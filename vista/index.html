@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComparaProductos - Encuentra y compara los mejores productos</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-balance-scale"></i> ComparaProductos</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="#">Categorías</a></li>
+                    <li><a href="#">Comparaciones</a></li>
+                    <li><a href="#">Recomendaciones</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-outline">Iniciar Sesión</button>
+                <button class="btn btn-primary">Registrarse</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Encuentra el producto perfecto para ti</h2>
+                <p>Compara características, precios y opiniones de miles de productos</p>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="¿Qué producto estás buscando?">
+                        <button id="search-btn" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Buscar
+                        </button>
+                    </div>
+                    <div class="search-filters">
+                        <select id="category-filter">
+                            <option value="">Todas las categorías</option>
+                            <option value="electronics">Electrónicos</option>
+                            <option value="home">Hogar</option>
+                            <option value="fashion">Moda</option>
+                            <option value="sports">Deportes</option>
+                        </select>
+                        <select id="price-filter">
+                            <option value="">Todos los precios</option>
+                            <option value="0-50">Menos de $50</option>
+                            <option value="50-100">$50 - $100</option>
+                            <option value="100-200">$100 - $200</option>
+                            <option value="200+">Más de $200</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2>Categorías Populares</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Electrónicos</h3>
+                    <p>Laptops, smartphones, tablets y más</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Moda</h3>
+                    <p>Ropa, calzado y accesorios</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Hogar</h3>
+                    <p>Electrodomésticos y decoración</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Deportes</h3>
+                    <p>Equipamiento y ropa deportiva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Recommendations -->
+    <section class="recommendations">
+        <div class="container">
+            <h2>Recomendaciones para ti</h2>
+            <div class="recommendations-grid" id="recommendations-container">
+                <!-- Los productos recomendados se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <h2>Comparador de Productos</h2>
+            <div class="comparison-container">
+                <div class="comparison-header">
+                    <h3>Selecciona productos para comparar</h3>
+                    <button id="clear-comparison" class="btn btn-outline">Limpiar</button>
+                </div>
+                <div class="comparison-grid" id="comparison-container">
+                    <!-- Los productos seleccionados para comparar aparecerán aquí -->
+                    <div class="empty-state">
+                        <i class="fas fa-balance-scale"></i>
+                        <p>Selecciona productos para comparar sus características</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ComparaProductos</h3>
+                    <p>Tu guía para encontrar los mejores productos al mejor precio.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Categorías</a></li>
+                        <li><a href="#">Comparaciones</a></li>
+                        <li><a href="#">Recomendaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="#">Soporte</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ComparaProductos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Contenido del producto se cargará aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
