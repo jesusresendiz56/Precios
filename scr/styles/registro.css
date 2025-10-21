@@ -1,0 +1,158 @@
+/* --- Sección de registro --- */
+.register-section {
+    margin: 7em;
+    padding: 30px;
+    background: white;
+    min-height: calc(100vh - 200px); /* Ajusta según tu header/footer */
+}
+
+.register-box {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.476);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoración sutil */
+.register-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.register-box h2 {
+    text-align: center;
+    margin-bottom: 1.8rem;
+    color: var(--dark);
+    font-size: 1.75rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.register-box h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* --- Grupos de formulario --- */
+.form-group {
+    margin-bottom: 1.4rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+    background-color: #fafafa;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(71, 176, 96, 0.15);
+}
+
+/* --- Opciones y checkbox --- */
+.form-options {
+    margin: 1.2rem 0;
+    font-size: 0.95rem;
+}
+
+.form-options label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.form-options input[type="checkbox"] {
+    margin-top: 4px;
+    accent-color: var(--primary); /* Color moderno para checkbox */
+    width: 18px;
+    height: 18px;
+}
+
+.form-options a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+/* --- Botón de registro --- */
+.btn-full {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1.05rem;
+    margin-top: 1rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(71, 176, 96, 0.3);
+}
+
+.btn-full:hover {
+    background-color: #b92929;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(71, 176, 96, 0.4);
+}
+
+/* --- Enlace de login --- */
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+.login-link a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+    .register-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .register-box h2 {
+        font-size: 1.5rem;
+    }
+}

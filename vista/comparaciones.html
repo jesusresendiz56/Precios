@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparaciones - ComparaProductos</title>
+    <link rel="stylesheet" href="../scr/styles/principal.css">
+    <link rel="stylesheet" href="../scr/styles/componentes.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-balance-scale"></i> ComparaProductos</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="categorias.html" class="nav-link">Categorías</a></li>
+                    <li><a href="comparaciones.html" class="nav-link active">Comparaciones</a></li>
+                    <li><a href="recomendaciones.html" class="nav-link">Recomendaciones</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="btn btn-primary">Iniciar Sesión</a>
+                <a href="register.html" class="btn btn-primary">Registrarse</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Comparación -->
+    <section class="comparison">
+        <div class="container">
+            <h2>Comparador de Productos</h2>
+            <div class="comparison-container">
+                <div class="comparison-header">
+                    <h3>Selecciona productos para comparar</h3>
+                    <button id="clear-comparison" class="btn btn-outline">Limpiar</button>
+                </div>
+                <div class="comparison-grid" id="comparison-container">
+                    <!-- Los productos seleccionados para comparar aparecerán aquí -->
+                    <div class="empty-state">
+                        <i class="fas fa-balance-scale"></i>
+                        <p>Selecciona productos para comparar sus características</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ComparaProductos</h3>
+                    <p>Tu guía para encontrar los mejores productos al mejor precio.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="categorias.html">Categorías</a></li>
+                        <li><a href="comparaciones.html">Comparaciones</a></li>
+                        <li><a href="recomendaciones.html">Recomendaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="#">Soporte</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ComparaProductos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Contenido del producto se cargará aquí -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script principal -->
+    <script src="../scr/js/principal.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ const sampleProducts = [
         category: "electronics",
         price: 699,
         rating: 4.5,
-        image: "https://via.placeholder.com/300x200?text=Smartphone",
+        image: "https://images.jdmagicbox.com/quickquotes/images_main/-ououu1xe.jpg",
         description: "El último smartphone con cámara de alta resolución y batería de larga duración.",
         features: [
             "Pantalla 6.5\" AMOLED",
@@ -21,7 +21,7 @@ const sampleProducts = [
         category: "electronics",
         price: 999,
         rating: 4.7,
-        image: "https://via.placeholder.com/300x200?text=Laptop",
+        image: "https://www.itaf.eu/wp-content/uploads/2021/01/Best-laptops-in-2021-7-things-to-consider-when-buying-a-laptop.jpg",
         description: "Laptop ultradelgada con procesador de última generación y pantalla táctil.",
         features: [
             "Procesador i7 10ma gen",
@@ -36,7 +36,7 @@ const sampleProducts = [
         category: "electronics",
         price: 149,
         rating: 4.3,
-        image: "https://via.placeholder.com/300x200?text=Auriculares",
+        image: "https://media.istockphoto.com/id/1178152157/es/foto/el-primer-plano-de-la-mujer-est%C3%A1-sosteniendo-el-caso-negro-de-los-auriculares-inal%C3%A1mbricos.jpg?s=612x612&w=0&k=20&c=9_13UJY1fC-KrlQyH-1tlbvl5Ag8fBixPsoLbQwtCLY=",
         description: "Auriculares con cancelación de ruido y hasta 30 horas de batería.",
         features: [
             "Cancelación de ruido activa",
@@ -51,7 +51,7 @@ const sampleProducts = [
         category: "electronics",
         price: 399,
         rating: 4.2,
-        image: "https://via.placeholder.com/300x200?text=Tablet",
+        image: "https://i.blogs.es/35a5d8/lenovo-tab-m11/650_1200.jpg",
         description: "Tablet perfecta para trabajo y entretenimiento con lápiz digital incluido.",
         features: [
             "Pantalla 10.5\" IPS",
@@ -66,7 +66,7 @@ const sampleProducts = [
         category: "electronics",
         price: 549,
         rating: 4.6,
-        image: "https://via.placeholder.com/300x200?text=Smart+TV",
+        image: "https://m.media-amazon.com/images/I/91Hk42lTFaL.jpg",
         description: "Televisor inteligente con resolución 4K y sistema de sonido integrado.",
         features: [
             "Pantalla 55\" 4K UHD",
@@ -81,7 +81,7 @@ const sampleProducts = [
         category: "sports",
         price: 89,
         rating: 4.4,
-        image: "https://via.placeholder.com/300x200?text=Zapatillas",
+        image: "https://site.innovasport.com/is/adidas/2024/is-desk-lp-adidas-division-calzado.webp",
         description: "Zapatillas cómodas para running con tecnología de amortiguación avanzada.",
         features: [
             "Amortiguación reactiva",
@@ -505,3 +505,36 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Efecto de header que se oculta al hacer scroll hacia abajo
+document.addEventListener('DOMContentLoaded', function() {
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+
+    if (!header) {
+        console.error("No se encontró el elemento .header");
+        return;
+    }
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Si el usuario hace scroll hacia ABAJO (y no está en la parte superior)
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Ocultar header
+            header.classList.remove('visible');
+            header.classList.add('hidden');
+        } 
+        // Si el usuario hace scroll hacia ARRIBA
+        else if (scrollTop < lastScrollTop || scrollTop < 100) {
+            // Mostrar header
+            header.classList.remove('hidden');
+            header.classList.add('visible');
+        }
+
+        lastScrollTop = scrollTop;
+    });
+
+    // Asegurarse de que el header esté visible al cargar la página
+    header.classList.add('visible');
+});
