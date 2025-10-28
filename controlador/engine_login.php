@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['correo'] = $correo;
 
                 // Redirigir al inicio o panel principal
-                header("Location: ../vista/index.html");
+                header("Location: ../vista/verificacion2fa.php");
                 exit();
             } else {
                 echo "⚠️ Contraseña incorrecta.";
