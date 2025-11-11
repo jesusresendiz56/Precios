@@ -1,0 +1,587 @@
+{
+  "url": "https://www.chedraui.com.mx/papel%20higi%C3%A9nico?_q=papel%20higi%C3%A9nico&map=ft&page=1",
+  "fecha_extraccion": "2025-11-09",
+  "categoria": "papel higiénico",
+  "total_productos": 146,
+  "productos_en_pagina": 20,
+  "productos": [
+    {
+      "posicion": 1,
+      "id": "3564171",
+      "sku": "3564171",
+      "nombre": "Papel Higiénico Pétalo Ultra Jumbo 16 Rollos",
+      "marca": "Pétalo",
+      "descripcion": "La resistencia y suavidad de Papel Higiénico Pétalo Ultra Jumbo de 16 rollos con 234 hojas, hará que tu papel rinda días y días. Su diseño con extractos de Aloe y Vitamina E, le dará una limpieza delicada a tu piel.",
+      "precio": 69,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58180314/7506425600021_00.jpg?v=638983203258500000",
+      "url_producto": "https://www.chedraui.com.mx/papel-higienico-petalo-ultra-jumbo-16-rollos-3564171/p",
+      "caracteristicas": {
+        "rollos": 16,
+        "hojas": 234,
+        "tipo": "Ultra Jumbo",
+        "ingredientes": "Aloe y Vitamina E"
+      }
+    },
+
+    {
+      "posicion": 2,
+      "id": "3733102",
+      "sku": "3733102",
+      "nombre": "Papel Higiénico Suavel 4 Rollos 325 Hojas",
+      "marca": "Suavel",
+      "descripcion": "Papel Higiénico Suavel con 4 Rollos",
+      "precio": 19.9,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58229050/7506425645466_00.jpg?v=638983309217730000",
+      "url_producto": "https://www.chedraui.com.mx/papel-higienico-suavel-4-rollos-325-hojas-3733102/p",
+      "caracteristicas": {
+        "rollos": 4,
+        "hojas": 325
+      }
+    },
+
+    {
+      "posicion": 3,
+      "id": "3755669",
+      "sku": "3755669",
+      "nombre": "Papel Higiénico Kleenex Cottonelle Elegance 32 Rollos",
+      "marca": "Kleenex",
+      "descripcion": "Papel Higiénico Kleenex Cottonelle",
+      "precio": 239,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57758751/7506425648436_00.jpg?v=638979070623930000",
+      "url_producto": "https://www.chedraui.com.mx/papel-higienico-kleenex-cottonelle-elegance-32-rollos-3755669/p",
+      "caracteristicas": {
+        "rollos": 32,
+        "linea": "Cottonelle Elegance"
+      }
+    },
+
+    {
+      "posicion": 4,
+      "id": "3806353",
+      "sku": "3806353",
+      "nombre": "Papel Higiénico Kleenex Cottonelle Elegance 18 Rollos",
+      "marca": "Kleenex",
+      "descripcion": "Papel Higiénico con hojas dobles.",
+      "precio": 130,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58055115/7506425654178_00.jpg?v=638980733423170000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-kleenex-cottonelle-elegance-18-rollos-3806353/p",
+      "caracteristicas": {
+        "rollos": 18,
+        "hojas": "dobles",
+        "linea": "Cottonelle Elegance"
+      }
+    },
+
+    {
+      "posicion": 5,
+      "id": "3790276",
+      "sku": "3790276",
+      "nombre": "Papel Higiénico Regio Almond Touch",
+      "marca": "Regio",
+      "descripcion": "Papel Higiénico Regio Almond Touch",
+      "precio": 30,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57777031/7501036625722_00.jpg?v=638979114415500000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-regio-almond-touch-3790276/p",
+      "caracteristicas": {
+        "aroma": "Almendra"
+      }
+    },
+
+    {
+      "posicion": 6,
+      "id": "3733100",
+      "sku": "3733100",
+      "nombre": "Papel Higiénico Suavel Esencia Floral 30 Rollos",
+      "marca": "Suavel",
+      "descripcion": "Papel Higiénico Suavel Esencia Floral con 30 Rollos",
+      "precio": 119,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58042905/7506425646968_00.jpg?v=638980690817370000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-suavel-esencia-floral-30-rollos-3733100/p",
+      "caracteristicas": {
+        "rollos": 30,
+        "aroma": "Esencia Floral"
+      }
+    },
+
+    {
+      "posicion": 7,
+      "id": "3664399",
+      "sku": "3664399",
+      "nombre": "Papel Higiénico Kleenex Cottonelle Elegance 4 Rollos",
+      "marca": "Kleenex",
+      "descripcion": "Kleenex Cottonelle Elegance es un producto Premium...",
+      "precio": 40,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58188325/7506425622016_00.jpg?v=638983220592600000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-kleenex-cottonelle-elegance-4-rollos-3664399/p",
+      "caracteristicas": {
+        "rollos": 4,
+        "tipo": "Premium",
+        "linea": "Cottonelle Elegance",
+        "aroma": "Flor de Magnolia",
+        "tecnologia": "Fibras de algodón"
+      }
+    },
+
+    {
+      "posicion": 8,
+      "id": "3738898",
+      "sku": "3738898",
+      "nombre": "Papel Higiénico Pétalo Rendimax 12 Rollos",
+      "marca": "Pétalo",
+      "descripcion": "Papel Higiénico Pétalo sin Aromatizante.",
+      "precio": 109,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57752930/7506425647163_00.jpg?v=638979056683930000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-petalo-rendimax-12-rollos-3738898/p",
+      "caracteristicas": {
+        "rollos": 12,
+        "tipo": "Rendimax",
+        "aroma": "Sin aromatizante"
+      }
+    },
+
+    {
+      "posicion": 9,
+      "id": "3718095",
+      "sku": "3718095",
+      "nombre": "Papel Higiénico Suavel 16 Rollos",
+      "marca": "Suavel",
+      "descripcion": "Papel higiénico Suavel de hojas dobles...",
+      "precio": 59.9,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57746944/7501943463073_00.jpg?v=638979042077200000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-suavel-16-rollos-3718095/p",
+      "caracteristicas": {
+        "rollos": 16,
+        "hojas": "dobles",
+        "caracteristica": "Se desintegra con el agua"
+      }
+    },
+
+    {
+      "posicion": 10,
+      "id": "3316070",
+      "sku": "3316070",
+      "nombre": "Papel Higiénico Regio Luxury Almond Touch 18 Rollos",
+      "marca": "Regio",
+      "descripcion": "Regio Luxury Almond Touch es el lujo hecho papel...",
+      "precio": 150,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58182351/7501036622066_00.jpg?v=638983207634000000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-regio-luxury-almond-touch-18-rollos-3316070/p",
+      "caracteristicas": {
+        "rollos": 18,
+        "tipo": "Luxury",
+        "aroma": "Almendra"
+      }
+    },
+
+    {
+      "posicion": 11,
+      "id": "3567016",
+      "sku": "3567016",
+      "nombre": "Papel Higiénico Elite Dúo 12 Rollos",
+      "marca": "Elite",
+      "descripcion": "Papel Higiénico Elite Dúo 12 Rollos",
+      "precio": 69,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58006452/7502279700771_00.jpg?v=638980621236130000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-elite-duo-12-rollos-3567016/p",
+      "caracteristicas": {
+        "rollos": 12,
+        "tipo": "Dúo"
+      }
+    },
+
+    {
+      "posicion": 12,
+      "id": "3802759",
+      "sku": "3802759",
+      "nombre": "Papel Higiénico Regio Aires de Lavanda 32 Rollos",
+      "marca": "Regio",
+      "descripcion": "Papel Higiénico Regio Aires de Lavanda...",
+      "precio": 149,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57782420/7501036626088_00.jpg?v=638979126878630000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-regio-aires-de-lavanda-32-rollos-3802759/p",
+      "caracteristicas": {
+        "rollos": 32,
+        "aroma": "Lavanda",
+        "tecnologia": "Elimina malos olores"
+      }
+    },
+
+    {
+      "posicion": 13,
+      "id": "3720165",
+      "sku": "3720165",
+      "nombre": "Papel Higiénico Premier 40 Rollos",
+      "marca": "Premier",
+      "descripcion": "Papel Higiénico Premier 40 Rollos",
+      "precio": 175,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58187720/7502247332584_00.jpg?v=638983219567930000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-premier-40-rollos-3720165/p",
+      "caracteristicas": {
+        "rollos": 40
+      }
+    },
+
+    {
+      "posicion": 14,
+      "id": "3735509",
+      "sku": "3735509",
+      "nombre": "Papel Higiénico Premier Rendiplus 12 Rollos 300 Hojas",
+      "marca": "Premier",
+      "descripcion": "Cuida de tu familia con Premier Rendiplus...",
+      "precio": 93,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58229722/7502247332645_00.jpg?v=638983310204900000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-premier-rendiplus-12-rollos-300-hojas-3735509/p",
+      "caracteristicas": {
+        "rollos": 12,
+        "hojas": 300,
+        "tipo": "Rendiplus",
+        "tecnologia": "Más esponjada"
+      }
+    },
+
+    {
+      "posicion": 15,
+      "id": "3484639",
+      "sku": "3484639",
+      "nombre": "Papel Higiénico Regio Just-1 con 12 Rollos",
+      "marca": "Regio",
+      "descripcion": "Regio Just 1, Una sola hoja puede ser suficiente.",
+      "precio": 165,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57999656/7501036622936_00.jpg?v=638980611625600000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-regio-just-1-con-12-rollos-3484639/p",
+      "caracteristicas": {
+        "rollos": 12,
+        "tipo": "Just-1",
+        "caracteristica": "Una sola hoja suficiente"
+      }
+    },
+
+    {
+      "posicion": 16,
+      "id": "3879066",
+      "sku": "3879066",
+      "nombre": "Papel Higiénico Pétalo Balance Ultra Jumbo 400 Hojas Dobles 4 Rollos",
+      "marca": "Pétalo",
+      "descripcion": "Papel higiénico con 4 rollos Ultra Jumbo...",
+      "precio": 30,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58068755/7506425662463_00.jpg?v=638980780820330000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-petalo-balance-ultra-jumbo-400-hojas-dobles-4-rollos-3879066/p",
+      "caracteristicas": {
+        "rollos": 4,
+        "hojas": 400,
+        "tipo": "Ultra Jumbo",
+        "hojas_tipo": "dobles"
+      }
+    },
+
+    {
+      "posicion": 17,
+      "id": "3692770",
+      "sku": "3692770",
+      "nombre": "Papel Higiénico Pétalo Maxi Resist 18 Rollos",
+      "marca": "Pétalo",
+      "descripcion": "El papel higiénico Pétalo Maxi Resist...",
+      "precio": 115,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58186312/7506425626212_00.jpg?v=638983216387230000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-petalo-maxi-resist-18-rollos-3692770/p",
+      "caracteristicas": {
+        "rollos": 18,
+        "tipo": "Maxi Resist",
+        "tecnologia": "Resiste 2x más",
+        "ingredientes": "Vitamina E y Coco"
+      }
+    },
+
+    {
+      "posicion": 18,
+      "id": "3524594",
+      "sku": "3524594",
+      "nombre": "Papel Higiénico Pétalo Ultra Jumbo 6 Rollos",
+      "marca": "Pétalo",
+      "descripcion": "La resistencia y suavidad de Pétalo Ultra Jumbo...",
+      "precio": 34.5,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58208393/7506425600748_00.jpg?v=638983262907000000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-petalo-ultra-jumbo-6-rollos-3524594/p",
+      "caracteristicas": {
+        "rollos": 6,
+        "hojas": 234,
+        "tipo": "Ultra Jumbo",
+        "ingredientes": "Aloe y Vitamina E"
+      }
+    },
+
+    {
+      "posicion": 19,
+      "id": "3797040",
+      "sku": "3797040",
+      "nombre": "Papel Higiénico Regio Ecomax Fresh 4 Rollos",
+      "marca": "Regio",
+      "descripcion": "Papel Higiénico Regio Ecomax Fresh 4 Rollos.",
+      "precio": 31,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58052940/7501036624572_00.jpg?v=638980727411900000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-regio-ecomax-fresh-4-rollos-3797040/p",
+      "caracteristicas": {
+        "rollos": 4,
+        "tipo": "Ecomax Fresh"
+      }
+    },
+
+    {
+      "posicion": 20,
+      "id": "3782581",
+      "sku": "3782581",
+      "nombre": "Papel Higiénico Regio Luxury Almond 4 Piezas",
+      "marca": "Regio",
+      "descripcion": "Regio Luxury Almond Touch es el lujo hecho papel...",
+      "precio": 37.5,
+      "precio_anterior": null,
+      "moneda": "MXN",
+      "disponibilidad": "En Stock",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58238229/7501036625159_00.jpg?v=638983328558700000",
+      "url_producto": "https://www.chedrauimx.com.mx/papel-higienico-regio-luxury-almond-4-piezas-3782581/p",
+      "caracteristicas": {
+        "rollos": 4,
+        "tipo": "Luxury Grand Rolls",
+        "aroma": "Almendra"
+      }
+    },
+
+    {
+      "posicion": 21,
+      "nombre": "Papel Higiénico Regio Rinde+ 16 Rollos XL",
+      "marca": "Regio",
+      "precio": 84,
+      "descripcion": "¡Más rendimiento para cada hogar!...",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57811762/7501036626866_00.jpg?v=638979194936730000",
+      "sku": "3861544"
+    },
+    {
+      "posicion": 22,
+      "nombre": "Papel Higiénico Elite Premium Soft 18 Rollos Xl",
+      "marca": "Elite",
+      "precio": 129,
+      "descripcion": "Papel Higiénico Elite Premium Soft 18 Rollos Xl.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58250124/7502247332867_00.jpg?v=638983353947300000",
+      "sku": "3824531"
+    },
+    {
+      "posicion": 23,
+      "nombre": "Papel Higiénico Kleenex Cottonelle Soft 24 Rollos",
+      "marca": "Kleenex",
+      "precio": 199,
+      "descripcion": "Papel Higiénico con 24 rollos, hojas dobles.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57784304/7506425653645_00.jpg?v=638979131001330000",
+      "sku": "3806356"
+    },
+    {
+      "posicion": 24,
+      "nombre": "Papel Higiénico Chedraui Max Hoja Doble 4 Rollos",
+      "marca": "Chedraui",
+      "precio": 25,
+      "descripcion": "Papel Higiénico Chedraui Max 4 Rollos.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57809632/7501253687275_00.jpg?v=638979190355570000",
+      "sku": "3853836"
+    },
+    {
+      "posicion": 25,
+      "nombre": "Papel Higiénico Suavel esencia floral 40 rollos",
+      "marca": "Suavel",
+      "precio": 145,
+      "descripcion": "Papel higiénico Suavel esencia floral...",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58051963/7501943461345_00.jpg?v=638980723218430000",
+      "sku": "3790692"
+    },
+    {
+      "posicion": 26,
+      "nombre": "Papel Higiénico Regio Aires de Lavanda 18+6 Rollos",
+      "marca": "Regio",
+      "precio": 105,
+      "descripcion": "Papel Higiénico Regio Aires de Lavanda 18+6 Rollos.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57790589/7501036626361_00.jpg?v=638979146153070000",
+      "sku": "3817649"
+    },
+    {
+      "posicion": 27,
+      "nombre": "Papel Higiénico Elite Ultra Suave 32 Rollos",
+      "marca": "Elite",
+      "precio": 149,
+      "descripcion": "Papel Higiénico Elite Ultra Suave 32 Rollos",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57833997/7502279700221_00.jpg?v=638979545877570000",
+      "sku": "3632036"
+    },
+    {
+      "posicion": 28,
+      "nombre": "Papel Higiénico Chedraui Clásico Doble Hoja 4 Rollos",
+      "marca": "Chedraui",
+      "precio": 18.5,
+      "descripcion": "Papel higiénico Chedraui con hojas dobles.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58181130/7501253661732_00.jpg?v=638983205159230000",
+      "sku": "3334128"
+    },
+    {
+      "posicion": 29,
+      "nombre": "Papel Higiénico Pétalo Rendimax",
+      "marca": "Pétalo",
+      "precio": 38,
+      "descripcion": "Papel Higiénico Pétalo Rendimax",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58237263/7506425651054_00.jpg?v=638983326988430000",
+      "sku": "3772223"
+    },
+    {
+      "posicion": 30,
+      "nombre": "Papel Higiénico Regio Just-1 6 rollos",
+      "marca": "Regio",
+      "precio": 100,
+      "descripcion": "Regio Just 1, Una sola hoja puede ser suficiente.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58208682/7501036622455_00.jpg?v=638983263555700000",
+      "sku": "3415749"
+    },
+    {
+      "posicion": 31,
+      "nombre": "Papel Higiénico Pétalo Día de Muertos Brilla en Obscuridad 6 Piezas",
+      "marca": "Pétalo",
+      "precio": 45,
+      "descripcion": "Pétalo Día de Muertos Brilla en Obscuridad.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/56887478/7506425667147_00.jpg?v=638967000824270000",
+      "sku": "3882716"
+    },
+    {
+      "posicion": 32,
+      "nombre": "Papel Higiénico Regio Luxury Almond Touch 18 Rollos + 6 Rollos",
+      "marca": "Regio",
+      "precio": 200,
+      "descripcion": "Producto de alta calidad...",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57614912/7501036623520_00.jpg?v=638978708522430000",
+      "sku": "3636310"
+    },
+    {
+      "posicion": 33,
+      "nombre": "Papel Higiénico Selecto Brand 224 Hojas Dobles Aroma Algodón 16 Rollos",
+      "marca": "Selecto Brand",
+      "precio": 58,
+      "descripcion": "Papel Higiénico Selecto Brand...",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57816981/7501253687268_00.jpg?v=638979208200970000",
+      "sku": "3879167"
+    },
+    {
+      "posicion": 34,
+      "nombre": "Papel Higiénico Elite Cuidado Clásico 32 Rollos",
+      "marca": "Elite",
+      "precio": 125,
+      "descripcion": "Elite Cuidado Clásico 32 Rollos",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58182590/7502247335448_00.jpg?v=638983208011230000",
+      "sku": "3358778"
+    },
+    {
+      "posicion": 35,
+      "nombre": "Papel Higiénico Premier Doble Hoja 6 Rollos",
+      "marca": "Premier",
+      "precio": 31,
+      "descripcion": "Premier Doble Hoja 6 rollos.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58180310/7502247337169_00.jpg?v=638983203248330000",
+      "sku": "3304254"
+    },
+    {
+      "posicion": 36,
+      "nombre": "Papel Higiénico Elite Cuidado Clásico 12 Rollos",
+      "marca": "Elite",
+      "precio": 62,
+      "descripcion": "Elite Cuidado Clásico 12 Rollos.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58208142/99072101524_00.jpg?v=638983262337600000",
+      "sku": "3171044"
+    },
+    {
+      "posicion": 37,
+      "nombre": "Papel Higiénico Suavel Frescura Floral 4 Rollos",
+      "marca": "Suavel",
+      "precio": 22.9,
+      "descripcion": "Suavel Frescura Floral 4 rollos.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58259740/7506425660414_00.jpg?v=638983372385030000",
+      "sku": "3842084"
+    },
+    {
+      "posicion": 38,
+      "nombre": "Papel Higiénico Chedraui Rollos Gigantes Doble Hoja 12 Rollos",
+      "marca": "Chedraui",
+      "precio": 91.5,
+      "descripcion": "Rollos gigantes de doble hoja.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58201725/7501253663897_00.jpg?v=638983250269200000",
+      "sku": "3362829"
+    },
+    {
+      "posicion": 39,
+      "nombre": "Papel Higiénico Regio Luxury Almond Touch 32 Rollos",
+      "marca": "Regio",
+      "precio": 347,
+      "descripcion": "Regio Luxury Almond Touch 32 Rollos.",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58208629/7501036622868_00.jpg?v=638983263441370000",
+      "sku": "3451842"
+    },
+    {
+      "posicion": 40,
+      "nombre": "Papel Higiénico Kleenex Cottonelle Beauty 18 Rollos",
+      "marca": "Kleenex",
+      "precio": 175,
+      "descripcion": "Kleenex Cottonelle Beauty...",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58208662/7506425612789_00.jpg?v=638983263512800000",
+      "sku": "3610769"
+    }
+  ]
+}
