@@ -1,4 +1,4 @@
-/* Variables CSS */
+/* === Variables CSS === */
 :root {
     --primary: #db3434;
     --secondary: #2e33cc;
@@ -10,7 +10,7 @@
     --border-radius: 8px;
 }
 
-/* Reset y estilos base */
+/* === Reset y estilos base === */
 * {
     margin: 0;
     padding: 0;
@@ -31,54 +31,116 @@ body {
     padding: 0 15px;
 }
 
-/* Header */
-/* --- Header fijo con transición --- */
-/* --- Header fijo con animación --- */
+/* === Botones (faltaba esta definición) === */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #c22a2a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(219, 52, 52, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* === Header (corregido y unificado) === */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    padding: 15px 30px;
-}
-.header .container {
-    display: flex;
-    justify-content: space-between; /* Esto empuja el logo a la izquierda y los botones a la derecha */
-    align-items: center;
-    padding: 15px 30px;
-}
-.header.hidden {
-    transform: translateY(-100%);
-    opacity: 0;
-}
-
-.header.visible {
+    background-color: rgba(252, 252, 252, 0.351);
+    backdrop-filter: blur(8px);
+    transition: all 0.35s ease;
+    padding: 16px 0;
+    /* Inicialmente visible */
     transform: translateY(0);
     opacity: 1;
+}
+
+/* Estado normal (al inicio, con splash visible) */
+.header.initial {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 20px 0;
+}
+
+/* Cuando se scrollea o desaparece la splash */
+.header.scrolled {
+    background-color: #f3f0f165;
+    padding: 0px 0px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo h1 {
     color: var(--primary);
     font-size: 1.5rem;
+    margin: 0;
 }
 
-.logo i {
-    margin-right: 10px;
+/* === Estilos para el nuevo logo ItemWise === */
+
+.logo-img {
+    height: 6em;
+    width: auto;
+    filter: brightness(0) invert(0);
+    margin-right: 12px;
 }
 
-/* --- Nuevo estilo para el menú de navegación --- */
+.splash-logo .logo-img {
+    height: 10em;
+    filter: brightness(0) invert(1);
+    margin-right: 15px;
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 32px;
+    }
+    .splash-logo .logo-img {
+        height: 50px;
+    }
+}
+/* === Navegación (unificada y corregida) === */
 .nav ul {
     display: flex;
     list-style: none;
-    gap: 2px; /* espacio mínimo entre elementos */
+    gap: 10px;
     background-color: #f8f9fa;
-    padding: 6px;
+    padding: 5px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin: 0;
 }
 
 .nav li {
@@ -86,63 +148,175 @@ body {
 }
 
 .nav-link {
-    padding: 10px 20px;
+    padding: 10px 16px;
     text-decoration: none;
-    color: var(--dark);
+    color: #6c757d;
     font-weight: 600;
     font-size: 0.95rem;
-    border-radius: 10px;
+    border-radius: 8px;
     transition: all 0.25s ease;
+    min-width: 100px;
     text-align: center;
-    min-width: 110px;
 }
 
-/* Estado normal */
-.nav-link {
-    background: transparent;
-    color: #6c757d;
-}
-
-/* Hover */
 .nav-link:hover {
-    background-color: #e9f7ef; /* fondo suave al pasar */
+    background-color: #e9f7ef;
     color: var(--primary);
 }
 
-/* Estado activo: el que está en la página actual */
 .nav-link.active {
-    background-color: var(--primary); /* verde principal */
+    background-color: var(--primary);
     color: white;
-    box-shadow: 0 2px 6px rgba(36, 180, 215, 0.3);
+    box-shadow: 0 2px 6px rgba(219, 52, 52, 0.3);
 }
 
+/* Acciones de usuario */
 .user-actions {
     display: flex;
     gap: 10px;
 }
 
-/* Hero Section */
+/* === Splash Screen (mejorada para integrarse con el header) === */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(15, 15, 15, 0.933), rgba(8, 8, 8, 0.064)), 
+                url('https://png.pngtree.com/thumb_back/fh260/background/20241007/pngtree-paper-bag-with-vegetables-and-fruits-on-a-white-background-online-image_16327979.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Suaviza el movimiento del header durante la transición */
+.header {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+#splash-screen.splash-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.splash-content {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    max-width: 700px;
+    z-index: 2001;
+}
+
+.splash-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 1.2rem;
+}
+
+.splash-logo i {
+    font-size: 2.2rem;
+}
+
+.splash-logo h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.splash-content p {
+    font-size: 1.2rem;
+    margin: 0.8rem 0;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+#splash-start-btn {
+    margin: 1.5rem 0;
+    padding: 0.85rem 2rem;
+    font-size: 1.05rem;
+    border-radius: 50px;
+    background-color: white;
+    color: var(--primary);
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#splash-start-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.splash-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    display: block;
+    margin-top: 0.3rem;
+    opacity: 0.85;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) translateX(-50%); }
+    50% { transform: translateY(-15px) translateX(-50%); }
+}
+
+/* === Hero Section (ajustado para evitar solapamiento con header fijo) === */
 .hero {
     background: linear-gradient(135deg, var(--primary), #076e9d);
     color: white;
-    padding: 80px 0;
+    padding: 140px 0 80px; /* ↑ Aumentado el top padding para compensar header fijo */
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    margin: 9%;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.8rem;
-    margin: 10px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.5rem;
+    max-width: 650px;
+    margin: 0 auto 30px;
 }
 
-/* Search Section */
+/* === Search Section (sin cambios críticos) === */
 .search-container {
     max-width: 700px;
     margin: 0 auto;
@@ -150,12 +324,13 @@ body {
 
 .search-box {
     display: flex;
-    margin: 30px;
+    gap: 2px;
+    margin: 30px auto;
 }
 
 .search-box input {
     flex: 1;
-    padding: 15px;
+    padding: 15px 20px;
     border: none;
     border-radius: var(--border-radius) 0 0 var(--border-radius);
     font-size: 1rem;
@@ -169,6 +344,7 @@ body {
     display: flex;
     gap: 15px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .search-filters select {
@@ -180,13 +356,12 @@ body {
     font-size: 0.9rem;
 }
 
-/* Categories Section */
-.categories {
-    padding: 60px 0;
-    background-color: white;
+/* === Sections generales (Categories, Recommendations, etc.) === */
+.categories, .recommendations, .comparison {
+    padding: 80px 0;
 }
 
-.categories h2 {
+.categories h2, .recommendations h2, .comparison h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2rem;
@@ -195,20 +370,8 @@ body {
 
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
-}
-
-/* Recommendations Section */
-.recommendations {
-    padding: 60px 0;
-}
-
-.recommendations h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    color: var(--dark);
 }
 
 .recommendations-grid {
@@ -217,73 +380,82 @@ body {
     gap: 25px;
 }
 
-/* Comparison Section */
-.comparison {
-    padding: 60px 0;
-    background-color: white;
-}
-
-.comparison h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    color: var(--dark);
-}
-
-.comparison-container {
-    border: 1px solid #e0e0e0;
-    border-radius: var(--border-radius);
+/* === Footer (sin cambios) === */
+/* ===== FOOTER ===== */
+.footer {
+    background: linear-gradient(135deg, var(--dark), #1a252f);
+    color: #ecf0f1;
+    padding: 60px 0 30px;
+    margin-top: 80px;
+    position: relative;
     overflow: hidden;
 }
 
-.comparison-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--light);
-    border-bottom: 1px solid #e0e0e0;
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    z-index: 2;
 }
 
-.comparison-grid {
-    padding: 20px;
-    min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.empty-state {
-    text-align: center;
-    color: var(--gray);
-}
-
-.empty-state i {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    color: #d0d0d0;
-}
-
-/* Footer */
-.footer {
-    background-color: var(--dark);
-    color: white;
-    padding: 50px 0 20px;
+.footer .container {
+    position: relative;
+    z-index: 1;
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-bottom: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+    margin-bottom: 40px;
 }
 
-.footer-section h3, .footer-section h4 {
-    margin-bottom: 15px;
+/* Sección de logo y descripción */
+.footer-section h3,
+.footer-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    position: relative;
+    padding-bottom: 8px;
 }
 
+.footer-section h3 {
+    color: white;
+    font-weight: 700;
+}
+
+.footer-section h4 {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.footer-section h3::after,
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 1px;
+}
+
+.footer-section p {
+    line-height: 1.7;
+    color: #bdc3c7;
+    font-size: 0.95rem;
+}
+
+/* Enlaces */
 .footer-section ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-section li {
@@ -291,33 +463,133 @@ body {
 }
 
 .footer-section a {
-    color: #bdc3c7;
     text-decoration: none;
-    transition: color 0.3s;
+    color: #95a5a6;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
 }
 
 .footer-section a:hover {
     color: white;
+    transform: translateX(4px);
 }
 
+.footer-section a::before {
+    content: '•';
+    margin-right: 8px;
+    color: var(--primary);
+    opacity: 0.7;
+}
+
+/* Redes sociales */
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 12px;
+    margin-top: 12px;
 }
 
 .social-icons a {
-    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ecf0f1;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
+.social-icons a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(219, 52, 52, 0.3);
+}
+
+/* Línea divisoria */
 .footer-bottom {
     text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #34495e;
-    color: #bdc3c7;
-    font-size: 0.9rem;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Modal */
+.footer-bottom p {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ✨ Efecto al cargar (opcional, pero elegante) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-section {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.footer-section:nth-child(1) { animation-delay: 0.1s; }
+.footer-section:nth-child(2) { animation-delay: 0.2s; }
+.footer-section:nth-child(3) { animation-delay: 0.3s; }
+.footer-section:nth-child(4) { animation-delay: 0.4s; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 25px;
+    }
+
+    .footer-content {
+        gap: 30px;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+        font-size: 1.2rem;
+    }
+
+    .footer-section a::before {
+        display: none;
+    }
+
+    .social-icons a {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-section a {
+        justify-content: center;
+    }
+}
+/* === Modal (sin cambios críticos) === */
 .modal {
     display: none;
     position: fixed;
@@ -354,43 +626,88 @@ body {
     color: var(--dark);
 }
 
-/* Responsive */
+/* === Responsive (mejorado) === */
 @media (max-width: 768px) {
     .header .container {
-        flex-direction: column;
-        gap: 15px;
+        flex-wrap: wrap;
+        gap: 12px;
     }
-    
+
     .nav ul {
         flex-wrap: wrap;
         justify-content: center;
+        width: 100%;
+        
     }
+
     .nav-link {
         min-width: 90px;
         padding: 8px 12px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
-    
+
+    .hero {
+        padding: 120px 0 60px;
+    }
+
     .hero h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
-    
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
     .search-box {
         flex-direction: column;
     }
-    
-    .search-box input, .search-box button {
+
+    .search-box input,
+    .search-box button {
         border-radius: var(--border-radius);
-        margin-bottom: 10px;
     }
-    
-    .search-filters {
+
+    #splash-screen {
+        padding: 0 20px;
+    }
+
+    .splash-logo h1 {
+        font-size: 2.2rem;
+    }
+
+    .splash-content p {
+        font-size: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .splash-stats {
         flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
     }
-    
-    .comparison-header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+
+    #splash-start-btn {
+        width: 100%;
+        max-width: 300px;
     }
+
+    .scroll-indicator {
+        bottom: 20px;
+    }
+}
+
+.tienda-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.tienda-card[data-tienda="all"] {
+    border: 2px solid var(--primary);
+}
+.tienda-card[data-tienda="all"]:hover {
+    box-shadow: 0 8px 20px rgba(219,52,52,0.2);
 }

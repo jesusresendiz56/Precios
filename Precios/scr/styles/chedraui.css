@@ -1,0 +1,366 @@
+/* ===== ESTILOS PARA TIENDAS Y PRODUCTOS (estilo Chedraui mejorado) ===== */
+
+/* Sección de tiendas - reemplaza .categories */
+.tiendas-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.tiendas-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--dark);
+    position: relative;
+}
+
+.tiendas-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
+}
+
+.tiendas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.tienda-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    text-align: center;
+    position: relative;
+}
+
+.tienda-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.tienda-header {
+    padding: 25px 20px 15px;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+.tienda-icon {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.walmart-card .tienda-icon { color: #0071ce; }
+.chedraui-card .tienda-icon { color: #ed1c24; }
+.soriana-card .tienda-icon { color: #00a94f; }
+
+.tienda-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.walmart-card .tienda-name { color: #0071ce; }
+.chedraui-card .tienda-name { color: #ed1c24; }
+.soriana-card .tienda-name { color: #00a94f; }
+
+.tienda-desc {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.tienda-stats {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+.tienda-stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: block;
+}
+
+.walmart-card .stat-value { color: #0071ce; }
+.chedraui-card .stat-value { color: #ed1c24; }
+.soriana-card .stat-value { color: #00a94f; }
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.tienda-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.walmart-card .tienda-btn {
+    background: #0071ce;
+    color: white;
+}
+.walmart-card .tienda-btn:hover {
+    background: #005aa7;
+    transform: translateY(-2px);
+}
+
+.chedraui-card .tienda-btn {
+    background: #ed1c24;
+    color: white;
+}
+.chedraui-card .tienda-btn:hover {
+    background: #c41018;
+    transform: translateY(-2px);
+}
+
+.soriana-card .tienda-btn {
+    background: #00a94f;
+    color: white;
+}
+.soriana-card .tienda-btn:hover {
+    background: #008c45;
+    transform: translateY(-2px);
+}
+
+/* Estadísticas generales */
+.estadisticas-home {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.estadistica-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    min-width: 160px;
+}
+
+.estadistica-valor {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.estadistica-valor.primary { color: var(--primary); }
+.estadistica-valor.secondary { color: var(--secondary); }
+.estadistica-valor.dark { color: var(--dark); }
+
+.estadistica-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Productos con estilo Chedraui */
+.product-card {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.35s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.product-image {
+    height: 180px !important;
+    padding: 15px !important;
+    background: #f8f9fa !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.product-image img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    transition: transform 0.4s ease !important;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05) !important;
+}
+
+.product-imagen-placeholder {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%) !important;
+    color: #6c757d !important;
+    font-size: 3rem !important;
+}
+
+.product-info {
+    padding: 20px !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.product-title {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: var(--dark) !important;
+    margin-bottom: 10px !important;
+    line-height: 1.4 !important;
+    min-height: 48px !important;
+}
+
+.product-price {
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    margin: 12px 0 !important;
+}
+
+.walmart-product .product-price { color: #0071ce !important; }
+.chedraui-product .product-price { color: #ed1c24 !important; }
+.soriana-product .product-price { color: #00a94f !important; }
+
+.product-store {
+    font-weight: 600 !important;
+    margin-bottom: 12px !important;
+    font-size: 0.95rem !important;
+}
+
+.walmart-product .product-store { color: #0071ce !important; }
+.chedraui-product .product-store { color: #ed1c24 !important; }
+.soriana-product .product-store { color: #00a94f !important; }
+
+.product-features {
+    margin-bottom: 16px !important;
+    flex: 1 !important;
+}
+
+.product-actions {
+    margin-top: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+.btn-sm {
+    padding: 10px 16px !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+}
+
+.view-product {
+    background: var(--primary) !important;
+    color: white !important;
+}
+
+.view-product:hover {
+    background: #c22a2a !important;
+    transform: translateY(-2px) !important;
+}
+
+.compare-product {
+    background: transparent !important;
+    color: var(--primary) !important;
+    border: 1px solid var(--primary) !important;
+}
+
+.compare-product:hover {
+    background: rgba(219, 52, 52, 0.05) !important;
+}
+
+/* Loading y errores */
+.loading-container {
+    text-align: center;
+    padding: 60px 20px;
+    grid-column: 1 / -1;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .tiendas-section {
+        padding: 40px 0;
+    }
+    
+    .tiendas-grid {
+        gap: 20px;
+    }
+    
+    .estadisticas-home {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .estadistica-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tienda-header {
+        padding: 20px 15px 10px;
+    }
+    
+    .tienda-icon {
+        font-size: 2.2rem;
+    }
+    
+    .tienda-name {
+        font-size: 1.2rem;
+    }
+}

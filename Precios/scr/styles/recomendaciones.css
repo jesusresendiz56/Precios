@@ -1,0 +1,13 @@
+/* === Espacio para header fijo === */
+body {
+    padding-top: 90px; /* Altura aproximada del header + margen */
+    transition: padding-top 0.3s ease;
+}
+
+.header.scrolled {
+    padding: 10px 0;
+}
+
+body.header-scrolled {
+    padding-top: 70px; /* Más compacto cuando se scrollea */
+}
