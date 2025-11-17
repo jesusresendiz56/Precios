@@ -3,30 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ComparaProductos - Encuentra y compara los mejores productos</title>
+    <title>ItemWise - Encuentra y compara los mejores productos</title>
     <link rel="stylesheet" href="../scr/styles/principal.css">
     <link rel="stylesheet" href="../scr/styles/componentes.css">
+    <link rel="stylesheet" href="../scr/styles/login.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- NUEVA PANTALLA DE BIENVENIDA (Splash Screen) -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <div class="splash-logo">
+                <img src="../scr/img/logo/logo.png" alt="ItemWise Logo" class="logo-img">
+                <h1>ItemWise</h1>
+            </div>
+            <p>Encuentra el mejor precio en todas las tiendas</p>
+            <p>Compara precios de miles de productos de las mejores tiendas online. Ahorra dinero y tiempo con nuestra plataforma inteligente de comparación.</p>
+            
+            <button class="btn btn-primary" disabled style="opacity:0.6; cursor: default;">
+                Desliza para comenzar <i class="fas fa-chevron-down"></i>
+            </button>
+
+            <!-- Estadísticas -->
+            <div class="splash-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Productos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Tiendas</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">30%</span>
+                    <span class="stat-label">Ahorro promedio</span>
+                </div>
+            </div>
+
+            <!-- Flecha de scroll -->
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
-    <header class="header">
+    <header class="header initial" id="main-header">
         <div class="container">
             <div class="logo">
-                <h1><i class="fas fa-balance-scale"></i> ComparaProductos</h1>
+                <img src="../scr/img/logo/logo.png" alt="ItemWise Logo" class="logo-img">
             </div>
             <nav class="nav">
-    <ul>
-        <li><a href="index.html" class="nav-link active">Inicio</a></li>
-        <li><a href="categorias.html" class="nav-link">Categorías</a></li>
-        <li><a href="comparaciones.html" class="nav-link">Comparaciones</a></li>
-        <li><a href="recomendaciones.html" class="nav-link">Recomendaciones</a></li>
-    </ul>
-</nav>
-    <div class="user-actions">
-    <a href="login.html" class="btn btn-primary">Iniciar Sesión</a>
-    <a href="register.html" class="btn btn-primary">Registrarse</a>
-</div>
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li><a href="tiendas.html" class="nav-link">Tiendas</a></li>
+                    <li><a href="recomendaciones.html" class="nav-link">Recomendaciones</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-primary" id="open-login-modal">Iniciar Sesión</button>
+                <button class="btn btn-outline" id="open-register-modal">Registrarse</button>
+            </div>
         </div>
     </header>
 
@@ -66,34 +103,34 @@
         </div>
     </section>
 
-    <!-- Featured Categories -->
-    <section class="categories">
-        <div class="container">
-            <h2>Categorías Populares</h2>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <i class="fas fa-laptop"></i>
-                    <h3>Electrónicos</h3>
-                    <p>Laptops, smartphones, tablets y más</p>
-                </div>
-                <div class="category-card">
-                    <i class="fas fa-tshirt"></i>
-                    <h3>Moda</h3>
-                    <p>Ropa, calzado y accesorios</p>
-                </div>
-                <div class="category-card">
-                    <i class="fas fa-home"></i>
-                    <h3>Hogar</h3>
-                    <p>Electrodomésticos y decoración</p>
-                </div>
-                <div class="category-card">
-                    <i class="fas fa-dumbbell"></i>
-                    <h3>Deportes</h3>
-                    <p>Equipamiento y ropa deportiva</p>
-                </div>
+    <!-- Tiendas Populares → ahora son filtros activos -->
+<section class="categories">
+    <div class="container">
+        <h2>Tiendas Populares</h2>
+        <div class="categories-grid" id="tiendas-filtro">
+            <div class="category-card tienda-card" data-tienda="all">
+                <i class="fas fa-store"></i>
+                <h3>Todas</h3>
+                <p>Productos de todas las tiendas</p>
+            </div>
+            <div class="category-card tienda-card" data-tienda="walmart" style="border-color:#0071ce;box-shadow:0 4px 12px rgba(0,113,206,0.1);">
+                <i class="fas fa-store" style="color:#0071ce;"></i>
+                <h3>Walmart</h3>
+                <p>Laptops, smartphones y más</p>
+            </div>
+            <div class="category-card tienda-card" data-tienda="chedraui" style="border-color:#ed1c24;box-shadow:0 4px 12px rgba(237,28,36,0.1);">
+                <i class="fas fa-shopping-cart" style="color:#ed1c24;"></i>
+                <h3>Chedraui</h3>
+                <p>Alimentos, hogar y belleza</p>
+            </div>
+            <div class="category-card tienda-card" data-tienda="soriana" style="border-color:#00a94f;box-shadow:0 4px 12px rgba(0,169,79,0.1);">
+                <i class="fas fa-store" style="color:#00a94f;"></i>
+                <h3>Soriana</h3>
+                <p>Electrodomésticos y abarrotes</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Product Recommendations -->
     <section class="recommendations">
@@ -115,7 +152,6 @@
                     <button id="clear-comparison" class="btn btn-outline">Limpiar</button>
                 </div>
                 <div class="comparison-grid" id="comparison-container">
-                    <!-- Los productos seleccionados para comparar aparecerán aquí -->
                     <div class="empty-state">
                         <i class="fas fa-balance-scale"></i>
                         <p>Selecciona productos para comparar sus características</p>
@@ -130,16 +166,14 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>ComparaProductos</h3>
-                    <p>Tu guía para encontrar los mejores productos al mejor precio.</p>
+                    <h3>ItemWise</h3>
+                    <p>Tu guía inteligente para encontrar los mejores productos al mejor precio.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Enlaces Rápidos</h4>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Categorías</a></li>
-                        <li><a href="#">Comparaciones</a></li>
-                        <li><a href="#">Recomendaciones</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tiendas.html">Tiendas</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -160,19 +194,92 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 ComparaProductos. Todos los derechos reservados.</p>
+                <p>&copy; 2025 ItemWise. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Product Detail Modal -->
+    <!-- Modal: Detalle de Producto -->
     <div id="product-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <div id="modal-body">
-                <!-- Contenido del producto se cargará aquí -->
+                <!-- Contenido se cargará dinámicamente -->
             </div>
         </div>
+    </div>
+
+    <!--Modal: Inicio de Sesión (UBICACIÓN CORRECTA: al final, fuera de otros contenedores) -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Iniciar sesión</h2>
+            <p>Accede a tu cuenta para guardar tus comparaciones favoritas</p>
+            <form id="loginForm" action="../controlador/engine_login.php" method="POST">
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="correo@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" name="remember"> Recordar mi sesión
+                    </label>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Iniciar sesión</button>
+                <div class="modal-footer">
+                    <p>¿No tienes cuenta? <a href="#" id="switch-to-register">Registrate aquí</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ✅ Modal: Registro -->
+<div id="register-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Crear cuenta</h2>
+        <p>Regístrate para guardar comparaciones, crear listas y más.</p>
+        
+        <form id="registerForm" action="../controlador/engine_register.php" method="POST">
+            <div class="form-group">
+                <label for="fullname">Nombre completo</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Juan Pérez" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-email">Correo electrónico</label>
+                <input type="email" id="reg-email" name="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="reg-password">Contraseña</label>
+                <input type="password" id="reg-password" name="password" placeholder="••••••••" required minlength="6">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirmar contraseña</label>
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="••••••••" required>
+            </div>
+
+            <div class="form-options">
+                <label>
+                    <input type="checkbox" name="terms" required>
+                    Acepto los <a href="#" class="terms-link">Términos y Condiciones</a>
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Crear cuenta</button>
+
+            <div class="modal-footer">
+                <p>¿Ya tienes cuenta? <a href="#" id="switch-to-login">Inicia sesión aquí</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <!-- Scripts -->
     <script src="../scr/js/principal.js"></script>
 </body>
 </html>
