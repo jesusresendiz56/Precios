@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $result = $manager->executeBulkWrite("$dbname.usuarios", $bulk);
             
             if ($result->getInsertedCount() === 1) {
-                header("Location: ../vista/login.html");
+                header("Location: ../vista/index.html?registro=exitoso");
                 exit();
             } else {
                 echo "Error al registrar usuario.";

@@ -62,7 +62,7 @@
             </nav>
             <div class="user-actions">
                 <button class="btn btn-primary" id="open-login-modal">Iniciar Sesión</button>
-                <button class="btn btn-outline" id="open-register-modal">Registrarse</button>
+                <a href="register.html" class="btn btn-outline">Registrarse</a>
             </div>
         </div>
     </header>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="comparison-grid" id="comparison-container">
                     <div class="empty-state">
-                        <i class="fas fa-balance-scale"></i>
+                        <img src="../scr/img/logo/logo.png" alt="ItemWise Logo" class="logo-img">
                         <p>Selecciona productos para comparar sus características</p>
                     </div>
                 </div>
@@ -232,52 +232,11 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-full">Iniciar sesión</button>
                 <div class="modal-footer">
-                    <p>¿No tienes cuenta? <a href="#" id="switch-to-register">Registrate aquí</a></p>
+                    <p>¿No tienes cuenta? <a href="../vista/register.html">Registrate aquí</a></p>
                 </div>
             </form>
         </div>
     </div>
-
-    <!-- ✅ Modal: Registro -->
-<div id="register-modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Crear cuenta</h2>
-        <p>Regístrate para guardar comparaciones, crear listas y más.</p>
-        
-        <form id="registerForm" action="../controlador/engine_register.php" method="POST">
-            <div class="form-group">
-                <label for="fullname">Nombre completo</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Juan Pérez" required>
-            </div>
-            <div class="form-group">
-                <label for="reg-email">Correo electrónico</label>
-                <input type="email" id="reg-email" name="email" placeholder="tu@email.com" required>
-            </div>
-            <div class="form-group">
-                <label for="reg-password">Contraseña</label>
-                <input type="password" id="reg-password" name="password" placeholder="••••••••" required minlength="6">
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirmar contraseña</label>
-                <input type="password" id="confirm-password" name="confirm_password" placeholder="••••••••" required>
-            </div>
-
-            <div class="form-options">
-                <label>
-                    <input type="checkbox" name="terms" required>
-                    Acepto los <a href="#" class="terms-link">Términos y Condiciones</a>
-                </label>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-full">Crear cuenta</button>
-
-            <div class="modal-footer">
-                <p>¿Ya tienes cuenta? <a href="#" id="switch-to-login">Inicia sesión aquí</a></p>
-            </div>
-        </form>
-    </div>
-</div>
 
     <!-- Scripts -->
     <script src="../scr/js/principal.js"></script>

@@ -113,13 +113,13 @@ const elements = {
     productModal: document.getElementById('product-modal'),
     modalBody: document.getElementById('modal-body'),
     loginModal: document.getElementById('login-modal'),
-    registerModal: document.getElementById('register-modal'),
+    // ❌ registerModal: document.getElementById('register-modal'), → eliminado
     openLoginModalBtn: document.getElementById('open-login-modal'),
-    openRegisterModalBtn: document.getElementById('open-register-modal'),
+    // ❌ openRegisterModalBtn: document.getElementById('open-register-modal'),
     closeLoginModalBtn: document.querySelector('#login-modal .close'),
-    closeRegisterModalBtn: document.querySelector('#register-modal .close'),
+    // ❌ closeRegisterModalBtn: document.querySelector('#register-modal .close'),
     closeProductModalBtn: document.querySelector('#product-modal .close'),
-    switchToRegisterLink: document.getElementById('switch-to-register'),
+    // ❌ switchToRegisterLink: document.getElementById('switch-to-register'),
     switchToLoginLink: document.getElementById('switch-to-login')
 };
 
@@ -127,6 +127,7 @@ const elements = {
 document.addEventListener('DOMContentLoaded', function() {
     initApp();
     setupSplashAndHeader();
+    handleUrlParams(); // ← para abrir login automáticamente si hay ?open=login
 });
 
 function initApp() {
@@ -138,11 +139,9 @@ function initApp() {
 function setupSplashAndHeader() {
     const splashScreen = document.getElementById('splash-screen');
     const mainHeader = document.getElementById('main-header');
-
     if (!splashScreen || !mainHeader) return;
 
     let splashActive = true;
-
     const hideSplash = () => {
         if (!splashActive) return;
         splashActive = false;
@@ -185,31 +184,21 @@ function setupModalListeners() {
         if (e.target === elements.loginModal) closeLoginModal();
     });
 
-    // Registro
-    elements.openRegisterModalBtn?.addEventListener('click', openRegisterModal);
-    elements.closeRegisterModalBtn?.addEventListener('click', closeRegisterModal);
-    elements.registerModal?.addEventListener('click', (e) => {
-        if (e.target === elements.registerModal) closeRegisterModal();
-    });
+    // 🚫 Registro: ya no hay modal → ¡eliminado totalmente!
 
-    // Cambio entre modales
-    elements.switchToRegisterLink?.addEventListener('click', (e) => {
-        e.preventDefault();
-        closeLoginModal();
-        openRegisterModal();
-    });
+    // Cambio entre modales (solo login queda)
+    // elements.switchToRegisterLink?.addEventListener(...) → eliminado
     elements.switchToLoginLink?.addEventListener('click', (e) => {
         e.preventDefault();
-        closeRegisterModal();
+        closeRegisterModal(); // por si acaso (fallback)
         openLoginModal();
     });
 
     // Tecla Esc
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            if (elements.loginModal.style.display === 'block') closeLoginModal();
-            if (elements.registerModal.style.display === 'block') closeRegisterModal();
-            if (elements.productModal.style.display === 'block') closeProductModal();
+            if (elements.loginModal?.style.display === 'block') closeLoginModal();
+            if (elements.productModal?.style.display === 'block') closeProductModal();
         }
     });
 
@@ -219,33 +208,61 @@ function setupModalListeners() {
         if (e.target === elements.productModal) closeProductModal();
     });
 
-    // Validación de registro
-    document.getElementById('registerForm')?.addEventListener('submit', validateRegisterForm);
+    // Validación de registro (solo en register.html → no aquí)
 }
 
 // === FUNCIONES DE MODAL ===
 function openLoginModal() {
-    elements.loginModal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
+    if (elements.loginModal) {
+        elements.loginModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
 }
 
 function closeLoginModal() {
-    elements.loginModal.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    if (elements.loginModal) {
+        elements.loginModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
 }
 
-function openRegisterModal() {
-    elements.registerModal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
+// 🚫 Eliminamos openRegisterModal y closeRegisterModal (no se usan)
 
 function closeRegisterModal() {
-    elements.registerModal.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    // Fallback por compatibilidad con switch-to-login
+    const registerModal = document.getElementById('register-modal');
+    if (registerModal) registerModal.style.display = 'none';
 }
 
 function closeProductModal() {
-    elements.productModal.style.display = 'none';
+    if (elements.productModal) {
+        elements.productModal.style.display = 'none';
+    }
+}
+
+// === FUNCIONES PARA REDIRECCIÓN POR URL ===
+function handleUrlParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('open') === 'login') {
+        setTimeout(() => {
+            // ✅ Primero: ocultar splash screen SI existe
+            const splashScreen = document.getElementById('splash-screen');
+            const mainHeader = document.getElementById('main-header');
+            if (splashScreen && !splashScreen.classList.contains('splash-hidden')) {
+                splashScreen.classList.add('splash-hidden');
+                if (mainHeader) {
+                    mainHeader.classList.remove('initial');
+                    mainHeader.classList.add('scrolled');
+                }
+            }
+
+            // ✅ Luego: abrir login
+            openLoginModal();
+
+            // ✅ Limpiar URL opcionalmente
+            history.replaceState(null, '', window.location.pathname);
+        }, 300);
+    }
 }
 
 // === FUNCIONALIDAD PRINCIPAL ===
@@ -268,11 +285,9 @@ function handleFilterChange() {
 
 function applyFilters() {
     let filtered = state.products;
-
     if (state.currentCategory) {
         filtered = filtered.filter(p => p.category === state.currentCategory);
     }
-
     if (state.currentPriceRange) {
         filtered = filtered.filter(p => {
             const price = p.price;
@@ -285,7 +300,6 @@ function applyFilters() {
             }
         });
     }
-
     state.filteredProducts = filtered;
     renderRecommendedProducts();
 }
@@ -344,7 +358,6 @@ function renderRecommendedProducts() {
             showProductDetails(id);
         });
     });
-
     document.querySelectorAll('.compare-product').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const id = parseInt(e.currentTarget.dataset.id);
@@ -415,12 +428,10 @@ function addToComparison(productId) {
         showNotification('⚠️ Este producto ya está en la comparación', 'warning');
         return;
     }
-
     if (state.comparisonProducts.length >= 4) {
         showNotification('⚠️ Máximo 4 productos para comparar', 'warning');
         return;
     }
-
     const product = state.products.find(p => p.id === productId);
     if (product) {
         state.comparisonProducts.push(product);
@@ -446,7 +457,7 @@ function renderComparison() {
     if (state.comparisonProducts.length === 0) {
         container.innerHTML = `
             <div class="empty-state">
-                <i class="fas fa-balance-scale"></i>
+                <img src="../scr/img/logo/logo.png" alt="ItemWise Logo" class="logo-img">
                 <p>Selecciona productos para comparar sus características</p>
             </div>
         `;
@@ -456,7 +467,6 @@ function renderComparison() {
 
     container.classList.add('active');
     const allFeatures = [...new Set(state.comparisonProducts.flatMap(p => p.features))];
-
     container.innerHTML = state.comparisonProducts.map(product => `
         <div class="comparison-product">
             <div class="comparison-product-header">
@@ -498,50 +508,12 @@ function renderComparison() {
             showProductDetails(id);
         });
     });
-
     document.querySelectorAll('.comparison-product .remove-comparison').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const id = parseInt(e.currentTarget.dataset.id);
             removeFromComparison(id);
         });
     });
-}
-
-// === VALIDACIÓN DE REGISTRO ===
-function validateRegisterForm(e) {
-    const password = document.getElementById('reg-password')?.value || '';
-    const confirm = document.getElementById('confirm-password')?.value || '';
-    const terms = document.querySelector('input[name="terms"]')?.checked || false;
-
-    // Limpiar errores
-    document.querySelectorAll('.form-group.error').forEach(el => el.classList.remove('error'));
-    document.querySelectorAll('.error-message').forEach(el => el.remove());
-
-    let valid = true;
-
-    if (password !== confirm) {
-        showError('confirm-password', 'Las contraseñas no coinciden');
-        valid = false;
-    }
-
-    if (!terms) {
-        showNotification('⚠️ Debes aceptar los Términos y Condiciones', 'warning');
-        valid = false;
-    }
-
-    if (!valid) e.preventDefault();
-}
-
-function showError(fieldId, message) {
-    const input = document.getElementById(fieldId);
-    const group = input.closest('.form-group');
-    group.classList.add('error');
-    
-    const errorDiv = document.createElement('div');
-    errorDiv.className = 'error-message';
-    errorDiv.style.cssText = 'color:#e74c3c; font-size:0.85rem; margin-top:5px;';
-    errorDiv.textContent = message;
-    group.appendChild(errorDiv);
 }
 
 // === NOTIFICACIONES ===
@@ -552,11 +524,10 @@ function showNotification(message, type = 'info') {
         error: '#e74c3c',
         info: '#2e33cc'
     };
-    
     const bgColor = colors[type] || colors.info;
     const icon = type === 'success' ? 'check-circle' : 
-                 type === 'warning' ? 'exclamation-triangle' : 
-                 type === 'error' ? 'times-circle' : 'info-circle';
+                type === 'warning' ? 'exclamation-triangle' : 
+                type === 'error' ? 'times-circle' : 'info-circle';
 
     const notif = document.createElement('div');
     notif.innerHTML = `
@@ -573,189 +544,19 @@ function showNotification(message, type = 'info') {
         </div>
     `;
     document.body.appendChild(notif);
-    
+
     setTimeout(() => {
         notif.firstChild.style.animation = 'slideOut 0.3s forwards';
         setTimeout(() => notif.remove(), 300);
     }, 3000);
 }
 
-// Animaciones CSS
+// Animaciones CSS dinámicas
 (function() {
     const style = document.createElement('style');
     style.textContent = `
         @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
         @keyframes slideOut { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }
-        .form-group.error input { border-color: #e74c3c; }
     `;
     document.head.appendChild(style);
 })();
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("registerForm");
-
-    form.addEventListener("submit", (e) => {
-        e.preventDefault(); // Evita enviar mientras validamos
-
-        // Obtener valores
-        const nombre = document.getElementById("nombre").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value.trim();
-        const confirmPassword = document.getElementById("confirmPassword").value.trim();
-        const terms = form.querySelector("input[type='checkbox']");
-
-        // Validaciones
-        if (nombre.length < 3) {
-            return mostrarError("El nombre es demasiado corto.");
-        }
-
-        if (!validarEmail(email)) {
-            return mostrarError("El correo electrónico no es válido.");
-        }
-
-        if (password.length < 6) {
-            return mostrarError("La contraseña debe tener al menos 6 caracteres.");
-        }
-
-        if (password !== confirmPassword) {
-            return mostrarError("Las contraseñas no coinciden.");
-        }
-
-        if (!terms.checked) {
-            return mostrarError("Debes aceptar los términos y condiciones.");
-        }
-
-        // Si todo está OK -> enviamos el formulario
-        form.submit();
-    });
-});
-
-// Función para validar email
-function validarEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-}
-
-// Función para mostrar errores
-function mostrarError(mensaje) {
-    let errorBox = document.getElementById("errorBox");
-
-    if (!errorBox) {
-        errorBox = document.createElement("div");
-        errorBox.id = "errorBox";
-        errorBox.style.background = "#ffdddd";
-        errorBox.style.border = "1px solid #ff6b6b";
-        errorBox.style.padding = "10px";
-        errorBox.style.marginBottom = "15px";
-        errorBox.style.color = "#a50000";
-        errorBox.style.borderRadius = "5px";
-        errorBox.style.fontSize = "14px";
-        document.querySelector(".register-box").prepend(errorBox);
-    }
-
-    errorBox.textContent = mensaje;
-}
-
-// === CARGAR DATOS DESDE JSON (sin PHP ni servidor) ===
-async function cargarDatosTienda(ruta) {
-    try {
-        const response = await fetch(ruta);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return await response.json();
-    } catch (error) {
-        console.warn(`⚠️ No se pudo cargar ${ruta}:`, error.message);
-        return []; // fallback vacío
-    }
-}
-
-// === Cargar y combinar datos de todas las tiendas ===
-async function cargarProductosReales() {
-    const bases = [
-        { tienda: 'walmart', ruta: '../scr/tiendas/data/walmart_papel.json' },
-        { tienda: 'chedraui', ruta: '../scr/tiendas/data/chedraui_papel.json' },
-        { tienda: 'soriana', ruta: '../scr/tiendas/data/soriana_papel.json' }
-    ];
-
-    const promesas = bases.map(async base => {
-        const datos = await cargarDatosTienda(base.ruta);
-        return Array.isArray(datos) ? datos.map(p => ({ ...p, tienda: base.tienda })) : [];
-    });
-
-    const resultados = await Promise.all(promesas);
-    return resultados.flat();
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("registerForm");
-
-    form.addEventListener("submit", function (e) {
-        e.preventDefault(); // Evita envío hasta validar
-
-        // Obtener valores
-        const nombre = document.getElementById("nombre").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
-        const confirmPassword = document.getElementById("confirmPassword").value;
-
-        // Validar campos vacíos
-        if (!nombre || !email || !password || !confirmPassword) {
-            mostrarAlerta("Por favor, completa todos los campos.");
-            return;
-        }
-
-        // Validar email
-        if (!validarEmail(email)) {
-            mostrarAlerta("Por favor, ingresa un correo electrónico válido.");
-            return;
-        }
-
-        // Validar longitud de la contraseña
-        if (password.length < 6) {
-            mostrarAlerta("La contraseña debe tener al menos 6 caracteres.");
-            return;
-        }
-
-        // Validar coincidencia de contraseñas
-        if (password !== confirmPassword) {
-            mostrarAlerta("Las contraseñas no coinciden.");
-            return;
-        }
-
-        // Si todo está bien, enviar formulario
-        form.submit();
-    });
-});
-
-
-// Función para validar email
-function validarEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-}
-
-
-// Función para mostrar alertas bonitas (puedes personalizar)
-function mostrarAlerta(mensaje) {
-    let alerta = document.getElementById("alerta-registro");
-
-    if (!alerta) {
-        alerta = document.createElement("div");
-        alerta.id = "alerta-registro";
-        alerta.style.background = "#ff4d4d";
-        alerta.style.color = "white";
-        alerta.style.padding = "10px";
-        alerta.style.marginTop = "15px";
-        alerta.style.borderRadius = "5px";
-        alerta.style.textAlign = "center";
-        alerta.style.fontWeight = "bold";
-        alerta.style.animation = "fadeIn 0.3s ease";
-        document.querySelector(".register-box").prepend(alerta);
-    }
-
-    alerta.textContent = mensaje;
-
-    // Desaparece después de 3 segundos
-    setTimeout(() => {
-        alerta.remove();
-    }, 3000);
-}
-
