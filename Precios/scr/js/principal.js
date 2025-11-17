@@ -344,7 +344,7 @@ function renderRecommendedProducts() {
                         <i class="fas fa-eye"></i> Ver Detalles
                     </button>
                     <button class="btn btn-outline btn-sm compare-product" data-id="${product.id}">
-                        <i class="fas fa-balance-scale"></i> Comparar
+                        Comparar
                     </button>
                 </div>
             </div>
@@ -405,7 +405,7 @@ function showProductDetails(productId) {
                 </div>
                 <div class="product-detail-actions">
                     <button class="btn btn-primary add-to-comparison" data-id="${product.id}">
-                        <i class="fas fa-balance-scale"></i> Agregar a comparación
+                        Agregar a comparación
                     </button>
                     <button class="btn btn-outline">
                         <i class="fas fa-shopping-cart"></i> Comprar ahora

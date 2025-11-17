@@ -28,7 +28,6 @@
     background-color: var(--secondary);
     color: white;
 }
-
 .btn-secondary:hover {
     background-color: #27ae60;
 }

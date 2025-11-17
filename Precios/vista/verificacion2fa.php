@@ -158,5 +158,6 @@ $qrCodeBase64 = base64_encode($result->getString());
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
+    <script src="../scr/js/principal.js"></script>
 </body>
 </html>

@@ -373,7 +373,11 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
 }
-
+/* Solo para los enlaces dentro de .categories-grid */
+.categories-grid a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
 .recommendations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
