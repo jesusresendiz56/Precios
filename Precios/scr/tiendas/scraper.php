@@ -1,360 +1,304 @@
-<?php
-header('Content-Type: application/json; charset=utf-8');
-error_reporting(0);
-
-function enviarJSON($data) {
-    echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-    exit;
-}
-
-class ProductoScraper {
-    private $eliminarDuplicados = false;
-
-    // Busca todos los archivos JSON de una tienda
-    private function obtenerArchivosJSON($tienda) {
-        $archivos = [];
-        $patron = "data/{$tienda}_*.json";
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar Todas las Tiendas</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh; 
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #ff6b00;
+        }
+        h1 { color: #333; font-size: 2em; }
+        .btn-volver {
+            padding: 12px 24px;
+            background: #666;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn-volver:hover {
+            background: #555;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .info-box {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 5px solid #ff6b00;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .producto-buscado {
+            color: #ff6b00;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .comparacion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .tienda-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 5px solid;
+            transition: all 0.3s;
+        }
+        .tienda-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .walmart-section { 
+            border-color: #0071ce;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+        }
+        .chedraui-section { 
+            border-color: #ed1c24;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffebee 100%);
+        }
+        .soriana-section { 
+            border-color: #00a94f;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);
+        }
+        .tienda-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .tienda-icono { font-size: 2em; margin-right: 12px; }
+        .tienda-titulo { font-size: 1.4em; font-weight: bold; }
+        .walmart-titulo { color: #0071ce; }
+        .chedraui-titulo { color: #ed1c24; }
+        .soriana-titulo { color: #00a94f; }
+        .productos-lista {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 12px;
+            background: white;
+        }
+        .productos-lista::-webkit-scrollbar { width: 8px; }
+        .productos-lista::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+        .productos-lista::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+        .productos-lista::-webkit-scrollbar-thumb:hover { background: #555; }
+        .producto-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f8f9fa;
+            transition: all 0.2s;
+        }
+        .producto-item:hover {
+            background: #f8f9fa;
+            padding-left: 8px;
+            border-radius: 4px;
+        }
+        .producto-item:last-child { border-bottom: none; }
+        .producto-nombre {
+            font-size: 0.9em;
+            flex: 1;
+            margin-right: 15px;
+            color: #333;
+        }
+        .producto-precio {
+            font-weight: bold;
+            font-size: 1em;
+            white-space: nowrap;
+        }
+        .walmart-precio { color: #0071ce; }
+        .chedraui-precio { color: #ed1c24; }
+        .soriana-precio { color: #00a94f; }
+        .loading { text-align: center; padding: 60px; }
+        .spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #ff6b00;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .error {
+            background: #fee;
+            color: #c33;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #c33;
+        }
+        @media (max-width: 1200px) {
+            .comparacion-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            .header { flex-direction: column; gap: 15px; text-align: center; }
+            h1 { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚖️ Comparar Todas las Tiendas</h1>
+            <a href="../index.php" class="btn-volver">← Volver al Inicio</a>
+        </div>
         
-        foreach (glob($patron) as $archivo) {
-            if (file_exists($archivo)) {
-                $archivos[] = $archivo;
+        <div class="info-box">
+            <strong>🔍 Producto buscado:</strong> 
+            <span class="producto-buscado" id="producto-buscado">Cargando...</span>
+        </div>
+        
+        <div id="comparacion-resultados">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>⏳ Comparando precios entre todas las tiendas...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            const termino = localStorage.getItem('terminoBusqueda') || 'papel higienico';
+            document.getElementById('producto-buscado').textContent = termino;
+            compararTodasTiendas(termino);
+        });
+        
+        async function compararTodasTiendas(termino) {
+            try {
+                const formData = new FormData();
+                formData.append('buscar', '1');
+                formData.append('termino', termino);
+                
+                const response = await fetch('../scraper.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}`);
+                }
+                
+                mostrarComparacionCompleta(data);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('comparacion-resultados').innerHTML = `
+                    <div class="error">
+                        <strong>❌ Error al comparar productos:</strong><br>
+                        ${error.message}
+                    </div>
+                `;
             }
         }
         
-        return $archivos;
-    }
-
-    public function scrapearWalmart($termino) {
-        $archivos = $this->obtenerArchivosJSON('walmart');
-        
-        if (empty($archivos)) {
-            return ['error' => 'No se encontraron archivos JSON de Walmart'];
-        }
-
-        $todosLosProductos = [];
-        $totalEnJson = 0;
-        $sinPrecio = 0;
-        $duplicados = 0;
-        $sinStock = 0;
-        $archivosConsultados = 0;
-
-        foreach ($archivos as $archivo) {
-            $json = file_get_contents($archivo);
-            $data = json_decode($json, true);
+        function mostrarComparacionCompleta(data) {
+            const resultados = document.getElementById('comparacion-resultados');
             
-            if ($data === null) continue;
-            
-            $resultado = $this->procesarJSONWalmart($data, $termino);
-            
-            $todosLosProductos = array_merge($todosLosProductos, $resultado['productos']);
-            $totalEnJson += $resultado['total_en_json'];
-            $sinPrecio += $resultado['sin_precio'];
-            $duplicados += $resultado['duplicados'];
-            $sinStock += $resultado['sin_stock'];
-            $archivosConsultados++;
-        }
-
-        return [
-            'productos' => $todosLosProductos,
-            'total_encontrados' => count($todosLosProductos),
-            'total_en_json' => $totalEnJson,
-            'sin_precio' => $sinPrecio,
-            'duplicados_eliminados' => $duplicados,
-            'sin_stock' => $sinStock,
-            'archivos_consultados' => $archivosConsultados
-        ];
-    }
-
-    public function scrapearChedraui($termino) {
-        $archivos = $this->obtenerArchivosJSON('chedraui');
-        
-        if (empty($archivos)) {
-            return ['error' => 'No se encontraron archivos JSON de Chedraui'];
-        }
-
-        $todosLosProductos = [];
-        $totalEnJson = 0;
-        $sinPrecio = 0;
-        $duplicados = 0;
-
-        foreach ($archivos as $archivo) {
-            $json = file_get_contents($archivo);
-            $data = json_decode($json, true);
-            
-            if ($data === null) continue;
-            
-            $resultado = $this->procesarJSONChedraui($data);
-            
-            $todosLosProductos = array_merge($todosLosProductos, $resultado['productos']);
-            $totalEnJson += $resultado['total_en_json'];
-            $sinPrecio += $resultado['sin_precio'];
-            $duplicados += $resultado['duplicados'];
-        }
-
-        return [
-            'productos' => $todosLosProductos,
-            'total_encontrados' => count($todosLosProductos),
-            'total_en_json' => $totalEnJson,
-            'sin_precio' => $sinPrecio,
-            'duplicados_eliminados' => $duplicados
-        ];
-    }
-
-    public function scrapearSoriana($termino) {
-        $archivos = $this->obtenerArchivosJSON('soriana');
-        
-        if (empty($archivos)) {
-            return ['error' => 'No se encontraron archivos JSON de Soriana'];
-        }
-
-        $todosLosProductos = [];
-        $totalEnJson = 0;
-        $sinPrecio = 0;
-
-        foreach ($archivos as $archivo) {
-            $json = file_get_contents($archivo);
-            $data = json_decode($json, true);
-            
-            if ($data === null || !is_array($data)) continue;
-
-            foreach ($data as $item) {
-                $totalEnJson++;
-
-                $precioString = isset($item['precio']) ? $item['precio'] : '';
-                $precio = $this->extraerPrecio($precioString);
-                
-                if ($precio <= 0) {
-                    $sinPrecio++;
-                    continue;
+            const tiendas = {
+                'walmart': { 
+                    productos: data.walmart || [], 
+                    nombre: 'Walmart', 
+                    color: '#0071ce', 
+                    icono: '🪙' 
+                },
+                'chedraui': { 
+                    productos: data.chedraui || [], 
+                    nombre: 'Chedraui', 
+                    color: '#ed1c24', 
+                    icono: '🛒' 
+                },
+                'soriana': { 
+                    productos: data.soriana || [], 
+                    nombre: 'Soriana', 
+                    color: '#00a94f', 
+                    icono: '🬠' 
                 }
-
-                $precioAntes = 0;
-                if (isset($item['precio_tachado']) && !empty($item['precio_tachado'])) {
-                    $precioAntes = $this->extraerPrecio($item['precio_tachado']);
+            };
+            
+            const todosProductos = [
+                ...tiendas.walmart.productos, 
+                ...tiendas.chedraui.productos, 
+                ...tiendas.soriana.productos
+            ];
+            
+            if (todosProductos.length === 0) {
+                resultados.innerHTML = '<div class="error">No se encontraron productos en ninguna tienda</div>';
+                return;
+            }
+            
+            let html = '<div class="comparacion-grid">';
+            
+            for (const [key, tienda] of Object.entries(tiendas)) {
+                const productos = tienda.productos;
+                
+                html += `
+                    <div class="tienda-section ${key}-section">
+                        <div class="tienda-header">
+                            <span class="tienda-icono">${tienda.icono}</span>
+                            <span class="tienda-titulo ${key}-titulo">${tienda.nombre}</span>
+                        </div>
+                `;
+                
+                if (!Array.isArray(productos) || productos.length === 0) {
+                    html += `<p style="color: #999; text-align: center; padding: 20px;">No se encontraron productos</p>`;
                 } else {
-                    $precioAntes = $precio * 1.1;
+                    html += `<div class="productos-lista">`;
+                    
+                    productos.forEach(prod => {
+                        html += `
+                            <div class="producto-item">
+                                <div class="producto-nombre">${prod.nombre}</div>
+                                <div class="producto-precio ${key}-precio">$${prod.precio.toFixed(2)}</div>
+                            </div>
+                        `;
+                    });
+                    
+                    html += `</div>`;
                 }
-
-                $todosLosProductos[] = [
-                    'nombre' => $item['nombre'] ?? 'Sin nombre',
-                    'precio' => $precio,
-                    'precio_antes' => $precioAntes,
-                    'tienda' => 'Soriana',
-                    'categoria' => $this->detectarCategoria($item['nombre'] ?? ''),
-                    'marca' => '',
-                    'imagen' => $item['imagen'] ?? '',
-                    'url' => 'https://www.soriana.com' . ($item['href'] ?? ''),
-                    'rating' => rand(40, 50) / 10,
-                    'reviews' => rand(10, 150),
-                    'disponibilidad' => 'Disponible',
-                    'vendedor' => 'Soriana',
-                    'id' => 'soriana_' . $totalEnJson
-                ];
+                
+                html += `</div>`;
             }
+            
+            html += '</div>';
+            resultados.innerHTML = html;
         }
-
-        return [
-            'productos' => $todosLosProductos,
-            'total_encontrados' => count($todosLosProductos),
-            'total_en_json' => $totalEnJson,
-            'sin_precio' => $sinPrecio,
-            'duplicados_eliminados' => 0
-        ];
-    }
-
-    private function detectarCategoria($nombre) {
-        $nombre = strtolower($nombre);
-        
-        if (strpos($nombre, 'papel') !== false || strpos($nombre, 'higienico') !== false) {
-            return '🧻 Papel Higiénico';
-        }
-        if (strpos($nombre, 'refresco') !== false || strpos($nombre, 'coca') !== false || strpos($nombre, 'pepsi') !== false) {
-            return '🥤 Refrescos';
-        }
-        if (strpos($nombre, 'leche') !== false || strpos($nombre, 'yogurt') !== false) {
-            return '🥛 Lácteos';
-        }
-        
-        return '🛒 Otros Productos';
-    }
-
-    private function extraerPrecio($precioString) {
-        if (empty($precioString)) {
-            return 0;
-        }
-
-        $precioString = trim($precioString);
-        
-        if (preg_match('/\$?(\d+\.\d+)/', $precioString, $matches)) {
-            return floatval($matches[1]);
-        }
-        
-        if (preg_match('/\$?(\d+)/', $precioString, $matches)) {
-            return floatval($matches[1]);
-        }
-        
-        return 0;
-    }
-
-    private function procesarJSONWalmart($data, $termino = '') {
-        $productos = [];
-        $productosUnicos = [];
-        $totalEnJson = 0;
-        $sinPrecio = 0;
-        $duplicados = 0;
-        $sinStock = 0;
-
-        if (!isset($data['search_results'])) {
-            return [
-                'productos' => [], 'total_en_json' => 0, 'sin_precio' => 0, 'duplicados' => 0, 'sin_stock' => 0
-            ];
-        }
-
-        foreach ($data['search_results'] as $bloque) {
-            if (!isset($bloque['item']) || !is_array($bloque['item'])) continue;
-
-            foreach ($bloque['item'] as $item) {
-                $totalEnJson++;
-                
-                // FILTRADO MEJORADO - Verificar disponibilidad
-                $disponibilidad = strtolower($item['availability_status'] ?? '');
-                $estadosNoDisponibles = [
-                    'out of stock',
-                    'no disponible', 
-                    'agotado',
-                    'sin stock',
-                    'no hay stock'
-                ];
-                
-                $estaDisponible = true;
-                foreach ($estadosNoDisponibles as $estado) {
-                    if (strpos($disponibilidad, $estado) !== false) {
-                        $sinStock++;
-                        $estaDisponible = false;
-                        break;
-                    }
-                }
-                
-                if (!$estaDisponible) {
-                    continue; // Saltar productos sin stock
-                }
-                
-                // Filtrar por término de búsqueda
-                $nombre = $item['title'] ?? '';
-                $marca = $item['brand'] ?? '';
-                if (!empty($termino) && !$this->coincideTermino($nombre . ' ' . $marca, $termino)) {
-                    continue;
-                }
-                
-                $idProducto = isset($item['usItemId']) ? $item['usItemId'] : md5($item['title'] ?? $totalEnJson);
-                if ($this->eliminarDuplicados && isset($productosUnicos[$idProducto])) { $duplicados++; continue; }
-
-                $precioString = $item['current_price'] ?? '';
-                $precio = $this->extraerPrecio($precioString);
-                if ($precio <= 0) { $sinPrecio++; continue; }
-
-                $categoria = $this->detectarCategoria($item['title'] ?? '');
-
-                $producto = [
-                    'nombre' => $item['title'] ?? 'Sin nombre',
-                    'precio' => $precio,
-                    'precio_antes' => isset($item['before_price']) ? $this->extraerPrecio($item['before_price']) : 0,
-                    'tienda' => 'Walmart',
-                    'categoria' => $categoria,
-                    'marca' => $item['brand'] ?? '',
-                    'imagen' => $item['thumbnail'] ?? '',
-                    'url' => 'https://www.walmart.com.mx' . ($item['canonicalUrl'] ?? ''),
-                    'rating' => $item['rating'] ?? null,
-                    'reviews' => $item['review_count'] ?? 0,
-                    'disponibilidad' => $item['availability_status'] ?? '',
-                    'vendedor' => $item['seller_name'] ?? 'Walmart',
-                    'id' => $item['id'] ?? ''
-                ];
-                $productos[] = $producto;
-                if ($this->eliminarDuplicados) $productosUnicos[$idProducto] = true;
-            }
-        }
-
-        return [
-            'productos' => $productos, 
-            'total_en_json' => $totalEnJson, 
-            'sin_precio' => $sinPrecio, 
-            'duplicados' => $duplicados,
-            'sin_stock' => $sinStock
-        ];
-    }
-
-    private function procesarJSONChedraui($data) {
-        $productos = [];
-        $productosUnicos = [];
-        $totalEnJson = 0;
-        $sinPrecio = 0;
-        $duplicados = 0;
-
-        if (!isset($data['productos']) || !is_array($data['productos'])) {
-            return ['productos' => [], 'total_en_json' => 0, 'sin_precio' => 0, 'duplicados' => 0];
-        }
-
-        foreach ($data['productos'] as $item) {
-            $totalEnJson++;
-            $idProducto = $item['sku'] ?? 'id_' . $totalEnJson;
-            if ($this->eliminarDuplicados && isset($productosUnicos[$idProducto])) { $duplicados++; continue; }
-
-            $precio = isset($item['precio']) ? floatval($item['precio']) : 0;
-            if ($precio <= 0) { $sinPrecio++; continue; }
-
-            $precioAntes = isset($item['precio_anterior']) && $item['precio_anterior'] ? floatval($item['precio_anterior']) : $precio * 1.15;
-            $marca = $item['marca'] ?? '';
-            $categoria = $this->detectarCategoria($item['nombre'] ?? '');
-
-            $producto = [
-                'nombre' => $item['nombre'] ?? 'Sin nombre',
-                'precio' => $precio,
-                'precio_antes' => $precioAntes,
-                'tienda' => 'Chedraui',
-                'categoria' => $categoria,
-                'marca' => $marca,
-                'imagen' => $item['imagen'] ?? '',
-                'url' => $item['url_producto'] ?? '',
-                'rating' => rand(40, 50) / 10,
-                'reviews' => rand(50, 300),
-                'disponibilidad' => $item['disponibilidad'] ?? 'Disponible',
-                'vendedor' => 'Chedraui',
-                'id' => $idProducto
-            ];
-            $productos[] = $producto;
-            if ($this->eliminarDuplicados) $productosUnicos[$idProducto] = true;
-        }
-
-        return ['productos' => $productos, 'total_en_json' => $totalEnJson, 'sin_precio' => $sinPrecio, 'duplicados' => $duplicados];
-    }
-
-    private function coincideTermino($texto, $termino) {
-        return stripos($texto, $termino) !== false;
-    }
-
-    public function buscarEnTodasLasTiendas($termino) {
-        $walmart = $this->scrapearWalmart($termino);
-        $chedraui = $this->scrapearChedraui($termino);
-        $soriana = $this->scrapearSoriana($termino);
-
-        return [
-            'walmart' => $walmart['productos'] ?? [],
-            'walmart_info' => $walmart,
-            'chedraui' => $chedraui['productos'] ?? [],
-            'chedraui_info' => $chedraui,
-            'soriana' => $soriana['productos'] ?? [],
-            'soriana_info' => $soriana
-        ];
-    }
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['buscar'])) {
-    $termino = $_POST['termino'] ?? '';
-    if (empty($termino)) enviarJSON(['error' => 'Debes ingresar un término']);
-    $scraper = new ProductoScraper();
-    enviarJSON($scraper->buscarEnTodasLasTiendas($termino));
-}
-
-enviarJSON(['status' => 'ok', 'message' => 'Scraper multi-archivo funcionando - Busca todos los JSON disponibles']);
-?>
+    </script>
+</body>
+</html>
