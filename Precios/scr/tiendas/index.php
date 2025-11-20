@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🛒 Comparador de Precios - México</title>
+    <title>Comparador de Precios - Tiendas</title>
     <style>
         * {
             margin: 0;
@@ -12,375 +12,291 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
         
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-        }
-        
-        /* Header con buscador */
-        .header {
             background: white;
             border-radius: 15px;
             padding: 30px;
-            margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         
         h1 {
             text-align: center;
             color: #333;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-        }
-        
-        .buscador {
-            max-width: 800px;
-            margin: 0 auto;
+            margin-bottom: 30px;
+            font-size: 2.2em;
         }
         
         .search-box {
             display: flex;
             gap: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         
-        .search-input {
+        input[type="text"] {
             flex: 1;
-            padding: 15px 20px;
-            font-size: 1.1em;
+            min-width: 300px;
+            padding: 12px 15px;
             border: 2px solid #ddd;
-            border-radius: 10px;
-            transition: all 0.3s;
-        }
-        
-        .search-input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-radius: 8px;
+            font-size: 16px;
         }
         
         .btn-buscar {
-            padding: 15px 40px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 12px 25px;
+            background: #667eea;
             color: white;
             border: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            font-weight: bold;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.3s;
+            font-size: 16px;
+            font-weight: bold;
         }
         
         .btn-buscar:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-        
-        .sugerencias {
-            text-align: center;
-            color: #666;
-            font-size: 0.9em;
-        }
-        
-        .sugerencias span {
-            display: inline-block;
-            background: #f0f0f0;
-            padding: 5px 12px;
-            margin: 5px;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .sugerencias span:hover {
-            background: #667eea;
-            color: white;
-        }
-        
-        /* Sección de tiendas */
-        .tiendas-section {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .section-title {
-            font-size: 1.8em;
-            color: #333;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            background: #5568d3;
         }
         
         .tiendas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
+            margin-top: 30px;
         }
         
         .tienda-card {
-            border-radius: 12px;
+            background: #f8f9fa;
+            border-radius: 10px;
             padding: 25px;
             text-align: center;
             cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .tienda-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%);
-            z-index: 1;
-        }
-        
-        .tienda-card > * {
-            position: relative;
-            z-index: 2;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid transparent;
         }
         
         .tienda-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .tienda-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .tienda-card h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .tienda-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .btn-tienda {
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
         }
         
         .walmart-card {
-            background: linear-gradient(135deg, #0071ce 0%, #004c91 100%);
+            border-color: #0071ce;
+        }
+        
+        .walmart-card .btn-tienda {
+            background: #0071ce;
         }
         
         .chedraui-card {
-            background: linear-gradient(135deg, #ed1c24 0%, #b01018 100%);
+            border-color: #ed1c24;
+        }
+        
+        .chedraui-card .btn-tienda {
+            background: #ed1c24;
         }
         
         .soriana-card {
-            background: linear-gradient(135deg, #00a94f 0%, #007a38 100%);
+            border-color: #00a94f;
+        }
+        
+        .soriana-card .btn-tienda {
+            background: #00a94f;
         }
         
         .comparar-card {
-            background: linear-gradient(135deg, #ff6b00 0%, #cc5500 100%);
+            border-color: #ff6b00;
+            background: linear-gradient(135deg, #fff, #fff8f0);
         }
         
-        .tienda-icono {
-            font-size: 3em;
-            margin-bottom: 10px;
+        .comparar-card .btn-tienda {
+            background: #ff6b00;
         }
         
-        .tienda-nombre {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .tienda-descripcion {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
-        
-        /* Categorías populares */
-        .categorias-section {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .categorias-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        
-        .categoria-btn {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border: none;
-            border-radius: 10px;
-            padding: 20px;
-            cursor: pointer;
-            transition: all 0.3s;
+        .loading {
             text-align: center;
+            padding: 30px;
+            display: none;
         }
         
-        .categoria-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
         }
         
-        .categoria-icono {
-            font-size: 2em;
-            display: block;
-            margin-bottom: 8px;
-        }
-        
-        .categoria-nombre {
-            font-weight: bold;
-            font-size: 1em;
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em;
+            .container {
+                padding: 20px;
             }
             
             .search-box {
                 flex-direction: column;
             }
             
-            .tiendas-grid, .categorias-grid {
-                grid-template-columns: 1fr;
+            input[type="text"] {
+                min-width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header con buscador -->
-        <div class="header">
-            <h1>🛒 Comparador de Precios</h1>
-            <div class="buscador">
-                <div class="search-box">
-                    <input 
-                        type="text" 
-                        class="search-input" 
-                        id="busqueda" 
-                        placeholder="¿Qué producto buscas? Ej: leche, arroz, shampoo..."
-                    >
-                    <button class="btn-buscar" onclick="buscarEnTodasTiendas()">
-                        🔍 Buscar
-                    </button>
-                </div>
-                <div class="sugerencias">
-                    <strong>Sugerencias:</strong>
-                    <span onclick="buscarRapido('papel higiénico')">🧻 Papel</span>
-                    <span onclick="buscarRapido('leche')">🥛 Leche</span>
-                    <span onclick="buscarRapido('arroz')">🍚 Arroz</span>
-                    <span onclick="buscarRapido('detergente')">🧼 Detergente</span>
-                    <span onclick="buscarRapido('aceite')">🫗 Aceite</span>
-                </div>
-            </div>
+        <h1>🛒 Comparador de Precios</h1>
+        
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="termino" 
+                placeholder="¿Qué producto estás buscando? Ejemplo: leche, pan, arroz..."
+                value="papel higienico"
+            >
+            <button class="btn-buscar" onclick="buscarEnTodas()">Buscar en Todas</button>
         </div>
         
-        <!-- Sección de tiendas -->
-        <div class="tiendas-section">
-            <h2 class="section-title">🏪 Explora por Tienda</h2>
-            <div class="tiendas-grid">
-                <a href="pages/tienda-walmart.php" class="tienda-card walmart-card">
-                    <div class="tienda-icono">🟦</div>
-                    <div class="tienda-nombre">Walmart</div>
-                    <div class="tienda-descripcion">Ver todos los productos de Walmart</div>
-                </a>
-                
-                <a href="pages/tienda-chedraui.php" class="tienda-card chedraui-card">
-                    <div class="tienda-icono">🟥</div>
-                    <div class="tienda-nombre">Chedraui</div>
-                    <div class="tienda-descripcion">Ver todos los productos de Chedraui</div>
-                </a>
-                
-                <a href="pages/tienda-soriana.php" class="tienda-card soriana-card">
-                    <div class="tienda-icono">🟩</div>
-                    <div class="tienda-nombre">Soriana</div>
-                    <div class="tienda-descripcion">Ver todos los productos de Soriana</div>
-                </a>
-                
-                <a href="pages/comparar-todos.php" class="tienda-card comparar-card">
-                    <div class="tienda-icono">⚖️</div>
-                    <div class="tienda-nombre">Comparar Todas</div>
-                    <div class="tienda-descripcion">Compara precios entre todas las tiendas</div>
-                </a>
-            </div>
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Buscando productos...</p>
         </div>
         
-        <!-- Categorías populares -->
-        <div class="categorias-section">
-            <h2 class="section-title">📦 Categorías Populares</h2>
-            <div class="categorias-grid">
-                <button class="categoria-btn" onclick="buscarRapido('papel higiénico')">
-                    <span class="categoria-icono">🧻</span>
-                    <span class="categoria-nombre">Papel Higiénico</span>
+        <div class="tiendas-grid">
+            <!-- Walmart -->
+            <div class="tienda-card walmart-card" onclick="irATienda('walmart')">
+                <div class="tienda-icon">🏪</div>
+                <h2>Walmart</h2>
+                <p>Busca productos específicos en Walmart</p>
+                <button class="btn-tienda" onclick="event.stopPropagation(); irATienda('walmart')">
+                    Ver Walmart
                 </button>
-                
-                <button class="categoria-btn" onclick="buscarRapido('leche')">
-                    <span class="categoria-icono">🥛</span>
-                    <span class="categoria-nombre">Lácteos</span>
+            </div>
+            
+            <!-- Chedraui -->
+            <div class="tienda-card chedraui-card" onclick="irATienda('chedraui')">
+                <div class="tienda-icon">🛒</div>
+                <h2>Chedraui</h2>
+                <p>Explora productos en Chedraui</p>
+                <button class="btn-tienda" onclick="event.stopPropagation(); irATienda('chedraui')">
+                    Ver Chedraui
                 </button>
-                
-                <button class="categoria-btn" onclick="buscarRapido('arroz')">
-                    <span class="categoria-icono">🍚</span>
-                    <span class="categoria-nombre">Despensa</span>
+            </div>
+            
+            <!-- Soriana -->
+            <div class="tienda-card soriana-card" onclick="irATienda('soriana')">
+                <div class="tienda-icon">🏬</div>
+                <h2>Soriana</h2>
+                <p>Encuentra productos en Soriana</p>
+                <button class="btn-tienda" onclick="event.stopPropagation(); irATienda('soriana')">
+                    Ver Soriana
                 </button>
-                
-                <button class="categoria-btn" onclick="buscarRapido('detergente')">
-                    <span class="categoria-icono">🧼</span>
-                    <span class="categoria-nombre">Limpieza</span>
-                </button>
-                
-                <button class="categoria-btn" onclick="buscarRapido('shampoo')">
-                    <span class="categoria-icono">🧴</span>
-                    <span class="categoria-nombre">Higiene Personal</span>
-                </button>
-                
-                <button class="categoria-btn" onclick="buscarRapido('refresco')">
-                    <span class="categoria-icono">🥤</span>
-                    <span class="categoria-nombre">Bebidas</span>
-                </button>
-                
-                <button class="categoria-btn" onclick="buscarRapido('galletas')">
-                    <span class="categoria-icono">🍪</span>
-                    <span class="categoria-nombre">Botanas</span>
-                </button>
-                
-                <button class="categoria-btn" onclick="buscarRapido('atún')">
-                    <span class="categoria-icono">🥫</span>
-                    <span class="categoria-nombre">Enlatados</span>
+            </div>
+            
+            <!-- Comparar Todos -->
+            <div class="tienda-card comparar-card" onclick="compararTodos()">
+                <div class="tienda-icon">⚖️</div>
+                <h2>Comparar Todos</h2>
+                <p>Compara precios entre todas las tiendas</p>
+                <button class="btn-tienda" onclick="event.stopPropagation(); compararTodos()">
+                    Comparar Ahora
                 </button>
             </div>
         </div>
     </div>
 
     <script>
-        // Buscar cuando se presiona Enter
-        document.getElementById('busqueda').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                buscarEnTodasTiendas();
-            }
-        });
-        
-        function buscarEnTodasTiendas() {
-            const termino = document.getElementById('busqueda').value.trim();
+        function buscarEnTodas() {
+            const termino = document.getElementById('termino').value.trim();
             
-            if (termino === '') {
-                alert('⚠️ Por favor ingresa un producto a buscar');
+            if (!termino) {
+                alert('Por favor ingresa un producto para buscar');
                 return;
             }
             
-            // Guardar el término en localStorage
+            // Guardar término en localStorage para las otras páginas
             localStorage.setItem('terminoBusqueda', termino);
             
-            // Redirigir a la página de comparación
+            // Ir directamente a comparar todos
+            compararTodos();
+        }
+        
+        function irATienda(tienda) {
+            const termino = document.getElementById('termino').value.trim();
+            
+            if (!termino) {
+                alert('Por favor ingresa un producto para buscar');
+                return;
+            }
+            
+            // Guardar término en localStorage
+            localStorage.setItem('terminoBusqueda', termino);
+            
+            // ACTUALIZADO: Redirigir a la página de la tienda en la carpeta pages/
+            window.location.href = `pages/tienda-${tienda}.php`;
+        }
+        
+        function compararTodos() {
+            const termino = document.getElementById('termino').value.trim();
+            
+            if (!termino) {
+                alert('Por favor ingresa un producto para buscar');
+                return;
+            }
+            
+            // Guardar término en localStorage
+            localStorage.setItem('terminoBusqueda', termino);
+            
+            // ACTUALIZADO: Redirigir a la página de comparación en la carpeta pages/
             window.location.href = 'pages/comparar-todos.php';
         }
         
-        function buscarRapido(termino) {
-            document.getElementById('busqueda').value = termino;
-            buscarEnTodasTiendas();
-        }
+        // Cargar término guardado si existe
+        window.addEventListener('load', function() {
+            const terminoGuardado = localStorage.getItem('terminoBusqueda');
+            if (terminoGuardado) {
+                document.getElementById('termino').value = terminoGuardado;
+            }
+        });
     </script>
 </body>
 </html>
