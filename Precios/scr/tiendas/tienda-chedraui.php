@@ -13,7 +13,7 @@
         
         body { 
             font-family: Arial, sans-serif; 
-            background: linear-gradient(135deg, #ed1c24 0%, #b01018 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh; 
             padding: 20px;
         }
@@ -54,49 +54,9 @@
         .btn-volver:hover {
             background: #555;
         }
-
-        .buscador-interno {
-            background: #fff0f0;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 4px solid #ed1c24;
-        }
-        
-        .search-box {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .search-input {
-            flex: 1;
-            padding: 12px;
-            font-size: 1em;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-        }
-        
-        .search-input:focus {
-            outline: none;
-            border-color: #ed1c24;
-        }
-        
-        .btn-buscar {
-            padding: 12px 30px;
-            background: #ed1c24;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        
-        .btn-buscar:hover {
-            background: #c41018;
-        }
         
         .info-box {
-            background: #fff0f0;
+            background: #f0f8ff;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 20px;
@@ -151,35 +111,11 @@
             padding: 15px;
             background: white;
             transition: transform 0.3s;
-            display: flex;
-            flex-direction: column;
         }
         
         .producto-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(237, 28, 36, 0.2);
-        }
-        
-        .producto-imagen {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            margin-bottom: 12px;
-            border-radius: 8px;
-            background: #f8f9fa;
-        }
-        
-        .producto-imagen-placeholder {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            color: #666;
-            font-size: 3em;
         }
         
         .producto-nombre {
@@ -188,7 +124,6 @@
             margin-bottom: 8px;
             font-size: 0.95em;
             line-height: 1.4;
-            min-height: 40px;
         }
         
         .producto-precio {
@@ -196,13 +131,6 @@
             font-size: 1.3em;
             font-weight: bold;
             margin: 8px 0;
-        }
-        
-        .producto-precio-anterior {
-            color: #666;
-            font-size: 0.9em;
-            text-decoration: line-through;
-            margin-bottom: 5px;
         }
         
         .producto-tienda {
@@ -219,33 +147,6 @@
             color: #495057;
             display: inline-block;
             margin-top: 5px;
-        }
-        
-        .producto-rating {
-            color: #ffc107;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-        
-        .producto-link {
-            margin-top: auto;
-            padding-top: 10px;
-        }
-        
-        .btn-ver-producto {
-            display: inline-block;
-            background: #ed1c24;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 0.9em;
-            text-align: center;
-            transition: background 0.3s;
-        }
-        
-        .btn-ver-producto:hover {
-            background: #c41018;
         }
         
         .loading {
@@ -323,10 +224,6 @@
             .estadisticas {
                 flex-direction: column;
             }
-
-            .search-box {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
@@ -334,28 +231,14 @@
     <div class="container">
         <div class="header">
             <h1>🛒 Chedraui - Productos</h1>
-            <a href="../index.php" class="btn-volver">← Volver al Inicio</a>
-        </div>
-        
-        <div class="buscador-interno">
-            <div class="search-box">
-                <input 
-                    type="text" 
-                    class="search-input" 
-                    id="busqueda-chedraui" 
-                    placeholder="Buscar producto específico en Chedraui..."
-                >
-                <button class="btn-buscar" onclick="buscarEnChedraui()">🔍 Buscar</button>
-            </div>
-            <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
-                <strong>Sugerencias:</strong> papel higiénico
-            </div>
+            <a href="index.php" class="btn-volver">← Volver al Inicio</a>
         </div>
         
         <div class="info-box">
-            <strong id="info-titulo">Todos los productos de Chedraui</strong>
-            <div id="info-detalle" style="margin-top: 5px; font-size: 0.9em; color: #666;"></div>
-            <div id="estadisticas-tienda" class="estadisticas" style="display: none;"></div>
+            <strong>Producto buscado:</strong> <span id="producto-buscado">Cargando...</span>
+            <div id="estadisticas-tienda" class="estadisticas" style="display: none;">
+                <!-- Las estadísticas se llenarán con JavaScript -->
+            </div>
         </div>
         
         <div id="resultados">
@@ -367,39 +250,38 @@
     </div>
 
     <script>
-        let todosLosProductosChedraui = [];
-        let busquedaActual = '';
-
+        // Cargar productos de Chedraui al iniciar
         window.addEventListener('load', function() {
-            cargarTodosLosProductosChedraui();
-        });
-
-        document.getElementById('busqueda-chedraui').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                buscarEnChedraui();
-            }
+            const termino = localStorage.getItem('terminoBusqueda') || 'lala';
+            document.getElementById('producto-buscado').textContent = termino;
+            cargarProductosChedraui(termino);
         });
         
-        function buscarEnChedraui() {
-            const termino = document.getElementById('busqueda-chedraui').value.trim();
-            busquedaActual = termino;
-            
-            if (termino === '') {
-                mostrarProductosChedraui(todosLosProductosChedraui, 'Todos los productos');
-                return;
-            }
-            
-            localStorage.setItem('terminoBusqueda', termino);
-            filtrarProductosChedraui(termino);
-        }
-        
-        async function cargarTodosLosProductosChedraui() {
+        async function cargarProductosChedraui(termino) {
             try {
-                const response = await fetch('../data/chedraui_papel.json');
-                const data = await response.json();
+                const formData = new FormData();
+                formData.append('buscar', '1');
+                formData.append('termino', termino);
                 
-                todosLosProductosChedraui = procesarJSONChedraui(data);
-                mostrarProductosChedraui(todosLosProductosChedraui, 'Todos los productos');
+                const response = await fetch('scraper.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const text = await response.text();
+                let data;
+                
+                try {
+                    data = JSON.parse(text);
+                } catch (e) {
+                    throw new Error('Error en la respuesta del servidor');
+                }
+                
+                if (!response.ok) {
+                    throw new Error(`Error ${response.status}: ${response.statusText}`);
+                }
+                
+                mostrarProductosChedraui(data.chedraui || []);
                 
             } catch (error) {
                 document.getElementById('resultados').innerHTML = `
@@ -409,88 +291,25 @@
                 `;
             }
         }
-
-        function procesarJSONChedraui(data) {
-            const productos = [];
-            
-            if (!data.productos || !Array.isArray(data.productos)) return productos;
-
-            data.productos.forEach(item => {
-                const precio = item.precio ? parseFloat(item.precio) : 0;
-                if (precio <= 0) return;
-
-                const categoria = detectarCategoria(item.nombre || '');
-                const precioAntes = precio * 1.15; // Simular precio anterior
-                
-                productos.push({
-                    nombre: item.nombre || 'Sin nombre',
-                    precio: precio,
-                    precio_antes: precioAntes,
-                    tienda: 'Chedraui',
-                    categoria: categoria,
-                    marca: extraerMarca(item.nombre || ''),
-                    imagen: item.imagen || '',
-                    url: item.url ? 'https://www.chedraui.com.mx' + item.url : '',
-                    rating: Math.random() * 1 + 4, // Rating entre 4-5
-                    reviews: Math.floor(Math.random() * 250) + 10,
-                    disponibilidad: 'Disponible',
-                    vendedor: 'Chedraui'
-                });
-            });
-
-            return productos;
-        }
-
-        function detectarCategoria(nombre) {
-            nombre = nombre.toLowerCase();
-            if (nombre.includes('papel') || nombre.includes('higienico')) {
-                return '🧻 Papel Higiénico';
-            }
-            return '🛒 Otros Productos';
-        }
-
-        function extraerMarca(nombre) {
-            const marcas = ['Regio', 'Kleenex', 'Premier', 'Suavel', 'Elite', 'Cottonelle', 'Snow', 'Pétalo'];
-            for (const marca of marcas) {
-                if (nombre.includes(marca)) {
-                    return marca;
-                }
-            }
-            return '';
-        }
-
-        function filtrarProductosChedraui(termino) {
-            const terminoLower = termino.toLowerCase();
-            const productosFiltrados = todosLosProductosChedraui.filter(producto => 
-                producto.nombre.toLowerCase().includes(terminoLower) ||
-                producto.categoria.toLowerCase().includes(terminoLower) ||
-                producto.marca.toLowerCase().includes(terminoLower)
-            );
-            
-            mostrarProductosChedraui(productosFiltrados, `Resultados para: "${termino}"`);
-        }
         
-        function mostrarProductosChedraui(productos, titulo) {
+        function mostrarProductosChedraui(productos) {
             const resultados = document.getElementById('resultados');
-            document.getElementById('info-titulo').innerHTML = `<strong>${titulo}</strong>`;
             
-            if (!Array.isArray(productos) || productos.length === 0) {
-                resultados.innerHTML = '<div class="error">No se encontraron productos</div>';
-                document.getElementById('info-detalle').textContent = '0 productos encontrados';
-                document.getElementById('estadisticas-tienda').style.display = 'none';
+            if (productos.error) {
+                resultados.innerHTML = `
+                    <div class="error">
+                        ${productos.error}
+                    </div>
+                `;
                 return;
             }
             
-            // Calcular estadísticas
-            const totalProductos = productos.length;
-            const categorias = [...new Set(productos.map(p => p.categoria))];
-            const precioMin = Math.min(...productos.map(p => p.precio));
-            const precioMax = Math.max(...productos.map(p => p.precio));
-            const precioPromedio = productos.reduce((sum, p) => sum + p.precio, 0) / totalProductos;
+            if (!Array.isArray(productos) || productos.length === 0) {
+                resultados.innerHTML = '<p>No se encontraron productos en Chedraui</p>';
+                return;
+            }
             
-            mostrarEstadisticas(totalProductos, categorias.length, precioMin, precioMax, precioPromedio);
-            document.getElementById('info-detalle').textContent = `${totalProductos} productos encontrados en ${categorias.length} categorías`;
-            
+            // Agrupar productos por categoría
             const productosPorCategoria = {};
             productos.forEach(producto => {
                 const categoria = producto.categoria || '🛒 Otros Productos';
@@ -500,6 +319,17 @@
                 productosPorCategoria[categoria].push(producto);
             });
             
+            // Calcular estadísticas
+            const totalProductos = productos.length;
+            const categoriasCount = Object.keys(productosPorCategoria).length;
+            const precioMin = Math.min(...productos.map(p => p.precio));
+            const precioMax = Math.max(...productos.map(p => p.precio));
+            const precioPromedio = productos.reduce((sum, p) => sum + p.precio, 0) / totalProductos;
+            
+            // Mostrar estadísticas
+            mostrarEstadisticas(totalProductos, categoriasCount, precioMin, precioMax, precioPromedio);
+            
+            // Construir HTML con categorías
             let html = '';
             
             for (const [categoria, productosCategoria] of Object.entries(productosPorCategoria)) {
@@ -517,37 +347,20 @@
                 `;
                 
                 productosCategoria.forEach(prod => {
-                    const precioAnteriorHTML = prod.precio_antes > prod.precio ? 
-                        `<div class="producto-precio-anterior">$${prod.precio_antes.toFixed(2)}</div>` : '';
-                    
-                    const ratingHTML = prod.rating ? 
-                        `<div class="producto-rating">⭐ ${prod.rating.toFixed(1)} (${prod.reviews} reviews)</div>` : '';
-                    
-                    const imagenHTML = prod.imagen ? 
-                        `<img src="${prod.imagen}" alt="${prod.nombre}" class="producto-imagen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                         <div class="producto-imagen-placeholder" style="display:none;">📦</div>` :
-                        `<div class="producto-imagen-placeholder">📦</div>`;
-                    
-                    const linkHTML = prod.url ? 
-                        `<div class="producto-link">
-                            <a href="${prod.url}" target="_blank" class="btn-ver-producto">Ver en Chedraui</a>
-                         </div>` : '';
-                    
                     html += `
                         <div class="producto-card">
-                            ${imagenHTML}
                             <div class="producto-nombre">${prod.nombre}</div>
-                            ${precioAnteriorHTML}
                             <div class="producto-precio">$${prod.precio.toFixed(2)}</div>
                             <div class="producto-tienda">${prod.tienda}</div>
                             ${prod.marca ? `<div class="producto-marca">${prod.marca}</div>` : ''}
-                            ${ratingHTML}
-                            ${linkHTML}
                         </div>
                     `;
                 });
                 
-                html += `</div></div>`;
+                html += `
+                        </div>
+                    </div>
+                `;
             }
             
             resultados.innerHTML = html;

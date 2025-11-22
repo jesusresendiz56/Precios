@@ -13,7 +13,7 @@
         
         body { 
             font-family: Arial, sans-serif; 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ed1c24 0%, #b01018 100%);
             min-height: 100vh; 
             padding: 20px;
         }
@@ -54,9 +54,49 @@
         .btn-volver:hover {
             background: #555;
         }
+
+        .buscador-interno {
+            background: #fff0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ed1c24;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #ed1c24;
+        }
+        
+        .btn-buscar {
+            padding: 12px 30px;
+            background: #ed1c24;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .btn-buscar:hover {
+            background: #c41018;
+        }
         
         .info-box {
-            background: #f0f8ff;
+            background: #fff0f0;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 20px;
@@ -120,7 +160,6 @@
             box-shadow: 0 5px 15px rgba(237, 28, 36, 0.2);
         }
         
-        /* NUEVO: Estilos para imagen */
         .producto-imagen {
             width: 100%;
             height: 200px;
@@ -241,7 +280,7 @@
         .estadisticas {
             display: flex;
             gap: 15px;
-            margin-bottom: 20px;
+            margin-top: 15px;
             flex-wrap: wrap;
         }
         
@@ -284,6 +323,10 @@
             .estadisticas {
                 flex-direction: column;
             }
+
+            .search-box {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -294,11 +337,22 @@
             <a href="../index.php" class="btn-volver">← Volver al Inicio</a>
         </div>
         
-        <div class="info-box">
-            <strong>Producto buscado:</strong> <span id="producto-buscado">Cargando...</span>
-            <div id="estadisticas-tienda" class="estadisticas" style="display: none;">
-                <!-- Las estadísticas se llenarán con JavaScript -->
+        <div class="buscador-interno">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="busqueda-chedraui" 
+                    placeholder="Buscar producto específico en Chedraui..."
+                >
+                <button class="btn-buscar" onclick="buscarEnChedraui()">🔍 Buscar</button>
             </div>
+        </div>
+        
+        <div class="info-box">
+            <strong id="info-titulo">Todos los productos de Chedraui</strong>
+            <div id="info-detalle" style="margin-top: 5px; font-size: 0.9em; color: #666;"></div>
+            <div id="estadisticas-tienda" class="estadisticas" style="display: none;"></div>
         </div>
         
         <div id="resultados">
@@ -310,65 +364,175 @@
     </div>
 
     <script>
+        let todosLosProductosChedraui = [];
+
+        const ARCHIVOS_CHEDRAUI = [
+            'chedraui_papel.json',
+            'chedraui_refrescos.json',
+            'chedraui_lacteos.json',
+            'chedraui_arroz.json',
+            'chedraui_galletas.json',
+        ];
+
         window.addEventListener('load', function() {
-            const termino = localStorage.getItem('terminoBusqueda') || 'Papel Higiénico';
-            document.getElementById('producto-buscado').textContent = termino;
-            cargarProductosChedraui(termino);
+            cargarTodosLosProductosChedraui();
+        });
+
+        document.getElementById('busqueda-chedraui').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                buscarEnChedraui();
+            }
         });
         
-        async function cargarProductosChedraui(termino) {
-            try {
-                const formData = new FormData();
-                formData.append('buscar', '1');
-                formData.append('termino', termino);
-                
-                const response = await fetch('../scraper.php', {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                const text = await response.text();
-                let data;
-                
-                try {
-                    data = JSON.parse(text);
-                } catch (e) {
-                    throw new Error('Error en la respuesta del servidor');
-                }
-                
-                if (!response.ok) {
-                    throw new Error(`Error ${response.status}: ${response.statusText}`);
-                }
-                
-                mostrarProductosChedraui(data.chedraui || []);
-                
-            } catch (error) {
-                document.getElementById('resultados').innerHTML = `
-                    <div class="error">
-                        <strong>Error:</strong> ${error.message}
-                    </div>
-                `;
+        function buscarEnChedraui() {
+            const termino = document.getElementById('busqueda-chedraui').value.trim();
+            
+            if (termino === '') {
+                mostrarProductosChedraui(todosLosProductosChedraui, 'Todos los productos');
+                return;
             }
+            
+            filtrarProductosChedraui(termino);
         }
         
-        function mostrarProductosChedraui(productos) {
-            const resultados = document.getElementById('resultados');
-            
-            if (productos.error) {
-                resultados.innerHTML = `
-                    <div class="error">
-                        ${productos.error}
-                    </div>
-                `;
-                return;
+        async function cargarTodosLosProductosChedraui() {
+            try {
+                let todosLosProductos = [];
+
+                for (const archivo of ARCHIVOS_CHEDRAUI) {
+                    try {
+                        console.log('Intentando cargar: ../data/' + archivo);
+                        const response = await fetch('../data/' + archivo + '?v=' + Date.now());
+                        
+                        if (response.ok) {
+                            const text = await response.text();
+                            
+                            if (!text || text.trim() === '') {
+                                console.warn('⚠️ Archivo ' + archivo + ' está vacío');
+                                continue;
+                            }
+                            
+                            const data = JSON.parse(text);
+                            const productos = procesarJSONChedraui(data, archivo);
+                            todosLosProductos = todosLosProductos.concat(productos);
+                            console.log('✅ Cargados ' + productos.length + ' productos de ' + archivo);
+                        } else {
+                            console.warn('❌ Archivo ' + archivo + ' no encontrado (status: ' + response.status + ')');
+                        }
+                    } catch (error) {
+                        console.error('❌ Error cargando ' + archivo + ':', error);
+                    }
+                }
+
+                todosLosProductosChedraui = todosLosProductos;
+                console.log('📦 Total de productos cargados: ' + todosLosProductosChedraui.length);
+                
+                if (todosLosProductosChedraui.length === 0) {
+                    document.getElementById('resultados').innerHTML = 
+                        '<div class="error">' +
+                            '<strong>⚠️ Advertencia:</strong> No se encontraron productos. ' +
+                            '<br><br>' +
+                            'Verifica que los archivos JSON existan en la carpeta \'data/\' y contengan productos válidos.' +
+                        '</div>';
+                } else {
+                    mostrarProductosChedraui(todosLosProductosChedraui, 'Todos los productos');
+                }
+                
+            } catch (error) {
+                console.error('❌ Error general:', error);
+                document.getElementById('resultados').innerHTML = 
+                    '<div class="error">' +
+                        '<strong>❌ Error:</strong> ' + error.message +
+                    '</div>';
             }
+        }
+
+        function obtenerCategoriaPorArchivo(nombreArchivo) {
+            const nombre = nombreArchivo.replace('chedraui_', '').replace('.json', '').toLowerCase();
+            
+            const mapaCategorias = {
+                'refrescos': '🥤 Refrescos y Bebidas',
+                'papel': '🧻 Papel y Desechables',
+                'lacteos': '🥛 Lacteos',
+                'carnes': '🥩 Carnes y Embutidos',
+                'arroz': '🌾 arroz',
+                'limpieza': '🧼 Limpieza',
+                'galletas': '🍪 galletas',
+                
+                'despensa': '🍝 Despensa'
+            };
+            
+            return mapaCategorias[nombre] || '🛒 Otros Productos';
+        }
+
+        function procesarJSONChedraui(data, nombreArchivo) {
+            const productos = [];
+            
+            if (!data.productos || !Array.isArray(data.productos)) {
+                console.log('Estructura de JSON inválida o sin productos');
+                return productos;
+            }
+
+            const categoria = obtenerCategoriaPorArchivo(nombreArchivo);
+
+            data.productos.forEach(item => {
+                const precio = item.precio ? parseFloat(item.precio) : 0;
+                if (precio <= 0) return;
+
+                const precioAntes = precio * 1.15;
+                
+                productos.push({
+                    nombre: item.nombre || 'Sin nombre',
+                    precio: precio,
+                    precio_antes: precioAntes,
+                    tienda: 'Chedraui',
+                    categoria: categoria,
+                    marca: item.marca || '',
+                    imagen: item.imagen || '',
+                    url: item.url ? 'https://www.chedraui.com.mx' + item.url : '',
+                    rating: Math.random() * 1 + 4,
+                    reviews: Math.floor(Math.random() * 250) + 10,
+                    disponibilidad: 'Disponible',
+                    vendedor: 'Chedraui',
+                    presentacion: item.presentacion || ''
+                });
+            });
+
+            console.log('Procesados ' + productos.length + ' productos');
+            return productos;
+        }
+
+        function filtrarProductosChedraui(termino) {
+            const terminoLower = termino.toLowerCase();
+            const productosFiltrados = todosLosProductosChedraui.filter(producto => 
+                producto.nombre.toLowerCase().includes(terminoLower) ||
+                producto.categoria.toLowerCase().includes(terminoLower) ||
+                producto.marca.toLowerCase().includes(terminoLower)
+            );
+            
+            mostrarProductosChedraui(productosFiltrados, 'Resultados para: "' + termino + '"');
+        }
+        
+        function mostrarProductosChedraui(productos, titulo) {
+            const resultados = document.getElementById('resultados');
+            document.getElementById('info-titulo').innerHTML = '<strong>' + titulo + '</strong>';
             
             if (!Array.isArray(productos) || productos.length === 0) {
-                resultados.innerHTML = '<p>No se encontraron productos en Chedraui</p>';
+                resultados.innerHTML = '<div class="error">No se encontraron productos</div>';
+                document.getElementById('info-detalle').textContent = '0 productos encontrados';
+                document.getElementById('estadisticas-tienda').style.display = 'none';
                 return;
             }
             
-            // Agrupar productos por categoría
+            const totalProductos = productos.length;
+            const categorias = [...new Set(productos.map(p => p.categoria))];
+            const precioMin = Math.min(...productos.map(p => p.precio));
+            const precioMax = Math.max(...productos.map(p => p.precio));
+            const precioPromedio = productos.reduce((sum, p) => sum + p.precio, 0) / totalProductos;
+            
+            mostrarEstadisticas(totalProductos, categorias.length, precioMin, precioMax, precioPromedio);
+            document.getElementById('info-detalle').textContent = totalProductos + ' productos encontrados en ' + categorias.length + ' categorías';
+            
             const productosPorCategoria = {};
             productos.forEach(producto => {
                 const categoria = producto.categoria || '🛒 Otros Productos';
@@ -378,69 +542,55 @@
                 productosPorCategoria[categoria].push(producto);
             });
             
-            // Calcular estadísticas
-            const totalProductos = productos.length;
-            const categoriasCount = Object.keys(productosPorCategoria).length;
-            const precioMin = Math.min(...productos.map(p => p.precio));
-            const precioMax = Math.max(...productos.map(p => p.precio));
-            const precioPromedio = productos.reduce((sum, p) => sum + p.precio, 0) / totalProductos;
-            
-            mostrarEstadisticas(totalProductos, categoriasCount, precioMin, precioMax, precioPromedio);
-            
-            // Construir HTML con categorías
             let html = '';
             
-            for (const [categoria, productosCategoria] of Object.entries(productosPorCategoria)) {
+            for (const categoria in productosPorCategoria) {
+                const productosCategoria = productosPorCategoria[categoria];
                 const icono = categoria.split(' ')[0];
                 const nombreCategoria = categoria.replace(/^[^\w\s]*\s/, '');
                 
-                html += `
-                    <div class="categoria">
-                        <div class="categoria-header">
-                            <span class="categoria-icono">${icono}</span>
-                            <span class="categoria-titulo">${nombreCategoria}</span>
-                            <span class="categoria-cantidad">${productosCategoria.length} productos</span>
-                        </div>
-                        <div class="productos-grid">
-                `;
+                html += '<div class="categoria">' +
+                    '<div class="categoria-header">' +
+                        '<span class="categoria-icono">' + icono + '</span>' +
+                        '<span class="categoria-titulo">' + nombreCategoria + '</span>' +
+                        '<span class="categoria-cantidad">' + productosCategoria.length + ' productos</span>' +
+                    '</div>' +
+                    '<div class="productos-grid">';
                 
                 productosCategoria.forEach(prod => {
                     const precioAnteriorHTML = prod.precio_antes > prod.precio ? 
-                        `<div class="producto-precio-anterior">$${prod.precio_antes.toFixed(2)}</div>` : '';
+                        '<div class="producto-precio-anterior">$' + prod.precio_antes.toFixed(2) + '</div>' : '';
                     
                     const ratingHTML = prod.rating ? 
-                        `<div class="producto-rating">⭐ ${prod.rating.toFixed(1)} (${prod.reviews} reviews)</div>` : '';
+                        '<div class="producto-rating">⭐ ' + prod.rating.toFixed(1) + ' (' + prod.reviews + ' reviews)</div>' : '';
                     
-                    // AGREGADO: Mostrar imagen o placeholder
                     const imagenHTML = prod.imagen ? 
-                        `<img src="${prod.imagen}" alt="${prod.nombre}" class="producto-imagen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                         <div class="producto-imagen-placeholder" style="display:none;">📦</div>` :
-                        `<div class="producto-imagen-placeholder">📦</div>`;
+                        '<img src="' + prod.imagen + '" alt="' + prod.nombre + '" class="producto-imagen" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'flex\';">' +
+                        '<div class="producto-imagen-placeholder" style="display:none;">📦</div>' :
+                        '<div class="producto-imagen-placeholder">📦</div>';
                     
-                    // AGREGADO: Link para ver producto
                     const linkHTML = prod.url ? 
-                        `<div class="producto-link">
-                            <a href="${prod.url}" target="_blank" class="btn-ver-producto">Ver en Chedraui</a>
-                         </div>` : '';
+                        '<div class="producto-link">' +
+                            '<a href="' + prod.url + '" target="_blank" class="btn-ver-producto">Ver en Chedraui</a>' +
+                        '</div>' : '';
                     
-                    html += `
-                        <div class="producto-card">
-                            ${imagenHTML}
-                            <div class="producto-nombre">${prod.nombre}</div>
-                            ${precioAnteriorHTML}
-                            <div class="producto-precio">$${prod.precio.toFixed(2)}</div>
-                            <div class="producto-tienda">${prod.tienda}</div>
-                            ${prod.marca ? `<div class="producto-marca">${prod.marca}</div>` : ''}
-                            ${ratingHTML}
-                            ${linkHTML}
-                        </div>
-                    `;
+                    const presentacionHTML = prod.presentacion ? 
+                        '<div style="color: #666; font-size: 0.85em; margin-top: 5px;">' + prod.presentacion + '</div>' : '';
+                    
+                    html += '<div class="producto-card">' +
+                        imagenHTML +
+                        '<div class="producto-nombre">' + prod.nombre + '</div>' +
+                        (prod.marca ? '<div class="producto-marca">' + prod.marca + '</div>' : '') +
+                        presentacionHTML +
+                        precioAnteriorHTML +
+                        '<div class="producto-precio">$' + prod.precio.toFixed(2) + '</div>' +
+                        '<div class="producto-tienda">' + prod.tienda + '</div>' +
+                        ratingHTML +
+                        linkHTML +
+                    '</div>';
                 });
                 
-                html += `
-                        </div>
-                    </div>
-                `;
+                html += '</div></div>';
             }
             
             resultados.innerHTML = html;
@@ -449,28 +599,27 @@
         function mostrarEstadisticas(total, categorias, min, max, promedio) {
             const estadisticasDiv = document.getElementById('estadisticas-tienda');
             
-            estadisticasDiv.innerHTML = `
-                <div class="estadistica-card">
-                    <div class="estadistica-valor">${total}</div>
-                    <div class="estadistica-label">Total Productos</div>
-                </div>
-                <div class="estadistica-card">
-                    <div class="estadistica-valor">${categorias}</div>
-                    <div class="estadistica-label">Categorías</div>
-                </div>
-                <div class="estadistica-card">
-                    <div class="estadistica-valor">$${min.toFixed(2)}</div>
-                    <div class="estadistica-label">Precio Mínimo</div>
-                </div>
-                <div class="estadistica-card">
-                    <div class="estadistica-valor">$${max.toFixed(2)}</div>
-                    <div class="estadistica-label">Precio Máximo</div>
-                </div>
-                <div class="estadistica-card">
-                    <div class="estadistica-valor">$${promedio.toFixed(2)}</div>
-                    <div class="estadistica-label">Precio Promedio</div>
-                </div>
-            `;
+            estadisticasDiv.innerHTML = 
+                '<div class="estadistica-card">' +
+                    '<div class="estadistica-valor">' + total + '</div>' +
+                    '<div class="estadistica-label">Total Productos</div>' +
+                '</div>' +
+                '<div class="estadistica-card">' +
+                    '<div class="estadistica-valor">' + categorias + '</div>' +
+                    '<div class="estadistica-label">Categorías</div>' +
+                '</div>' +
+                '<div class="estadistica-card">' +
+                    '<div class="estadistica-valor">$' + min.toFixed(2) + '</div>' +
+                    '<div class="estadistica-label">Precio Mínimo</div>' +
+                '</div>' +
+                '<div class="estadistica-card">' +
+                    '<div class="estadistica-valor">$' + max.toFixed(2) + '</div>' +
+                    '<div class="estadistica-label">Precio Máximo</div>' +
+                '</div>' +
+                '<div class="estadistica-card">' +
+                    '<div class="estadistica-valor">$' + promedio.toFixed(2) + '</div>' +
+                    '<div class="estadistica-label">Precio Promedio</div>' +
+                '</div>';
             
             estadisticasDiv.style.display = 'flex';
         }

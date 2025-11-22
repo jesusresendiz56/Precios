@@ -1,0 +1,441 @@
+{
+  "productos": [
+    {
+      "nombre": "Arroz Super Extra Chedraui 900g",
+      "presentacion": "1 pieza de 900g",
+      "precio": 14.50,
+      "precio_anterior": 20.00,
+      "url": "/arroz-super-extra-chedraui-900g-3250655/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58689887/7501253655175_00.jpg",
+      "tienda": "Chedraui",
+      "promocion": "2x$30"
+    },
+    {
+      "nombre": "Arroz Verde Valle Super Extra 900g",
+      "presentacion": "1 pieza de 900g",
+      "precio": 32.50,
+      "url": "/arroz-verde-valle-super-extra-900g-3008380/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58734805/7501071301698_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz Schettino Verde 900g",
+      "presentacion": "1 pieza de 900g",
+      "precio": 18.00,
+      "url": "/arroz-schettino-verde-900g-3008386/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58701249/7501372810325_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz Schettino Extra 900g",
+      "presentacion": "1 pz de 900g",
+      "precio": 17.50,
+      "url": "/arroz-schettino-extra-900g-3801889/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58242671/7501372800913_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz Sos Grano Grueso 750g",
+      "presentacion": "1 pieza de 750g",
+      "precio": 26.50,
+      "url": "/arroz-sos-grano-grueso-750g-3750813/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58231398/7501372813364_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz SOS integral 1Kg",
+      "presentacion": "1 pieza de 1Kg",
+      "precio": 33.00,
+      "url": "/arroz-sos-integral-1kg-3008400/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58217956/7501111105095_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz con Leche Lala 4 Piezas 125g",
+      "presentacion": "4 Piezas 125g c/u",
+      "precio": 36.00,
+      "precio_anterior": 38.00,
+      "url": "/arroz-con-leche-lala-4-piezas-125g-3256700/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58190648/7501020540628_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz La Merced Super Extra 900g",
+      "presentacion": "1 pieza de 900g",
+      "precio": 20.00,
+      "url": "/arroz-la-merced-super-extra-900g-3247692/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57714678/7501047200154_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz a la Mexicana Knorr en sobre 155g",
+      "presentacion": "1 pieza de 155g",
+      "precio": 44.00,
+      "url": "/arroz-a-la-mexicana-knorr-en-sobre-155g-3089997/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58702042/7506306307209_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz Super Extra Calidad Bueno Premium 900g",
+      "presentacion": "1 pieza de 900g",
+      "precio": 29.50,
+      "url": "/arroz-super-extra-calidad-bueno-premium-900g-3321972/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58711086/7501379120052_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz Verde Valle Impegable 750g",
+      "presentacion": "1 pieza de 750g",
+      "precio": 41.50,
+      "url": "/arroz-verde-valle-impegable-750g-3008406/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57969415/7501071302558_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz Italriso Súper Extra 800g",
+      "presentacion": "1 pieza de 800g",
+      "precio": 20.00,
+      "url": "/arroz-italriso-super-extra-800g-3696184/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58691574/7501079331048_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz SOS Super Extra Rojo 900g",
+      "presentacion": "1 pieza de 900g",
+      "precio": 33.00,
+      "url": "/arroz-sos-super-extra-rojo-900g-3008327/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58218569/7501111105316_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz Precocido Verde Valle Jardinera 140g",
+      "presentacion": "1 pieza de 140g",
+      "precio": 25.00,
+      "url": "/arroz-precocido-verde-valle-jardinera-140g-3692783/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58194563/7501071300622_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz a la Primavera Knorr en Sobre 155g",
+      "presentacion": "1 pieza de 155g",
+      "precio": 37.00,
+      "url": "/arroz-a-la-primavera-knorr-en-sobre-155g-3043493/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58690419/7501005114288_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz con Leche Lala 125g",
+      "presentacion": "1 pieza de 125g",
+      "precio": 10.00,
+      "url": "/arroz-con-leche-lala-125g-3115339/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58700548/7501020532036_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz Sos Precocido 900g",
+      "presentacion": "1 pieza de 900g",
+      "precio": 42.00,
+      "url": "/arroz-sos-precocido-900g-3008392/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57546982/7501111105415_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz Precocido Verde Valle Blanco 300g",
+      "presentacion": "1 pieza de 300g",
+      "precio": 41.00,
+      "url": "/arroz-precocido-verde-valle-blanco-300g-3043457/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58196766/7501071302664_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz SOS Super Extra Para Sushi 1Kg",
+      "presentacion": "1 pieza de 1Kg",
+      "precio": 70.00,
+      "url": "/arroz-sos-super-extra-para-sushi-1kg-3008403/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57654125/7501111105101_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Arroz Verde Valle Integral 900g",
+      "presentacion": "1 pieza de 900g",
+      "precio": 42.00,
+      "url": "/arroz-verde-valle-integral-900g-3500669/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58212764/7501071300134_00.jpg",
+      "tienda": "Chedraui"
+    },
+  {
+    "nombre": "Arroz Precocido Verde valle Mexicana 140g",
+    "presentacion": "1 pieza de 140g",
+    "precio": 25.00,
+    "precio_original": 25.50,
+    "marca": "Verde Valle",
+    "url": "/arroz-precocido-verde-valle-mexicana-140g-3692784/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57664156/7501071300493_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Integral La Merced 750g",
+    "presentacion": "1 pieza de 750g",
+    "precio": 29.50,
+    "marca": "La Merced",
+    "url": "/arroz-integral-la-merced-750g-3803931/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57782960/7501047205395_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Blanco Knorr en sobre 155g",
+    "presentacion": "1 pieza de 155g",
+    "precio": 39.00,
+    "marca": "Knorr",
+    "url": "/arroz-blanco-knorr-en-sobre-155g-3089993/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58219519/7506306307186_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz a la Poblana Knorr 155g",
+    "presentacion": "1 pieza de 155g",
+    "precio": 44.00,
+    "marca": "Knorr",
+    "url": "/arroz-a-la-poblana-knorr-155g-3089996/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58702036/7501005105873_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Gourmet Basmati Santina Cultivado al Pie del Himalaya 500g",
+    "presentacion": "1 pieza de 500g",
+    "precio": 65.00,
+    "marca": "Santina",
+    "url": "/arroz-gourmet-basmati-santina-cultivado-al-pie-del-himalaya-500g-3691228/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58426918/7503017898286_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz para Preparar Sushi Satoru Grano Medio Estlo Japones 700g",
+    "presentacion": "1 pieza de 700g",
+    "precio": 53.00,
+    "marca": "Satoru",
+    "url": "/arroz-para-preparar-sushi-satoru-grano-medio-estlo-japones-700g-3273784/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58195067/7503012633196_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Gourmet con aroma a Jazmín 500g",
+    "presentacion": "1 pieza de 500g",
+    "precio": 63.00,
+    "marca": "Santina",
+    "url": "/arroz-gourmet-con-aroma-a-jazmin-500g-3394815/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58427650/7503017898279_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Sos Salvaje Mixto 170g",
+    "presentacion": "1 pieza de 170g",
+    "precio": 25.00,
+    "marca": "SOS",
+    "url": "/arroz-sos-salvaje-mixto170g-3240324/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57714607/7501111105125_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz con Tomate Knorr en sobre 155g",
+    "presentacion": "1 pieza de 155g",
+    "precio": 39.00,
+    "marca": "Knorr",
+    "url": "/arroz-con-tomate-knorr-en-sobre-155g-3089994/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58219503/7506306307223_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Precocido Verde Valle Integral 250g",
+    "presentacion": "1 pieza de 250g",
+    "precio": 42.00,
+    "precio_original": 47.00,
+    "marca": "Verde Valle",
+    "url": "/arroz-precocido-verde-valle-integral-250g-3140717/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58196431/7501071302671_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Knorr Yakimeshi 155g",
+    "presentacion": "1 pieza de 155g",
+    "precio": 45.00,
+    "marca": "Knorr",
+    "url": "/arroz-knorr-yakimeshi-155g-3769338/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58236892/7506306321625_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Sushi Verde Valle Bolsa 1 Kg",
+    "presentacion": "1 pieza de 1Kg",
+    "precio": 85.00,
+    "marca": "Verde Valle",
+    "url": "/arroz-sushi-verde-valle-bolsa-1-kg-3132623/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58211457/7501071301483_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz El Patrón Mexicano Grano Largo 500g",
+    "presentacion": "1 pieza de 500g",
+    "precio": 10.00,
+    "marca": "El Patron",
+    "url": "/arroz-el-patron-mexicano-grano-largo-500g-3774086/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57771200/7501047621027_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Morelos Grano Largo 900g",
+    "presentacion": "1 pz de 900g",
+    "precio": 24.90,
+    "marca": "Morelos",
+    "url": "/arroz-morelos-grano-largo-900g-3863802/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57812172/7501047650485_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Gourmet Arborio para Risotto 500g",
+    "presentacion": "1 pieza de 500g",
+    "precio": 68.00,
+    "marca": "Santina",
+    "url": "/arroz-gourmet-arborio-para-risotto-500g-3394819/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58216569/7503017898231_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Integral Morelos Orgánico 1kg",
+    "presentacion": "1 pieza de 1kg",
+    "precio": 91.00,
+    "marca": "Aires de Campo",
+    "url": "/arroz-integral-morelos-organico-1kg-3005716/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57546863/7502219833507_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz a la Española Knorr en sobre 155g",
+    "presentacion": "1 pieza de 155g",
+    "precio": 45.00,
+    "marca": "Knorr",
+    "url": "/arroz-a-la-espanola-knorr-en-sobre-155g-3089995/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58702027/7506306307193_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Verde Valle Grano Grueso 1kg",
+    "presentacion": "1 pieza de 1kg",
+    "precio": 48.00,
+    "marca": "Verde Valle",
+    "url": "/arroz-verde-valle-grano-grueso-1kg-3008342/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57969405/7501071307263_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Sos Grano Largo 750g",
+    "presentacion": "1 pieza de 750g",
+    "precio": 22.50,
+    "marca": "SOS",
+    "url": "/arroz-sos-grano-largo-750g-3750812/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57555809/7501372813104_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Precocido Verde Valle con Tomate 140g",
+    "presentacion": "1 pieza de 140g",
+    "precio": 20.00,
+    "marca": "Verde Valle",
+    "url": "/arroz-precocido-verde-valle-con-tomate-140g-3530069/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57670179/7501071300639_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Precocido La Merced 900g",
+    "presentacion": "900 g",
+    "precio": 28.00,
+    "marca": "La Merced",
+    "url": "/arroz-precocido-la-merced-900g-3347726/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58217149/7501047202387_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Schettino Grano Largo 750g",
+    "presentacion": "750g",
+    "precio": 22.70,
+    "marca": "Schettino",
+    "url": "/arroz-schettino-grano-largo-750g-3750609/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57555803/7501372811001_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Japonés Cocido Satoru para Hacer Sushi 210g",
+    "presentacion": "210 g",
+    "precio": 28.00,
+    "marca": "Satoru",
+    "url": "/arroz-japones-cocido-satoru-para-hacer-sushi-210g-3485254/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57666813/7503018092560_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz La Moderna Primavera 160g",
+    "presentacion": "160g",
+    "precio": 27.00,
+    "marca": "La Moderna",
+    "url": "/arroz-la-moderna-primavera-160g-3828174/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57796735/7501018315573_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Morelos Grano Grueso 900g",
+    "presentacion": "1 pz de 900g",
+    "precio": 30.00,
+    "marca": "Morelos",
+    "url": "/arroz-morelos-grano-grueso-900g-3863801/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57812173/7501047650478_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Verde Valle Super Extra 2Kg",
+    "presentacion": "1 pieza de 2Kg",
+    "precio": 74.50,
+    "marca": "Verde Valle",
+    "url": "/arroz-verde-valle-super-extra-2kg-3132622/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57980380/7501071301469_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Verde Valle Jazmín 750g",
+    "presentacion": "1 pz de 750g",
+    "precio": 59.50,
+    "marca": "Verde Valle",
+    "url": "/arroz-verde-valle-jazmin-750g-3861992/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57811515/7501071309106_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Preparado Isadora Blanco con Elote 250g",
+    "presentacion": "1 pieza de 250g",
+    "precio": 24.00,
+    "marca": "Isadora",
+    "url": "/arroz-preparado-isadora-blanco-con-elote-250g-3853915/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57809833/7501071307836_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz La Moderna Mexicana 160g",
+    "presentacion": "",
+    "precio": 25.00,
+    "marca": "La Moderna",
+    "url": "/arroz-la-moderna-mexicana-160g-3828175/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57796721/7501018315580_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Arroz Bueno Impegable 900g",
+    "presentacion": "900g",
+    "precio": 34.00,
+    "marca": "Bueno",
+    "url": "/arroz-bueno-impegable-900g-3844161/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58737556/7501379120151_00.jpg",
+    "tienda": "Chedraui"
+  
+      
+    }
+  ]
+}

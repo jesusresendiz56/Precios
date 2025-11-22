@@ -1,5 +1,5 @@
-// === DATOS DE EJEMPLO ===
 const sampleProducts = [
+    // === Electrónicos ===
     {
         id: 1,
         name: "Smartphone XYZ Pro",
@@ -13,7 +13,9 @@ const sampleProducts = [
             "128GB Almacenamiento",
             "Cámara triple 48MP",
             "Batería 4000mAh"
-        ]
+        ],
+        brand: "XYZ",
+        stores: ["TechMall", "ElectroPlus", "MegaStore"]
     },
     {
         id: 2,
@@ -28,7 +30,9 @@ const sampleProducts = [
             "16GB RAM",
             "SSD 512GB",
             "Pantalla 14\" FHD"
-        ]
+        ],
+        brand: "NovaTech",
+        stores: ["PCWorld", "MegaStore", "OfficeHub"]
     },
     {
         id: 3,
@@ -43,7 +47,9 @@ const sampleProducts = [
             "Batería 30 horas",
             "Conexión Bluetooth 5.0",
             "Resistencia al agua IPX4"
-        ]
+        ],
+        brand: "SonicGear",
+        stores: ["AudioMax", "TechMall", "ElectroPlus"]
     },
     {
         id: 4,
@@ -58,7 +64,9 @@ const sampleProducts = [
             "64GB Almacenamiento",
             "Lápiz digital incluido",
             "Batería 12 horas"
-        ]
+        ],
+        brand: "TabWorks",
+        stores: ["PCWorld", "MegaStore"]
     },
     {
         id: 5,
@@ -73,10 +81,99 @@ const sampleProducts = [
             "Smart TV con Android",
             "Sonido Dolby Atmos",
             "3 puertos HDMI"
-        ]
+        ],
+        brand: "VisionPro",
+        stores: ["ElectroPlus", "MegaStore", "HomeCenter"]
     },
     {
         id: 6,
+        name: "Consola GameStation X",
+        category: "electronics",
+        price: 449,
+        rating: 4.9,
+        image: "https://www.playstation.com/en-us/ps5/assets/img/ps5-product-shot-01-en-1920.png",
+        description: "Consola de última generación con gráficos 4K y carga ultrarrápida.",
+        features: [
+            "Procesador Zen 2",
+            "SSD 825GB",
+            "Ray tracing",
+            "Controlador háptico"
+        ],
+        brand: "GameStation",
+        stores: ["GameHub", "TechMall", "MegaStore"]
+    },
+    {
+        id: 7,
+        name: "Reloj Inteligente FitTrack",
+        category: "electronics",
+        price: 199,
+        rating: 4.4,
+        image: "https://i0.wp.com/www.androidsis.com/wp-content/uploads/2021/12/google-pixel-watch-nuevo-diseno.jpg",
+        description: "Reloj con monitoreo de salud, GPS y notificaciones inteligentes.",
+        features: [
+            "Monitor de ritmo cardíaco",
+            "GPS integrado",
+            "Resistente al agua 5ATM",
+            "Batería 3 días"
+        ],
+        brand: "FitTrack",
+        stores: ["TechMall", "SportsLife", "MegaStore"]
+    },
+    {
+        id: 8,
+        name: "Drone SkyFly Pro",
+        category: "electronics",
+        price: 799,
+        rating: 4.5,
+        image: "https://m.media-amazon.com/images/I/71zKuNICJtL._AC_SL1500_.jpg",
+        description: "Drone con cámara 4K, estabilización y vuelo autónomo.",
+        features: [
+            "Cámara 4K 30fps",
+            "Estabilización de 3 ejes",
+            "30 min de vuelo",
+            "Modo seguimiento automático"
+        ],
+        brand: "SkyFly",
+        stores: ["DroneWorld", "TechMall"]
+    },
+    {
+        id: 9,
+        name: "Impresora Multifuncional",
+        category: "electronics",
+        price: 129,
+        rating: 4.0,
+        image: "https://m.media-amazon.com/images/I/61Kv6U3uGpL._AC_SL1500_.jpg",
+        description: "Impresora láser color con escáner y copiadora, ideal para oficina.",
+        features: [
+            "Impresión/escaneo/copia",
+            "Conexión Wi-Fi",
+            "Velocidad 20ppm",
+            "Alimentador automático"
+        ],
+        brand: "PrintPro",
+        stores: ["OfficeHub", "MegaStore"]
+    },
+    {
+        id: 10,
+        name: "Proyector HD Mini",
+        category: "electronics",
+        price: 299,
+        rating: 4.1,
+        image: "https://m.media-amazon.com/images/I/71zXlnG0K5L._AC_SL1500_.jpg",
+        description: "Proyector portátil HD compatible con HDMI, USB y streaming.",
+        features: [
+            "Resolución 1080p",
+            "Brillo 3000 lúmenes",
+            "Altavoz integrado",
+            "Conectividad Bluetooth"
+        ],
+        brand: "LumaTech",
+        stores: ["TechMall", "HomeCenter"]
+    },
+
+    // === Deportes ===
+    {
+        id: 11,
         name: "Zapatillas Deportivas",
         category: "sports",
         price: 89,
@@ -88,7 +185,342 @@ const sampleProducts = [
             "Material transpirable",
             "Suela antideslizante",
             "Peso ligero"
-        ]
+        ],
+        brand: "RunFlex",
+        stores: ["SportsLife", "MegaStore", "FootHub"]
+    },
+    {
+        id: 12,
+        name: "Mancuerna Ajustable 20kg",
+        category: "sports",
+        price: 75,
+        rating: 4.6,
+        image: "https://m.media-amazon.com/images/I/71jDy2nQJlL._AC_SL1500_.jpg",
+        description: "Mancuerna regulable con sistema de cambio rápido de peso.",
+        features: [
+            "Rango 2–20kg por unidad",
+            "Ajuste en segundos",
+            "Mango ergonómico antideslizante",
+            "Material recubierto de goma"
+        ],
+        brand: "IronCore",
+        stores: ["GymPro", "SportsLife"]
+    },
+    {
+        id: 13,
+        name: "Bicicleta Urbana EcoRide",
+        category: "sports",
+        price: 420,
+        rating: 4.3,
+        image: "https://assets.bikeexchange.com/2022/10/urban-bike-1024x683.jpg",
+        description: "Bicicleta plegable ideal para ciudad, ligera y con cambio Shimano.",
+        features: [
+            "Marco de aluminio",
+            "8 velocidades Shimano",
+            "Ruedas 20\"",
+            "Plegable en 15 segundos"
+        ],
+        brand: "EcoRide",
+        stores: ["BikeWorld", "SportsLife", "GreenHub"]
+    },
+    {
+        id: 14,
+        name: "Colchoneta Yoga Eco",
+        category: "sports",
+        price: 35,
+        rating: 4.7,
+        image: "https://m.media-amazon.com/images/I/81y6YxVfPQL._AC_SL1500_.jpg",
+        description: "Colchoneta antideslizante, ecológica y extra gruesa para yoga y pilates.",
+        features: [
+            "Grosor 6mm",
+            "Material TPE biodegradable",
+            "Superficie texturizada",
+            "Libre de látex y PVC"
+        ],
+        brand: "ZenMat",
+        stores: ["SportsLife", "WellnessShop"]
+    },
+    {
+        id: 15,
+        name: "Balón de Fútbol Profesional",
+        category: "sports",
+        price: 45,
+        rating: 4.8,
+        image: "https://m.media-amazon.com/images/I/71xP4vJYDzL._AC_SL1500_.jpg",
+        description: "Balón oficial FIFA Quality Pro para entrenamiento y competición.",
+        features: [
+            "Tamaño 5",
+            "Cámara de butilo",
+            "Costuras termoselladas",
+            "Resistente a la humedad"
+        ],
+        brand: "StrikeBall",
+        stores: ["SportsLife", "FootHub", "GameHub"]
+    },
+
+    // === Hogar ===
+    {
+        id: 16,
+        name: "Aspiradora Robot CleanBot",
+        category: "home",
+        price: 249,
+        rating: 4.5,
+        image: "https://m.media-amazon.com/images/I/71zD+YV8QQL._AC_SL1500_.jpg",
+        description: "Aspiradora autónoma con mapeo láser y control por app.",
+        features: [
+            "Mapeo 3D LIDAR",
+            "Filtro HEPA",
+            "Succión 2500Pa",
+            "Programable por zonas"
+        ],
+        brand: "CleanBot",
+        stores: ["HomeCenter", "TechMall", "MegaStore"]
+    },
+    {
+        id: 17,
+        name: "Set de Ollas Antiadherentes",
+        category: "home",
+        price: 65,
+        rating: 4.2,
+        image: "https://m.media-amazon.com/images/I/71xN1FQkZqL._AC_SL1500_.jpg",
+        description: "Juego de 5 ollas con base de aluminio y recubrimiento cerámico.",
+        features: [
+            "Recubrimiento cerámico",
+            "Apto para inducción",
+            "Mango ergonómico",
+            "Lavavajillas seguro"
+        ],
+        brand: "KitchenPro",
+        stores: ["HomeCenter", "MegaStore"]
+    },
+    {
+        id: 18,
+        name: "Cafetera Espresso Automática",
+        category: "home",
+        price: 189,
+        rating: 4.6,
+        image: "https://m.media-amazon.com/images/I/71N5sJZrO+L._AC_SL1500_.jpg",
+        description: "Cafetera con molinillo integrado y sistema de leche automático.",
+        features: [
+            "15 bares de presión",
+            "Molinillo ajustable",
+            "Vaporizador automático",
+            "Depósito 1.8L"
+        ],
+        brand: "BrewMaster",
+        stores: ["HomeCenter", "MegaStore", "OfficeHub"]
+    },
+    {
+        id: 19,
+        name: "Silla Ergonómica Oficina",
+        category: "home",
+        price: 159,
+        rating: 4.4,
+        image: "https://m.media-amazon.com/images/I/71i+-V+g0QL._AC_SL1500_.jpg",
+        description: "Silla de oficina con soporte lumbar ajustable y reposabrazos 4D.",
+        features: [
+            "Reposacabezas regulable",
+            "Soporte lumbar dinámico",
+            "Base de aluminio",
+            "Ruedas silenciosas"
+        ],
+        brand: "ErgoWork",
+        stores: ["OfficeHub", "HomeCenter"]
+    },
+    {
+        id: 20,
+        name: "Lámpara Inteligente RGB",
+        category: "home",
+        price: 42,
+        rating: 4.3,
+        image: "https://m.media-amazon.com/images/I/61h+I2VhPdL._AC_SL1500_.jpg",
+        description: "Lámpara LED con control por app y sincronización con música.",
+        features: [
+            "16 millones de colores",
+            "Programación horaria",
+            "Modo atardecer/amanecer",
+            "Compatible con Alexa/Google"
+        ],
+        brand: "LumaHome",
+        stores: ["HomeCenter", "TechMall"]
+    },
+
+    // === Belleza ===
+    {
+        id: 21,
+        name: "Secador de Cabello Profesional",
+        category: "beauty",
+        price: 89,
+        rating: 4.5,
+        image: "https://m.media-amazon.com/images/I/61qz7kR+QaL._AC_SL1500_.jpg",
+        description: "Secador con tecnología iónica y 3 ajustes de temperatura y flujo.",
+        features: [
+            "Motor AC de larga vida",
+            "Tecnología iónica",
+            "Boquilla concentradora",
+            "2 años de garantía"
+        ],
+        brand: "HairPro",
+        stores: ["BeautyHub", "MegaStore"]
+    },
+    {
+        id: 22,
+        name: "Crema Hidratante Facial SPF50",
+        category: "beauty",
+        price: 28,
+        rating: 4.7,
+        image: "https://m.media-amazon.com/images/I/71JU2eX+DqL._SL1500_.jpg",
+        description: "Hidratante no grasa con protección solar y antioxidantes.",
+        features: [
+            "Factor SPF50+",
+            "Fórmula no comedogénica",
+            "Con vitamina E y ácido hialurónico",
+            "Apto para piel sensible"
+        ],
+        brand: "DermaCare",
+        stores: ["BeautyHub", "PharmaPlus", "MegaStore"]
+    },
+    {
+        id: 23,
+        name: "Plancha de Cabello Cerámica",
+        category: "beauty",
+        price: 49,
+        rating: 4.4,
+        image: "https://m.media-amazon.com/images/I/61Vf3jvGKPL._AC_SL1500_.jpg",
+        description: "Plancha con placas de cerámica y ajuste digital de temperatura.",
+        features: [
+            "Placas de turmalina",
+            "Rango 120–230°C",
+            "Cable giratorio 360°",
+            "Calentamiento en 15s"
+        ],
+        brand: "StylePro",
+        stores: ["BeautyHub", "MegaStore"]
+    },
+
+    // === Libros y Oficina ===
+    {
+        id: 24,
+        name: "Cuaderno Inteligente Reutilizable",
+        category: "office",
+        price: 32,
+        rating: 4.6,
+        image: "https://m.media-amazon.com/images/I/71K7Q4FpvzL._AC_SL1500_.jpg",
+        description: "Cuaderno con páginas borrables y app para escanear notas.",
+        features: [
+            "Tinta borrable con agua",
+            "App integrada (iOS/Android)",
+            "Cubierta impermeable",
+            "80 páginas"
+        ],
+        brand: "SmartNote",
+        stores: ["OfficeHub", "MegaStore"]
+    },
+    {
+        id: 25,
+        name: "Libro: 'Hábitos Atómicos'",
+        category: "books",
+        price: 18,
+        rating: 4.9,
+        image: "https://m.media-amazon.com/images/I/81wgcld4wxL._SL1500_.jpg",
+        description: "Guía práctica para construir buenos hábitos y romper los malos.",
+        features: [
+            "Autor: James Clear",
+            "Edición tapa dura",
+            "Incluye resúmenes al final",
+            "Traducción al español"
+        ],
+        brand: "Editorial Éxito",
+        stores: ["LibroWorld", "MegaStore", "OfficeHub"]
+    },
+    {
+        id: 26,
+        name: "Bolígrafo Premium Metal",
+        category: "office",
+        price: 22,
+        rating: 4.8,
+        image: "https://m.media-amazon.com/images/I/61xKdJ4K4eL._AC_SL1200_.jpg",
+        description: "Bolígrafo de aluminio con recarga de gel y empaque regalo incluido.",
+        features: [
+            "Cuerpo de aluminio cepillado",
+            "Recarga de gel negra",
+            "Diseño antideslizante",
+            "Empaque de regalo"
+        ],
+        brand: "InkLuxe",
+        stores: ["OfficeHub", "GiftShop"]
+    },
+
+    // === Jardín y Mascotas ===
+    {
+        id: 27,
+        name: "Comedero Automático para Mascotas",
+        category: "pets",
+        price: 69,
+        rating: 4.3,
+        image: "https://m.media-amazon.com/images/I/71F5J+VvRIL._AC_SL1500_.jpg",
+        description: "Dispensador programable con grabación de voz y batería de respaldo.",
+        features: [
+            "Programable hasta 4 comidas/día",
+            "Capacidad 4L",
+            "Batería de respaldo",
+            "Grabación de 10s de voz"
+        ],
+        brand: "PetCare",
+        stores: ["PetWorld", "MegaStore"]
+    },
+    {
+        id: 28,
+        name: "Kit de Riego Automático",
+        category: "garden",
+        price: 55,
+        rating: 4.2,
+        image: "https://m.media-amazon.com/images/I/81QZb0XySQL._AC_SL1500_.jpg",
+        description: "Sistema de goteo programable para macetas y huertos pequeños.",
+        features: [
+            "Temporizador digital 7 días",
+            "20 emisores ajustables",
+            "Fácil instalación sin herramientas",
+            "Funciona con batería o USB"
+        ],
+        brand: "GreenDrop",
+        stores: ["GreenHub", "HomeCenter"]
+    },
+
+    // === Otros ===
+    {
+        id: 29,
+        name: "Mochila Antirrobo para Laptop",
+        category: "accessories",
+        price: 59,
+        rating: 4.5,
+        image: "https://m.media-amazon.com/images/I/71uXz7+QnFL._AC_SL1500_.jpg",
+        description: "Mochila ligera con cierre oculto, puerto USB y compartimento acolchado.",
+        features: [
+            "Compartimento para laptop 15.6\"",
+            "Puerto USB externo",
+            "Material resistente al agua",
+            "Cierre trasero antirrobo"
+        ],
+        brand: "SafePack",
+        stores: ["MegaStore", "OfficeHub", "TravelGear"]
+    },
+    {
+        id: 30,
+        name: "Power Bank 20000mAh",
+        category: "accessories",
+        price: 45,
+        rating: 4.6,
+        image: "https://m.media-amazon.com/images/I/71xHRYJ7DIL._AC_SL1500_.jpg",
+        description: "Batería externa con carga rápida y 3 puertos de salida.",
+        features: [
+            "20000mAh capacidad",
+            "Carga rápida 18W",
+            "Puertos: USB-C, USB-A x2",
+            "Pantalla LED de batería"
+        ],
+        brand: "PowerMax",
+        stores: ["TechMall", "MegaStore", "TravelGear"]
     }
 ];
 
