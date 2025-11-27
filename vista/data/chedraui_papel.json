@@ -1,0 +1,410 @@
+{
+  "productos": [
+    
+ 
+  {
+    "nombre": "Papel Higiénico Chedraui Rollos Gigantes Doble Hoja 12 Rollos",
+    "presentacion": "1 pz con 12 uds",
+    "precio": 140.00,
+    "url": "/papel-higienico-chedraui-rollos-gigantes-doble-hoja-12-rollos-3362829/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58694372/7501253663897_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Regio Luxury Almond Touch 32 Rollos",
+    "presentacion": "1 pz con 32 uds",
+    "precio": 347.00,
+    "url": "/papel-higienico-regio-luxury-almond-touch-32-rollos-3451842/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58208629/7501036622868_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel higiénico Kleenex 100 años 4 Rollos",
+    "presentacion": "1 pz con 4 uds",
+    "precio": 27.50,
+    "url": "/papel-higienico-kleenex-100-anos-4-rollos-3834202/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57799158/7506425658763_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Premier Rendiplus 32 Rollos",
+    "presentacion": "1 pz con 32 uds",
+    "precio": 140.00,
+    "url": "/papel-higienico-premier-rendiplus-32-rollos-3860634/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57810870/7502247333161_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Suavel Jumbo 550 Hojas Dobles 12 Rollos",
+    "presentacion": "1 pz con 12 uds",
+    "precio": 140.00,
+    "url": "/papel-higienico-suavel-jum-pack-lav-12-rollos-3864499/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58066450/7506425661749_00.jpg",
+    "tienda": "Chedraui"
+  
+  },
+  {
+    "nombre": "Papel Higiénico Regio Expert 9 Rollos",
+    "presentacion": "1 pz con 9 uds",
+    "precio": 88.00,
+    "url": "/papel-higienico-regio-expert-9-rollos-3866438/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57814176/7501036627269_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Elite Cuidado Clásico 4 Rollos",
+    "presentacion": "1 pz con 4 uds",
+    "precio": 29.50,
+    "url": "/papel-higienico-elite-cuidado-clasico-4-rollos-3284482/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58208709/7502247335127_00.jpg",
+    "tienda": "Chedraui"
+
+  },
+  {
+    "nombre": "Papel Higiénico Biodegradable Chedraui 4 Rollos",
+    "presentacion": "1 pz con 4 uds",
+    "precio": 19.50,
+    "url": "/papel-higienico-biodegradable-chedraui-4-rollos-3806585/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58712729/7501253682799_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Chedraui Clásico 12 Rollos",
+    "presentacion": "1 pz con 12 uds",
+    "precio": 49.50,
+    "url": "/papel-higienico-chedraui-clasico-12-rollos-3744429/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58230453/7501253678273_00.jpg",
+    "tienda": "Chedraui"
+  
+  },
+  {
+    "nombre": "Papel Higiénico Kleenex Cottonelle Eco 8 Rollos",
+    "presentacion": "1 pz con 8 uds",
+    "precio": 75.00,
+    "url": "/papel-higienico-kleenex-cottonelle-eco-8-rollos-3853922/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58264859/7506425653638_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel higiénico húmedo Kleenex con 10 toallitas",
+    "presentacion": "10 toallitas",
+    "precio": 18.00,
+    "url": "/papel-higienico-humedo-kleenex-con-10-toallitas-3747403/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58230978/7506425637652_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Kleenex Cottonelle Soft 8 Rollos",
+    "presentacion": "1 pz con 8 uds",
+    "precio": 75.00,
+    "url": "/papel-higienico-kleenex-cottonelle-soft-8-rollos-3806355/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58243877/7506425654093_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Regio Almond 30% Más 8 Piezas",
+    "presentacion": "1 pz con 8 uds",
+    "precio": 60.00,
+    "url": "/papel-higienico-regio-almond-30-mas-8-piezas-3884672/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57297120/7501036627559_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Facial Quality Big 6 Rollos",
+    "presentacion": "1 pz con 6 uds",
+    "precio": 67.50,
+    "url": "/papel-higienico-facial-quality-big-6-rollos-3119845/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58430512/7501050410557_00.jpg",
+    "tienda": "Chedraui"
+  },
+    {
+  "nombre": "Papel Higiénico Regio Just-1 con 8 Rollos",
+  "presentacion": "1 pz con 8 uds",
+  "precio": 108.00,
+  "url": "/papel-higienico-regio-just-1-con-8-rollos-3451224/p",
+  "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57711053-300-300?v=638978950877470000&width=300&height=300&aspect=true",
+  "tienda": "Chedraui"
+},
+{
+  "nombre": "Papel Higiénico Regio Just-1 con 8 Rollos",
+  "presentacion": "1 pz con 8 uds",
+  "precio": 108.00,
+  "url": "/papel-higienico-regio-just-1-con-8-rollos-3451224/p",
+  "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57711053-300-300?v=638978950877470000&width=300&height=300&aspect=true",
+  "tienda": "Chedraui"
+},
+  {
+    "nombre": "Papel Higiénico Chedraui Rollos Gigantes Doble Hoja 12 Rollos",
+    "presentacion": "1 pz con 12 uds",
+    "precio": 140.00,
+    "url": "/papel-higienico-chedraui-rollos-gigantes-doble-hoja-12-rollos-3362829/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58694372-300-300?v=638990903252870000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Elite Cuidado Clásico 4 Rollos",
+    "presentacion": "1 pz con 4 uds",
+    "precio": 29.50,
+    "url": "/papel-higienico-elite-cuidado-clasico-4-rollos-3284482/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58208709-300-300?v=638983263605670000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Biodegradable Chedraui 4 Rollos",
+    "presentacion": "1 pz con 4 uds",
+    "precio": 19.50,
+    "url": "/papel-higienico-biodegradable-chedraui-4-rollos-3806585/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58712729-300-300?v=638990947792070000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Chedraui Clásico 12 Rollos",
+    "presentacion": "1 pz con 12 uds",
+    "precio": 49.50,
+    "url": "/papel-higienico-chedraui-clasico-12-rollos-3744429/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58230453-300-300?v=638983311983770000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Snow Soft Lavanda y Vainilla 12 Piezas",
+    "presentacion": "1 pz con 12 uds",
+    "precio": 55.00,
+    "url": "/papel-higienico-snow-soft-lavanda-y-vainilla-12-piezas-3875215/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57251624-300-300?v=638972953402000000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Delsey Max 4 Rollos",
+    "presentacion": "1 pz con 4 uds",
+    "precio": 9.00,
+    "url": "/papel-higienico-delsey-max-4-rollos-3755673/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57556391-300-300?v=638977995182170000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Facial Quality Big 6 Rollos",
+    "presentacion": "1 pz con 6 uds",
+    "precio": 67.50,
+    "url": "/papel-higienico-facial-quality-big-6-rollos-3119845/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58430512-300-300?v=638986055347730000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Pétalo Ultra Jumbo 16 Rollos",
+    "presentacion": "1 pz con 16 uds",
+    "precio": 82.00,
+    "url": "/papel-higienico-petalo-ultra-jumbo-16-rollos-3564171/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58734575-300-300?v=638991137889330000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Kleenex Cottonelle Elegance 18 Rollos",
+    "presentacion": "1 pz con 18 uds",
+    "precio": 130.00,
+    "url": "/papel-higienico-kleenex-cottonelle-elegance-18-rollos-3806353/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58055115-300-300?v=638980733423170000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Kleenex Cottonelle Elegance 32 Rollos",
+    "presentacion": "1 pz con 32 uds",
+    "precio": 269.00,
+    "url": "/papel-higienico-kleenex-cottonelle-elegance-32-rollos-3755669/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57758751-300-300?v=638979070623930000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Suavel 4 Rollos 325 Hojas",
+    "presentacion": "1 pz con 4 uds",
+    "precio": 25.00,
+    "url": "/papel-higienico-suavel-4-rollos-325-hojas-3733102/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58707585-300-300?v=638990935091400000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Kleenex Cottonelle Elegance 4 Rollos",
+    "presentacion": "1 pz con 4 uds",
+    "precio": 40.00,
+    "url": "/papel-higienico-kleenex-cottonelle-elegance-4-rollos-3664399/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58689638-300-300?v=638990890395930000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Suavel Esencia Floral 30 Rollos",
+    "presentacion": "1 pz con 30 uds",
+    "precio": 157.00,
+    "url": "/papel-higienico-suavel-esencia-floral-30-rollos-3733100/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58443338-300-300?v=638986082190530000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Regio Almond Touch",
+    "presentacion": "1 pz con 6 uds",
+    "precio": 30.00,
+    "url": "/papel-higienico-regio-almond-touch-3790276/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57777031-300-300?v=638979114415500000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Suavel 16 Rollos",
+    "presentacion": "1 pz con 16 uds",
+    "precio": 59.90,
+    "url": "/papel-higienico-suavel-16-rollos-3718095/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57746944-300-300?v=638979042077200000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Regio Luxury Almond Touch 18 Rollos",
+    "presentacion": "1 pz con 18 uds",
+    "precio": 150.00,
+    "url": "/papel-higienico-regio-luxury-almond-touch-18-rollos-3316070/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58687333-300-300?v=638990885012470000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Elite Dúo 12 Rollos",
+    "presentacion": "1 pz con 12 uds",
+    "precio": 75.00,
+    "url": "/papel-higienico-elite-duo-12-rollos-3567016/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58006452-300-300?v=638980621236130000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Regio Aires de Lavanda 32 Rollos",
+    "presentacion": "1 pz con 32 uds",
+    "precio": 149.00,
+    "url": "/papel-higienico-regio-aires-de-lavanda-32-rollos-3802759/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57782420-300-300?v=638979126878630000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Regio Luxury Almond 4 Piezas",
+    "presentacion": "1 pz con 4 uds",
+    "precio": 37.50,
+    "url": "/papel-higienico-regio-luxury-almond-4-piezas-3782581/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58447890-300-300?v=638986091683170000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Premier 40 Rollos",
+    "presentacion": "1 pz con 40 uds",
+    "precio": 176.00,
+    "url": "/papel-higienico-premier-40-rollos-3720165/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58187720-300-300?v=638983219567930000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Pétalo Rendimax 12 Rollos",
+    "presentacion": "1 pz con 12 uds",
+    "precio": 118.00,
+    "url": "/papel-higienico-petalo-rendimax-12-rollos-3738898/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57752930-300-300?v=638979056683930000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Premier Rendiplus 12 Rollos 300 Hojas",
+    "presentacion": "1 pz con 12 uds",
+    "precio": 93.00,
+    "url": "/papel-higienico-premier-rendiplus-12-rollos-300-hojas-3735509/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58229722-300-300?v=638983310204900000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Regio Just-1 con 12 Rollos",
+    "presentacion": "1 pz con 12 uds",
+    "precio": 208.00,
+    "url": "/papel-higienico-regio-just-1-con-12-rollos-3484639/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57999656-300-300?v=638980611625600000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Kleenex Cottonelle Soft 24 Rollos",
+    "presentacion": "1 pz con 24 uds",
+    "precio": 199.00,
+    "url": "/papel-higienico-kleenex-cottonelle-soft-24-rollos-3806356/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57784304-300-300?v=638979131001330000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Pétalo Día de Muertos Brilla en Obscuridad 6 Piezas",
+    "presentacion": "1 pz con 6 uds",
+    "precio": 24.00,
+    "url": "/papel-higienico-petalo-dia-de-muertos-brilla-en-obscuridad-6-piezas-3882716/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/56887478-300-300?v=638967000824270000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Regio Ecomax Fresh 4 Rollos",
+    "presentacion": "1 pz con 4 uds",
+    "precio": 31.00,
+    "url": "/papel-higienico-regio-ecomax-fresh-4-rollos-3797040/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58449405-300-300?v=638986094566470000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Regio Rinde+ 16 Rollos XL",
+    "presentacion": "1 pz con 16 uds",
+    "precio": 84.00,
+    "url": "/papel-higienico-regio-rinde-16-rollos-xl-3861544/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57811762-300-300?v=638979194936730000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Pétalo Balance Ultra Jumbo 400 Hojas Dobles 4 Rollos",
+    "presentacion": "1 pz con 4 uds",
+    "precio": 23.50,
+    "url": "/papel-higienico-petalo-balance-ultra-jumbo-400-hojas-dobles-4-rollos",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58068755-300-300?v=638980780820330000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Pétalo Maxi Resist 18 Rollos",
+    "presentacion": "1 pz con 18 uds",
+    "precio": 103.00,
+    "url": "/papel-higienico-petalo-maxi-resist-18-rollos",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58186312-300-300?v=638983216387230000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Pétalo Ultra Jumbo 6 Rollos",
+    "presentacion": "1 pz con 6 uds",
+    "precio": 34.50,
+    "url": "/papel-higienico-petalo-ultra-jumbo-6-rollos",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58696200-300-300?v=638990907632930000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Elite Premium Soft 18 Rollos Xl",
+    "presentacion": "1 pz con 18 uds",
+    "precio": 129.00,
+    "url": "/papel-higienico-elite-premium-soft-18-rollos-xl",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58250124-300-300?v=638983353947300000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Suavel esencia floral 40 rollos",
+    "presentacion": "1 pz con 40 uds",
+    "precio": 188.00,
+    "url": "/papel-higienico-suavel-esencia-floral-40-rollos",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58051963-300-300?v=638980723218430000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Regio Aires de Lavanda 18+6 Rollos",
+    "presentacion": "1 pz con 24 uds",
+    "precio": 105.00,
+    "url": "/papel-higienico-regio-aires-de-lavanda-18-6-rollos",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57790589-300-300?v=638979146153070000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Papel Higiénico Elite Ultra Suave 32 Rollos",
+    "presentacion": "1 pz con 32 uds",
+    "precio": 149.00,
+    "url": "/papel-higienico-elite-ultra-suave-32-rollos",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58686594-300-300?v=638990882554900000&width=300&height=300&aspect=true",
+    "tienda": "Chedraui"
+  }
+
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "productos": [
+    {
+      "nombre": "Refresco Coca-Cola Sin Azúcar 12 Piezas de 355ml c/u",
+      "presentacion": "12 piezas de 355ml c/u",
+      "precio": 120.00,
+      "url": "/refresco-coca-cola-sin-azucar-12-piezas-de-355ml-cu-3700683/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57679905/7501055356263_00.jpg?v=638978872330600000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 3L",
+      "presentacion": "1 pieza de 3L",
+      "precio": 52.00,
+      "url": "/refresco-coca-cola-original-3l-3061494/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58687306/7501055304745_00.jpg?v=638990884942200000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Sin Azúcar 3L",
+      "presentacion": "3 L",
+      "precio": 35.00,
+      "url": "/refresco-coca-cola-sin-azucar-3l-3502536/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688131/7501055329465_00.jpg?v=638990887145100000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 4 Botellas de 600ml c/u",
+      "presentacion": "4 piezas de 600ml c/u",
+      "precio": 60.00,
+      "url": "/refresco-coca-cola-original-4-botellas-de-600ml-cu-3061490/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58695061/7501055307043_00.jpg?v=638990905311930000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 12 Botellas de 355ml c/u",
+      "presentacion": "12 piezas de 355ml c/u",
+      "precio": 140.50,
+      "url": "/refresco-coca-cola-original-12-botellas-de-355ml-cu-3487236/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58000185/7501055356188_00.jpg?v=638980612254230000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola sin Azúcar 600ml",
+      "presentacion": "1 pieza de 600ml",
+      "precio": 17.50,
+      "url": "/refresco-coca-cola-sin-azucar-600ml-3062158/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688109/7501055320639_00.jpg?v=638990887100070000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 1.35L",
+      "presentacion": "1 pieza de 1.35L",
+      "precio": 25.00,
+      "url": "/refresco-coca-cola-original-135l-3663138/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58693878/7501055371655_00.jpg?v=638990901902270000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 2 Botellas De 2L",
+      "presentacion": "2 piezas de 2L c/u",
+      "precio": 67.00,
+      "url": "/refresco-coca-cola-original-2-botellas-de-2l-3061924/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58695069/7501055302222_00.jpg?v=638990905329430000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Squirt 2L",
+      "presentacion": "1 pieza de 2L",
+      "precio": 30.00,
+      "url": "/refresco-squirt-2l-3080171/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688075/7501071120077_00.jpg?v=638990887014570000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Sin Azúcar 2.5L",
+      "presentacion": "1 pieza de 2.5L",
+      "precio": 42.50,
+      "url": "/refresco-coca-cola-sin-azucar-25l-3441655/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57997106/7501055321681_00.jpg?v=638980607419500000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 2.5L",
+      "presentacion": "1 pieza de 2.5L",
+      "precio": 35.00,
+      "url": "/refresco-coca-cola-original-25l-3061492/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57974206/7501055305247_00.jpg?v=638980570821530000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Sin Azúcar 8 Latas de 235ml c/u",
+      "presentacion": "8 piezas de 235ml c/u",
+      "precio": 137.00,
+      "url": "/refresco-coca-cola-sin-azucar-8-latas-de-235ml-cu-3315566/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57988457/7501055349913_00.jpg?v=638980593021930000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 2 Botellas De 3L c/u",
+      "presentacion": "2 piezas de 3L c/u",
+      "precio": 92.00,
+      "url": "/refresco-coca-cola-original-2-botellas-de-3l-cu-3671645/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58026627/7501055372126_00.jpg?v=638980656623200000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 8 Latas de 235ml c/u",
+      "presentacion": "8 piezas de 235ml c/u",
+      "precio": 137.00,
+      "url": "/refresco-coca-cola-original-8-latas-de-235ml-cu-3315563/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57694682/7501055349425_00.jpg?v=638978911232970000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Sidral Mundet Manzana 2L",
+      "presentacion": "1 pieza de 2L",
+      "precio": 25.00,
+      "url": "/refresco-sidral-mundet-manzana-2l-3218917/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688088/7501055340002_00.jpg?v=638990887054370000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Light 8 Latas de 235ml c/u",
+      "presentacion": "8 piezas de 235ml c/u",
+      "precio": 137.00,
+      "url": "/refresco-coca-cola-light-8-latas-de-235ml-cu-3315565/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57988462/7501055349890_00.jpg?v=638980593022100000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 600ml",
+      "presentacion": "1 pieza de 600ml",
+      "precio": 18.50,
+      "url": "/refresco-coca-cola-original-600ml-3001968/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58687294/75007614_00.jpg?v=638990884911830000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola sin Azúcar 355ml",
+      "presentacion": "1 pieza de 355ml",
+      "precio": 10.50,
+      "url": "/refresco-coca-cola-sin-azucar-355ml-3441616/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688117/7501055356256_00.jpg?v=638990887116630000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Sprite Lima-Limón 3L",
+      "presentacion": "1 pieza de 3L",
+      "precio": 41.00,
+      "url": "/refresco-sprite-lima-limon-3l-3061643/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688061/7501055304806_00.jpg?v=638990886982370000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Pepsi Black sin Azúcar 355ml",
+      "presentacion": "1 pieza de 355ml",
+      "precio": 6.00,
+      "url": "/refresco-pepsi-black-sin-azucar-355ml-3607111/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58694990/7501022013861_00.jpg?v=638990905146800000",
+      "tienda": "Chedraui"
+    },
+    {
+
+      "nombre": "Refresco Pepsi Black sin Azúcar 355ml",
+      "presentacion": "1 pieza de 355ml",
+      "precio": 6.00,
+      "url": "/refresco-pepsi-black-sin-azucar-355ml-3607111/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58694990-300-300?v=638990905146800000&width=300&height=300&aspect=true",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Light 2L",
+      "presentacion": "1 pieza de 2L",
+      "precio": 38.50,
+      "url": "/refresco-coca-cola-light-2l-3061753/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57974146-300-300?v=638980570819970000&width=300&height=300&aspect=true",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 1.75L",
+      "presentacion": "1 pieza de 1.75L",
+      "precio": 32.90,
+      "url": "/refresco-coca-cola-original-175l-3061539/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688017-300-300?v=638990886852870000&width=300&height=300&aspect=true",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Squirt Toronja 3L",
+      "presentacion": "1 pieza de 3L",
+      "precio": 38.00,
+      "url": "/refresco-squirt-toronja-3l-3062070/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688067-300-300?v=638990886997670000&width=300&height=300&aspect=true",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Frutal Sprite sin Azúcar Sin Azúcar sabor Lima-Limón 355ml",
+      "presentacion": "1 pieza de 355ml",
+      "precio": 5.00,
+      "url": "/refresco-frutal-sprite-sin-azucar-sin-azucar-sabor-lima-limon-355ml-3714200/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58693844-300-300?v=638990901789870000&width=300&height=300&aspect=true",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Light 600ml",
+      "presentacion": "1 pieza de 600ml",
+      "precio": 21.00,
+      "url": "/refresco-coca-cola-light-600ml-3061760/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688104-300-300?v=638990887090800000&width=300&height=300&aspect=true",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Fresca Toronja 3L",
+      "presentacion": "1 pieza de 3L",
+      "precio": 40.00,
+      "url": "/refresco-fresca-toronja-3l-3061645/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688063-300-300?v=638990886989070000&width=300&height=300&aspect=true",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 12 Latas de 355ml c/u",
+      "presentacion": "12 piezas de 355 c/u",
+      "precio": 229.00,
+      "url": "/refresco-coca-cola-original-12-latas-de-355ml-cu-3061478/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58763903-300-300?v=638991704056570000&width=300&height=300&aspect=true",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 355ml",
+      "presentacion": "1 pieza de 355ml",
+      "precio": 20.50,
+      "url": "/refresco-coca-cola-original-355ml-3525604/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688040-300-300?v=638990886926670000&width=300&height=300&aspect=true",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Original 6 botellas de 600ml c/u",
+      "presentacion": "6 piezas de 600ml c/u",
+      "precio": 116.50,
+      "url": "/refresco-coca-cola-original-6-botellas-de-600ml-cu-3061936/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57974474-300-300?v=638980570829470000&width=300&height=300&aspect=true",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Ginger Ale Canada Dry 600ml",
+      "presentacion": "1 pieza de 600ml",
+      "precio": 11.00,
+      "url": "/refresco-ginger-ale-canada-dry-600ml-3061807/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58430663/7501198350432_00.jpg?v=638986055678870000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Sidral Mundet sabor manzana 600ml",
+      "presentacion": "1 pieza de 600ml",
+      "precio": 17.00,
+      "url": "/refresco-sidral-mundet-sabor-manzana-600ml-3218933/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688092/7501055339983_00.jpg?v=638990887063570000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Delaware Punch Sabor Uva 2L",
+      "presentacion": "1 pieza de 2L",
+      "precio": 25.00,
+      "url": "/refresco-delaware-punch-sabor-uva-2l-3684849/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58694375/7501055304691_00.jpg?v=638990903261800000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Jarrito Tamarindo 2L",
+      "presentacion": "1 pieza de 2L",
+      "precio": 22.00,
+      "url": "/refresco-jarrito-tamarindo-2l-3110193/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688086/744886365050_00.jpg?v=638990887044330000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Red Cola 3L",
+      "presentacion": "1 pieza de 3L",
+      "precio": 32.00,
+      "url": "/refresco-red-cola-3l-3288036/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688034/793573950079_00.jpg?v=638990886892100000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Jarrito Mandarina 2L",
+      "presentacion": "1 pieza de 2L",
+      "precio": 22.00,
+      "url": "/refresco-jarrito-mandarina-2l-3110191/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688085/744886375059_00.jpg?v=638990887040070000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Sprite Lima-Limón 2L",
+      "presentacion": "1 pieza de 2L",
+      "precio": 25.00,
+      "url": "/refresco-sprite-lima-limon-2l-3062104/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58204105/7501055305650_00.jpg?v=638983255282770000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Sprite lima limón 600ml",
+      "presentacion": "1 pieza de 600ml",
+      "precio": 19.00,
+      "url": "/refresco-sprite-lima-limon-600ml-3101721/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688079/7501055305629_00.jpg?v=638990887022400000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Sidral Mundet Manzana 3L",
+      "presentacion": "1 pieza de 3L",
+      "precio": 41.00,
+      "url": "/refresco-sidral-mundet-manzana-3l-3323501/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58695224/7501055340422_00.jpg?v=638990905515400000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Frutal Sidral Mundet Light sabor Manzana 355ml",
+      "presentacion": "1 pieza de 355ml",
+      "precio": 6.00,
+      "url": "/refresco-frutal-sidral-mundet-light-sabor-manzana-355ml-3714203/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58693833/7501055376827_00.jpg?v=638990901652300000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Pepsi Cola 2.5L",
+      "presentacion": "1 pieza de 2.5L",
+      "precio": 32.00,
+      "url": "/refresco-pepsi-cola-25l",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58694990/7501022013861_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Sprite Sin Azúcar Lima-Limón 2L",
+      "presentacion": "1 pieza de 2L",
+      "precio": 27.00,
+      "url": "/refresco-sprite-sin-azucar-lima-limon-2l",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58204105/7501055305650_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Pepsi Cola 3L",
+      "presentacion": "1 pieza de 3L",
+      "precio": 42.00,
+      "url": "/refresco-pepsi-cola-3l",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58694990/7501022013861_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Fanta Naranja 600ml",
+      "presentacion": "1 pieza de 600ml",
+      "precio": 15.00,
+      "url": "/refresco-fanta-naranja-600ml",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688063-300-300?v=638990886989070000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Pepsi Cola Black sin Azúcar 1.5L",
+      "presentacion": "1 pieza de 1.5L",
+      "precio": 25.50,
+      "url": "/refresco-pepsi-black-15l",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58694990/7501022013861_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Sin Azúcar 6 Latas de 355ml c/u",
+      "presentacion": "6 piezas de 355ml c/u",
+      "precio": 117.00,
+      "url": "/refresco-coca-cola-sin-azucar-6-latas-355ml",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57988457/7501055349913_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Coca-Cola Light 12 Botellas de 355ml c/u",
+      "presentacion": "12 piezas de 355ml c/u",
+      "precio": 152.50,
+      "url": "/refresco-coca-cola-light-12-botellas-355ml",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57988462/7501055349890_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Peñafiel Mandarina Light 2L",
+      "presentacion": "1 pieza de 2L",
+      "precio": 31.00,
+      "url": "/refresco-penafiel-mandarina-light-2l",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688085/744886375059_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Fresca sabor toronja 600ml",
+      "presentacion": "1 pieza de 600ml",
+      "precio": 19.00,
+      "url": "/refresco-fresca-toronja-600ml",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688063-300-300?v=638990886989070000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Refresco Fanta sin Azúcar Naranja 355ml",
+      "presentacion": "1 pieza de 355ml",
+      "precio": 6.00,
+      "url": "/refresco-fanta-sin-azucar-naranja-355ml",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58693844-300-300?v=638990901789870000",
+      "tienda": "Chedraui"
+
+      
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+  {
+    "productos": 
+  [
+  {
+    "nombre": "Galletas Gamesa Cremax Chocolate 7 paketines x 322g",
+    "presentacion": "7 piezas de 46g c/u",
+    "precio": 45.75,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-cremax-chocolate-7-paketines-x-322g-3368351/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57991983/7501000654727_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Crema7 Paketines 322g",
+    "presentacion": "7 piezas de 322g c/u",
+    "precio": 45.75,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-crema7-paketines-322g-3368352/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58687642/7501000655151_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Marinela Barritas Fresa 268g contiene 4 paquetes",
+    "presentacion": "4 piezas de 268g",
+    "precio": 35.00,
+    "marca": "Marinela",
+    "url": "/galletas-marinela-barritas-fresa-268g-contiene-4-paquetes-3724930/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58708224/7500810000977_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Oreo de Chocolate Relleno sabor Vainilla 252g",
+    "presentacion": "1 pieza de 252g",
+    "precio": 29.00,
+    "marca": "Oreo",
+    "url": "/galletas-oreo-de-chocolate-relleno-sabor-vainilla-252g-3821019/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58713611/7622210575395_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Gamesa Giro Sándwich 228g",
+    "presentacion": "1 pieza de 228g",
+    "precio": 16.50,
+    "marca": "Gamesa",
+    "url": "/galleta-gamesa-giro-sandwich-228g-3281535/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58696006/7501000639632_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta salada Crackets 208 g",
+    "presentacion": "1 pieza de 208g",
+    "precio": 22.50,
+    "marca": "Gamesa",
+    "url": "/galleta-salada-crackets-208-g-3713026/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58696433/7500478027606_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Marías 850g",
+    "presentacion": "1 pieza de 850g",
+    "precio": 67.12,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-marias-850g-3131975/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57706469/7501000625062_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Marinela Barritas Piña 268g",
+    "presentacion": "1 pieza de 268g",
+    "precio": 35.00,
+    "marca": "Marinela",
+    "url": "/galletas-marinela-barritas-pina-268g-3721679/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58709121/7500810000960_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Marías 510g",
+    "presentacion": "1 pieza de 510g",
+    "precio": 40.50,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-marias-510g-3045721/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58734652/7501000655380_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Gamesa Chokis Mix 277.5g",
+    "presentacion": "1 pieza de 277.5g",
+    "precio": 27.00,
+    "marca": "Gamesa",
+    "url": "/galleta-gamesa-chokis-mix-2775g-3835305/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58259437/7500478037537_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Marinela Príncipe Chocolate 315g",
+    "presentacion": "1 pieza de 315g",
+    "precio": 37.00,
+    "marca": "Marinela",
+    "url": "/galletas-marinela-principe-chocolate-315g-3724934/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57763465/7503034672104_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Chokis Chispas de Chocolate 228g",
+    "presentacion": "1 pieza de 228g",
+    "precio": 37.50,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-chokis-chispas-de-chocolate-228g-3710301/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58689243/7500478014552_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Marinela Canelitas 300g",
+    "presentacion": "1 pieza de 300g",
+    "precio": 35.00,
+    "marca": "Marinela",
+    "url": "/galleta-marinela-canelitas-300g-3750076/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58295979/7500810003114_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Florentinas Fresa 332g",
+    "presentacion": "1 pieza de 332g",
+    "precio": 29.25,
+    "marca": "Gamesa",
+    "url": "/galletas-florentinas-fresa-332g-3402637/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58429357/7501000673193_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Clásicas Florentinas Cajeta 332g",
+    "presentacion": "1 pieza de 332g",
+    "precio": 29.25,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-clasicas-florentinas-cajeta-332g-3402640/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58429367/7501000673209_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Saladitas Clásicas 42 Paketines 504g",
+    "presentacion": "42 piezas de 504g",
+    "precio": 39.59,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-saladitas-clasicas-42-paketines-504g-3633004/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58689093/7500478018192_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Marinela Polvorones 296g",
+    "presentacion": "1 pieza de 296g",
+    "precio": 38.00,
+    "marca": "Marinela",
+    "url": "/galleta-marinela-polvorones-296g-3750078/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57756374/7500810003251_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Clásicas Flor De Naranjo 4 Paketines De 150g",
+    "presentacion": "4 piezas de 150g",
+    "precio": 37.42,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-clasicas-flor-de-naranjo-4-paketines-de-150g-3044753/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58432095/7501000650552_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Marinela Sponch 225g",
+    "presentacion": "1 pieza de 225g",
+    "precio": 42.00,
+    "marca": "Marinela",
+    "url": "/galleta-marinela-sponch-225g-3750077/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58708427/7500810003244_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Chocolatines 252g",
+    "presentacion": "1 pieza de 252g",
+    "precio": 29.25,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-chocolatines-252g-3880747/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58725427/7500478047291_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+ 
+    "nombre": "Galletas Gamesa Pekepakes 374g",
+    "presentacion": "1 pz de 374g",
+    "precio": 54.00,
+    "marca": "Gamesa",
+    "url": "/null-3869762/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58723820/7500478045051_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Emperador Piruetas 96g",
+    "presentacion": "1 pieza de 96g",
+    "precio": 9.38,
+    "marca": "Gamesa",
+    "url": "/galletas-emperador-piruetas-96g-3619155/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57680778/7500478014477_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Maravillas Vainilla 464g",
+    "presentacion": "1 pieza de 464g",
+    "precio": 48.00,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-maravillas-vainilla-464g-3383651/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58429362/7501000673186_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Flipy Duo Pack 90g",
+    "presentacion": "1 pieza de 90g",
+    "precio": 7.50,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-flipy-duo-pack-90g-3668466/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58234420/7500478022335_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Mini Barritas Fresa Marinela 222g",
+    "presentacion": "1 pieza de 222g",
+    "precio": 38.00,
+    "marca": "Marinela",
+    "url": "/galletas-mini-barritas-fresa-marinela-222g-3791795/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58711806/7501030457190_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas De Avena Quaker Chocolate 6 Paquetes 240g",
+    "presentacion": "6 piezas de 40g c/u",
+    "precio": 40.50,
+    "marca": "Quaker",
+    "url": "/galletas-de-avena-quaker-chocolate-6-paquetes-240g-3497476/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58203480/7500478004690_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Oreo de Chocolate Relleno Sabor Chocolate 252g",
+    "presentacion": "1 pieza de 252g",
+    "precio": 29.00,
+    "marca": "Oreo",
+    "url": "/galletas-oreo-de-chocolate-relleno-sabor-chocolate-252g-3821015/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58248394/7622210575302_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Marinela Maxi Tubos Polvorones 310g",
+    "presentacion": "1 pieza de 310g",
+    "precio": 38.00,
+    "marca": "Marinela",
+    "url": "/galleta-marinela-maxi-tubos-polvorones-310g-3794709/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58711802/7501030418559_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Gamesa Emperador Piruetas 288g",
+    "presentacion": "1 pieza de 288g",
+    "precio": 43.50,
+    "marca": "Gamesa",
+    "url": "/galleta-gamesa-emperador-piruetas-288g-3612563/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58696121/7500478014484_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Emperador Combinado 91g",
+    "presentacion": "1 pieza de 91g",
+    "precio": 9.38,
+    "marca": "Emperador",
+    "url": "/galletas-gamesa-emperador-combinado-91g-3792525/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57777335/7500478013678_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Gamesa Saladitas 140g",
+    "presentacion": "1 pieza de 140g",
+    "precio": 15.74,
+    "marca": "Gamesa",
+    "url": "/galleta-gamesa-saladitas-140g-3846323/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58721358/7500478042128_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Chokis 6 paketines de 228g",
+    "presentacion": "6 piezas de 38g c/u",
+    "precio": 27.75,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-chokis-6-paketines-de-228g-3880748/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58725438/7500478047666_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Chips Ahoy Vainilla 257.6g",
+    "presentacion": "1 pieza de 257.6g",
+    "precio": 32.00,
+    "marca": "Nabisco",
+    "url": "/galleta-chips-ahoy-vainilla-2576g-3787496/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58239280/7622210576224_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Marinela Maxi Tubos Canelitas 224g",
+    "presentacion": "1 pieza de 224g",
+    "precio": 38.00,
+    "marca": "Marinela",
+    "url": "/galleta-marinela-maxi-tubos-canelitas-224g-3794708/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58711800/7501030418542_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Soda Real Saladas 150g",
+    "presentacion": "1 pieza de 150g",
+    "precio": 9.75,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-soda-real-saladas-150g-3044981/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58186179/7501000642397_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Emperador Senzo 93g",
+    "presentacion": "1 pieza de 93g",
+    "precio": 7.50,
+    "marca": "Emperador",
+    "url": "/galleta-emperador-senzo-93g-3799999/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58712082/7501000601776_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta OKKO de Arroz con Quinoa 140g",
+    "presentacion": "1 pieza de 140g",
+    "precio": 33.00,
+    "marca": "Okko super foods",
+    "url": "/galleta-okko-de-arroz-con-quinoa-140g-3540383/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58188588/7500327047878_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Marinela Príncipe Tentación 315g",
+    "presentacion": "1 pieza de 315g",
+    "precio": 32.99,
+    "marca": "Marinela",
+    "url": "/galletas-marinela-principe-tentacion-315g-3724932/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58230277/7503034672067_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Crackets 215g",
+    "presentacion": "1 pieza de 215g",
+    "precio": 23.62,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-crackets-215g-3702453/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58209128/7500478020492_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Emperador Nuez 91g",
+    "presentacion": "1 pieza de 91g",
+    "precio": 9.38,
+    "marca": "Emperador",
+    "url": "/galletas-gamesa-emperador-nuez-91g-3792524/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58240509/7500478013661_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Sabor Mantequilla Gamesa Pan Crema 151g",
+    "presentacion": "1 pieza de 151g",
+    "precio": 14.25,
+    "marca": "Gamesa",
+    "url": "/galletas-sabor-mantequilla-gamesa-pan-crema-151g-3511931/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58688969/7500478005581_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Arcoiris Fresa 185g",
+    "presentacion": "1 pieza de 185g",
+    "precio": 21.00,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-arcoiris-fresa-185g-3094493/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58703437/7501000625253_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Marinela Triki Trakes 255g",
+    "presentacion": "1 pieza de 255g",
+    "precio": 41.00,
+    "marca": "Marinela",
+    "url": "/galletas-marinela-triki-trakes-255g-3724936/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57763391/7503034672159_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Gamesa Marias Doradas 171g",
+    "presentacion": "1 pz de 171g",
+    "precio": 18.75,
+    "marca": "Gamesa",
+    "url": "/galleta-gamesa-marias-doradas-171g-3835304/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57809707/7500478037247_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Mamut Chocolate 240g",
+    "presentacion": "1 pieza de 240g",
+    "precio": 34.50,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-mamut-chocolate-240g-3044591/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58687728/7501000612406_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Crackets 348g",
+    "presentacion": "1 pieza de 348g",
+    "precio": 28.50,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-crackets-348g-3639725/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58736047/7500478018741_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Marinela Barritas Moras 268g",
+    "presentacion": "1 pieza de 268g",
+    "precio": 20.00,
+    "marca": "Marinela",
+    "url": "/galletas-marinela-barritas-moras-268g-3724931/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58234130/7500810000984_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Gamesa Marias Azucaradas 111g",
+    "presentacion": "1 pieza de 111g",
+    "precio": 11.25,
+    "marca": "Gamesa",
+    "url": "/galleta-gamesa-marias-azucaradas-111g-3814309/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58246441/7500478035892_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galleta Cuetara Mexicanas 135g",
+    "presentacion": "1 pieza de 135g",
+    "precio": 9.50,
+    "marca": "Cuétara",
+    "url": "/galleta-cuetara-mexicanas-135g-3044423/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58687778/7501008703441_00.jpg",
+    "tienda": "Chedraui"
+  },
+  {
+    "nombre": "Galletas Gamesa Marías Doradas 456g",
+    "presentacion": "1 pieza de 456g",
+    "precio": 48.75,
+    "marca": "Gamesa",
+    "url": "/galletas-gamesa-marias-doradas-456g-3245466/p",
+    "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57984512/7501000628377_00.jpg",
+    "tienda": "Chedraui"
+
+ 
+  }
+]
+  }

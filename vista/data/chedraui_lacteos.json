@@ -1,0 +1,457 @@
+{
+  "productos": [
+    {
+      "nombre": "Leche Alpura Deslactosada 4 Piezas de 1L c/u",
+      "presentacion": "4 piezas de 1L c/u",
+      "precio": 116.00,
+      "marca": "Alpura",
+      "url": "/leche-alpura-deslactosada-4-piezas-de-1l-cu-3713406/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58691501/7501056215538_00.jpg?v=638990895042970000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Condensada Nestlé La Lechera Original 375g",
+      "presentacion": "1 pieza de 375g",
+      "precio": 32.00,
+      "marca": "La Lechera",
+      "url": "/leche-condensada-nestle-la-lechera-original-375g-3388156/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58691133/7506475104722_00.jpg?v=638990894049670000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Lala Deslactosada 6 piezas de 1L",
+      "presentacion": "6 piezas de 1L c/u",
+      "precio": 158.00,
+      "marca": "Lala",
+      "url": "/leche-lala-deslactosada-6-piezas-de-1l-3586168/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58339871/7501020558173_00.jpg?v=638984716244270000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Evaporada Nestlé Carnation Clavel Original 1 Lata de 360g",
+      "presentacion": "1 pieza de 360g",
+      "precio": 24.00,
+      "marca": "Carnation",
+      "url": "/leche-evaporada-nestle-carnation-clavel-original-1-lata-de-360g-3334924/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58734944/7501058611062_00.jpg?v=638991138884870000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Santa Clara Entera 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 37.00,
+      "marca": "Santa Clara",
+      "url": "/leche-santa-clara-entera-1l-3019421/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58734812/7501295600126_00.jpg?v=638991138520730000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Lala 100 Reducida en Grasa sin Lactosa 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 44.00,
+      "marca": "Lala",
+      "url": "/leche-lala-100-reducida-en-grasa-sin-lactosa-1l-3430871/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58700896/7501020550979_00.jpg?v=638990919036270000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Santa Clara Deslactosada 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 39.00,
+      "marca": "Santa Clara",
+      "url": "/leche-santa-clara-deslactosada-1l-3019328/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58734822/7501295600157_00.jpg?v=638991138546770000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Alpura Deslactosada Light 4 Piezas de 1L c/u",
+      "presentacion": "4 piezas de 1L c/u",
+      "precio": 116.00,
+      "marca": "Alpura",
+      "url": "/leche-alpura-deslactosada-light-4-piezas-de-1l-cu-3713407/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58691503/7501056215552_00.jpg?v=638990895052370000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Selecto Brand Entera 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 18.00,
+      "marca": "Selecto Brand",
+      "url": "/leche-selecto-brand-entera-1l-3108094/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58704103/7501253641956_00.jpg?v=638990926383570000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Lala Entera 6 pack de 1L",
+      "presentacion": "6 piezas de 1L c/u",
+      "precio": 169.00,
+      "marca": "Lala",
+      "url": "/leche-lala-entera-6-pack-de-1l-3718257/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58344018/7501020565966_00.jpg?v=638984725946270000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Santa Clara Chocolate Ultra 180ml",
+      "presentacion": "1 pieza de 180ml",
+      "precio": 11.50,
+      "marca": "Santa Clara",
+      "url": "/leche-santa-clara-chocolate-ultra-180ml-3724320/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58709103/7501055377183_00.jpg?v=638990939512400000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Condensada Nestlé La Lechera Bolsa 209g",
+      "presentacion": "1 pieza de 209g",
+      "precio": 15.00,
+      "marca": "La Lechera",
+      "url": "/leche-condensada-nestle-la-lechera-bolsa-209g-3414592/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58691157/7501058631961_00.jpg?v=638990894102070000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Lala 100 Proteína Sin Lactosa 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 42.90,
+      "marca": "Lala",
+      "url": "/leche-lala-100-proteina-sin-lactosa-1l-3430879/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58700497/7501020550986_00.jpg?v=638990918096430000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Alpura Clásica 4 Piezas de 1L c/u",
+      "presentacion": "4 piezas de 1L c/u",
+      "precio": 115.00,
+      "marca": "Alpura",
+      "url": "/leche-alpura-clasica-4-piezas-de-1l-cu-3713405/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58691502/7501056215545_00.jpg?v=638990895047970000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Alpura LacDel Deslactosada 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 26.00,
+      "marca": "Alpura",
+      "url": "/leche-alpura-lacdel-deslactosada-1l-3419036/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58435160/7501055909179_00.jpg?v=638986064532670000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche UHT Lala Deslactosada Light 6 piezas de 1L",
+      "presentacion": "6 piezas de 1L c/u",
+      "precio": 169.00,
+      "marca": "Lala",
+      "url": "/leche-uht-lala-deslactosada-light-6-piezas-de-1l-3758978/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58444602/7501020566000_00.jpg?v=638986085212000000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Sta Clara Fresa Ultra 180ml",
+      "presentacion": "1 pieza de 180ml",
+      "precio": 11.50,
+      "marca": "Santa Clara",
+      "url": "/leche-sta-clara-fresa-ultra-180ml-3724321/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58709075/7501055377190_00.jpg?v=638990939422200000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Santa Clara Deslactosada Light 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 39.00,
+      "marca": "Santa Clara",
+      "url": "/leche-santa-clara-deslactosada-light-1l-3294168/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58690049/7501055349005_00.jpg?v=638990891595300000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Evaporada Nestlé Carnation Clavel Original envase 360 g",
+      "presentacion": "1 pieza de 360g",
+      "precio": 23.00,
+      "marca": "Carnation",
+      "url": "/leche-evaporada-nestle-carnation-clavel-original-envase-360-g-3685738/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58031010/7506475100250_00.jpg?v=638980664422830000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Santa Clara Vainilla Ultra 180ml",
+      "presentacion": "1 pieza de 180ml",
+      "precio": 11.50,
+      "marca": "Santa Clara",
+      "url": "/leche-santa-clara-vainilla-ultra-180ml-3724322/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58711191/7501055377206_00.jpg?v=638990944424800000",
+      "tienda": "Chedraui"
+     },
+    {
+      "nombre": "Leche Granja Deslactosada 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 28.50,
+      "marca": "Granja",
+      "url": "https://www.chedraui.com.mx/leche-granja-deslactosada-1l-3806705/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58712724/7501158400290_00.jpg?v=638990947776500000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Evaporada Nestlé Carnation Clavel Original Brick 720g",
+      "presentacion": "1 pieza de 720g",
+      "precio": 46.50,
+      "marca": "Carnation",
+      "url": "https://www.chedraui.com.mx/leche-evaporada-nestle-carnation-clavel-original-brick-720g-3505633/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58691791/7501058628831_00.jpg?v=638990895874800000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Sta Clara Capuchino Ultra 180ml",
+      "presentacion": "1 pieza de 180ml",
+      "precio": 11.50,
+      "marca": "Santa Clara",
+      "url": "https://www.chedraui.com.mx/leche-sta-clara-capuchino-ultra-180ml-3721729/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58709076/7501055377213_00.jpg?v=638990939427430000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Alpura Deslactosada 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 35.00,
+      "marca": "Alpura",
+      "url": "https://www.chedraui.com.mx/leche-alpura-deslactosada-1l-3019478/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58734829/7501055901425_00.jpg?v=638991138560700000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Alpura Lac Del Entera 1 L",
+      "presentacion": "1 pieza de 1 L",
+      "precio": 27.50,
+      "marca": "Alpura",
+      "url": "https://www.chedraui.com.mx/leche-alpura-lac-del-entera-1-l-3230538/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58339894/7501055905706_00.jpg?v=638984716302930000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Pronto Condensada 380g",
+      "presentacion": "1 pieza de 380g",
+      "precio": 20.00,
+      "marca": "Pronto",
+      "url": "https://www.chedraui.com.mx/leche-pronto-condensada-380g-3304102/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57714136/7501200486005_00.jpg?v=638978959354070000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Bové Entera Orgánica 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 39.50,
+      "marca": "Bové",
+      "url": "https://www.chedraui.com.mx/leche-bove-entera-organica-1l-3278923/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58338131/7501639303690_00.jpg?v=638984711771330000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Evaporada Nestlé Carnation Clavel Original 2 Piezas de 360g",
+      "presentacion": "2 piezas de 360g",
+      "precio": 40.00,
+      "marca": "Carnation",
+      "url": "https://www.chedraui.com.mx/leche-evaporada-nestle-carnation-clavel-original-2-piezas-de-360g-3810353/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57786990/7506475111690_00.jpg?v=638979137897930000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Lala 100 Fresca Light + Proteína sin Lactosa 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 44.00,
+      "marca": "Lala",
+      "url": "https://www.chedraui.com.mx/leche-lala-100-fresca-light--proteina-sin-lactosa1l-3397217/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58701199/7501020548440_00.jpg?v=638990919927900000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Lala Light 6 piezas de 1L",
+      "presentacion": "6 piezas de 1L",
+      "precio": 169.00,
+      "marca": "Lala",
+      "url": "https://www.chedraui.com.mx/leche-lala-light-6-piezas-de-1l-3758976/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58444592/7501020565973_00.jpg?v=638986085195430000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Sta Clara Deslactosada 1.5L",
+      "presentacion": "1 pieza de 1.5L",
+      "precio": 55.00,
+      "marca": "Santa Clara",
+      "url": "https://www.chedraui.com.mx/leche-sta-clara-deslactosada-15l-3721728/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58709049/7501055377176_00.jpg?v=638990939354070000",
+      "tienda": "Chedraui"
+    },
+   {
+  "nombre": "Leche UHT San Marcos Deslactosada Light 1L",
+  "presentacion": "1 pieza de 1L",
+  "precio": 35.00,
+  "marca": "San Marcos",
+  "url": "/leche-uht-san-marcos-deslactosada-light-1l-3407582/p",
+  "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58339888/7501158414518_00.jpg?v=638984716282000000",
+  "tienda": "Chedraui"
+},
+{
+
+      "nombre": "Leche Santa Clara Light 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 37.00,
+      "marca": "Santa Clara",
+      "url": "https://www.chedraui.com.mx/leche-santa-clara-light-1l-3019255/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58334661/7501295600140_00.jpg?v=638984702541270000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Forti Plus Deslactosada 1.5L",
+      "presentacion": "1 pieza de 1.5L",
+      "precio": 32.50,
+      "marca": "Forti Plus",
+      "url": "https://www.chedraui.com.mx/leche-forti-plus-deslactosada-15l-3493782/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58339836/7501055910236_00.jpg?v=638984716171830000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche UHT Lala Entera 1.5 L",
+      "presentacion": "1 pieza de 1.5L",
+      "precio": 42.00,
+      "marca": "Lala",
+      "url": "https://www.chedraui.com.mx/leche-uht-lala-entera-15-l-3497853/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58700560/7501020550733_00.jpg?v=638990918234330000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Condensada Nestlé La Lechera 670g",
+      "presentacion": "1 pieza de 670g",
+      "precio": 50.00,
+      "marca": "La Lechera",
+      "url": "https://www.chedraui.com.mx/leche-condensada-nestle-la-lechera-670g-3697660/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58690329/7506475104470_00.jpg?v=638990892488570000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Evaporada Nestlé Carnation Clavel Original Brick 1kg",
+      "presentacion": "1 pieza de 1kg",
+      "precio": 55.00,
+      "marca": "Carnation",
+      "url": "https://www.chedraui.com.mx/leche-evaporada-nestle-carnation-clavel-original-brick-1kg-3548338/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58701143/7501059240681_00.jpg?v=638990919800270000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Santa Clara Entera 4L más Taza",
+      "presentacion": "4 piezas de 1L + taza",
+      "precio": 132.00,
+      "marca": "Santa Clara",
+      "url": "https://www.chedraui.com.mx/leche-santa-clara-entera-4l-mas-taza-3842925/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58720788/7501055386901_00.jpg?v=638990963961870000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche UHT Lala Deslactosada Light 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 36.00,
+      "marca": "Lala",
+      "url": "https://www.chedraui.com.mx/leche-uht-lala-deslactosada-light-1l-3758977/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58708798/7501020565928_00.jpg?v=638990938619930000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Leche Lac Del Semidescremada 1L",
+      "presentacion": "1 pieza de 1L",
+      "precio": 25.50,
+      "marca": "Lac Del",
+      "url": "https://www.chedraui.com.mx/leche-lac-del-semidescremada-1l-3019338/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58700342/7501055900053_00.jpg?v=638990917766170000",
+      "tienda": "Chedraui"
+     },
+    {
+      "nombre": "Yoghurt Yoplait Batido Natural 1Kg",
+      "presentacion": "1 pieza con 1kg",
+      "precio": 41.00,
+      "marca": "Yoplait",
+      "url": "https://www.chedraui.com.mx/yoghurt-yoplait-batido-natural-1kg-3098934/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58703080/7501040090028_00.jpg?v=638990923924830000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Yoghurt Griego Oikos Natural Sin Azúcar 900g con 12g de Proteína",
+      "presentacion": "1 pieza de 900g",
+      "precio": 90.00,
+      "marca": "Oikos",
+      "url": "https://www.chedraui.com.mx/yoghurt-griego-oikos-natural-sin-azucar-900g-con-12g-de-proteina-3638695/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58018351/7506443101074_00.jpg?v=638980641019200000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Yoghurt Yoplait Batido Griego Natural sin Azúcar 1kg",
+      "presentacion": "1 pieza con 1kg",
+      "precio": 105.00,
+      "marca": "Yoplait",
+      "url": "https://www.chedraui.com.mx/yoghurt-yoplait-batido-griego-natural-sin-azucar-1kg-3460436/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58338377/7501040095177_00.jpg?v=638984712477970000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Yoghurt Danone Sabor Natural Sin Azúcar 900g",
+      "presentacion": "1 pieza con 900g",
+      "precio": 45.00,
+      "marca": "Danone",
+      "url": "https://www.chedraui.com.mx/yoghurt-danone-sabor-natural-sin-azucar-900g-3487280/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/57999993/7501032398439_00.jpg?v=638980612238230000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Yoghurt Yoplait Batido Griego Natural 1kg",
+      "presentacion": "1 pieza con 1kg",
+      "precio": 90.00,
+      "marca": "Yoplait",
+      "url": "https://www.chedraui.com.mx/yoghurt-yoplait-batido-griego-natural-1kg-3344364/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58700859/7501040091476_00.jpg?v=638990918937530000",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Crema Alpura Entera 426ml",
+      "presentacion": "1 pieza con 426ml",
+      "precio": 45.00,
+      "marca": "Alpura",
+      "url": "/crema-alpura-entera-426ml-3746321/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58708322/7501055916023_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Crema Alpura Deslactosada 426ml",
+      "presentacion": "1 pieza con 426ml",
+      "precio": 41.00,
+      "marca": "Alpura",
+      "url": "/crema-alpura-deslactosada-426ml-3746324/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58708324/7501055916030_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Crema Alpura Entera 900ml",
+      "presentacion": "1 pieza con 900ml",
+      "precio": 70.00,
+      "marca": "Alpura",
+      "url": "/crema-alpura-entera-900ml-3013345/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58700753/7501055909544_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Crema Lala Entera 426ml",
+      "presentacion": "1 pieza con 426ml",
+      "precio": 41.00,
+      "marca": "Lala",
+      "url": "/crema-lala-entera-426ml-3646609/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58699770/7501020561906_00.jpg",
+      "tienda": "Chedraui"
+    },
+    {
+      "nombre": "Crema Lala Entera 900ml",
+      "presentacion": "1 pieza con 900ml",
+      "precio": 70.00,
+      "marca": "Lala",
+      "url": "/crema-lala-entera-900ml-3011797/p",
+      "imagen": "https://chedrauimx.vtexassets.com/arquivos/ids/58700753/7501020561890_00.jpg",
+      "tienda": "Chedraui"
+   
+  
+    }
+  ]
+}

@@ -285,7 +285,7 @@
     <div class="container">
         <div class="header">
             <h1>🛒 Walmart - Productos</h1>
-            <a href="../index.php" class="btn-volver">← Volver al Inicio</a>
+            <a href="../vista/tiendas.html" class="btn-volver">← Volver al Inicio</a>
         </div>
         
         <div class="buscador-interno">
