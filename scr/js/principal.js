@@ -142,7 +142,7 @@ const sampleProducts = [
         category: "electronics",
         price: 129,
         rating: 4.0,
-        image: "https://m.media-amazon.com/images/I/61Kv6U3uGpL._AC_SL1500_.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-uYAJFcT9uUyTGAqiSgXOBwDpJNQH0e_1vQ&s",
         description: "Impresora láser color con escáner y copiadora, ideal para oficina.",
         features: [
             "Impresión/escaneo/copia",
@@ -159,7 +159,7 @@ const sampleProducts = [
         category: "electronics",
         price: 299,
         rating: 4.1,
-        image: "https://m.media-amazon.com/images/I/71zXlnG0K5L._AC_SL1500_.jpg",
+        image: "https://wibor.mx/2039-large_default/mini-proyector-multimedia-hd-de-4840-lm-con-bluetooth-y-control-remoto-steren.jpg",
         description: "Proyector portátil HD compatible con HDMI, USB y streaming.",
         features: [
             "Resolución 1080p",
@@ -178,7 +178,7 @@ const sampleProducts = [
         category: "sports",
         price: 89,
         rating: 4.4,
-        image: "https://site.innovasport.com/is/adidas/2024/is-desk-lp-adidas-division-calzado.webp",
+        image: "https://images.pexels.com/photos/1124466/pexels-photo-1124466.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         description: "Zapatillas cómodas para running con tecnología de amortiguación avanzada.",
         features: [
             "Amortiguación reactiva",
@@ -195,7 +195,7 @@ const sampleProducts = [
         category: "sports",
         price: 75,
         rating: 4.6,
-        image: "https://m.media-amazon.com/images/I/71jDy2nQJlL._AC_SL1500_.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBxeL6Ekd4NMURrFV6Z1OWwHBEXI9nWAFLnw&s",
         description: "Mancuerna regulable con sistema de cambio rápido de peso.",
         features: [
             "Rango 2–20kg por unidad",
@@ -212,7 +212,7 @@ const sampleProducts = [
         category: "sports",
         price: 420,
         rating: 4.3,
-        image: "https://assets.bikeexchange.com/2022/10/urban-bike-1024x683.jpg",
+        image: "https://kuborbikes.com/cdn/shop/files/03._ECORIDE_BLANCA_01.jpg?v=1696973277&width=1200",
         description: "Bicicleta plegable ideal para ciudad, ligera y con cambio Shimano.",
         features: [
             "Marco de aluminio",
@@ -229,7 +229,7 @@ const sampleProducts = [
         category: "sports",
         price: 35,
         rating: 4.7,
-        image: "https://m.media-amazon.com/images/I/81y6YxVfPQL._AC_SL1500_.jpg",
+        image: "https://m.media-amazon.com/images/I/51EMLjBTl1L.jpg",
         description: "Colchoneta antideslizante, ecológica y extra gruesa para yoga y pilates.",
         features: [
             "Grosor 6mm",
@@ -246,7 +246,7 @@ const sampleProducts = [
         category: "sports",
         price: 45,
         rating: 4.8,
-        image: "https://m.media-amazon.com/images/I/71xP4vJYDzL._AC_SL1500_.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiBGSbpPemMbcQ7eqP46hj0A5Sh054faCtnA&s",
         description: "Balón oficial FIFA Quality Pro para entrenamiento y competición.",
         features: [
             "Tamaño 5",
@@ -265,7 +265,7 @@ const sampleProducts = [
         category: "home",
         price: 249,
         rating: 4.5,
-        image: "https://m.media-amazon.com/images/I/71zD+YV8QQL._AC_SL1500_.jpg",
+        image: "https://www.irobotshop.mx/media/catalog/product/cache/7901d8dabdb8ab05136b49a53f4004dc/3/5/3530080_combo_j7_plus_1.jpeg",
         description: "Aspiradora autónoma con mapeo láser y control por app.",
         features: [
             "Mapeo 3D LIDAR",
@@ -282,7 +282,7 @@ const sampleProducts = [
         category: "home",
         price: 65,
         rating: 4.2,
-        image: "https://m.media-amazon.com/images/I/71xN1FQkZqL._AC_SL1500_.jpg",
+        image: "https://i5.walmartimages.com/asr/7da949f9-c9dd-4cec-864e-53b95332026e.184d88c3018278362732dfc0c0c42857.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
         description: "Juego de 5 ollas con base de aluminio y recubrimiento cerámico.",
         features: [
             "Recubrimiento cerámico",
@@ -299,7 +299,7 @@ const sampleProducts = [
         category: "home",
         price: 189,
         rating: 4.6,
-        image: "https://m.media-amazon.com/images/I/71N5sJZrO+L._AC_SL1500_.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm9cehM4KsM4O82I-OMqTjLav89nHQgywhbA&s",
         description: "Cafetera con molinillo integrado y sistema de leche automático.",
         features: [
             "15 bares de presión",
@@ -316,7 +316,7 @@ const sampleProducts = [
         category: "home",
         price: 159,
         rating: 4.4,
-        image: "https://m.media-amazon.com/images/I/71i+-V+g0QL._AC_SL1500_.jpg",
+        image: "https://iseating.com.mx/cdn/shop/files/Silla_para_escritorio_Operativa_Tivoli.jpg?v=1738786291&width=2048",
         description: "Silla de oficina con soporte lumbar ajustable y reposabrazos 4D.",
         features: [
             "Reposacabezas regulable",
@@ -333,7 +333,7 @@ const sampleProducts = [
         category: "home",
         price: 42,
         rating: 4.3,
-        image: "https://m.media-amazon.com/images/I/61h+I2VhPdL._AC_SL1500_.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7xDBzQwLEXdA43dDc0SGNtzK-aZh9y2mkgQ&s",
         description: "Lámpara LED con control por app y sincronización con música.",
         features: [
             "16 millones de colores",
@@ -352,7 +352,7 @@ const sampleProducts = [
         category: "beauty",
         price: 89,
         rating: 4.5,
-        image: "https://m.media-amazon.com/images/I/61qz7kR+QaL._AC_SL1500_.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0Sco9NrAB9clVx_7FxBBymdGivAqbBA3waw&s",
         description: "Secador con tecnología iónica y 3 ajustes de temperatura y flujo.",
         features: [
             "Motor AC de larga vida",
@@ -369,7 +369,7 @@ const sampleProducts = [
         category: "beauty",
         price: 28,
         rating: 4.7,
-        image: "https://m.media-amazon.com/images/I/71JU2eX+DqL._SL1500_.jpg",
+        image: "https://www.dermaexpress.com.mx/cdn/shop/files/3337875597388_1.jpg?v=1746680618",
         description: "Hidratante no grasa con protección solar y antioxidantes.",
         features: [
             "Factor SPF50+",
@@ -386,7 +386,7 @@ const sampleProducts = [
         category: "beauty",
         price: 49,
         rating: 4.4,
-        image: "https://m.media-amazon.com/images/I/61Vf3jvGKPL._AC_SL1500_.jpg",
+        image: "https://i5.walmartimages.com/asr/83991707-116a-4732-ba9a-b48d4aed840e.e42b6e0dd5ed14f159fb4affde58207d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
         description: "Plancha con placas de cerámica y ajuste digital de temperatura.",
         features: [
             "Placas de turmalina",
@@ -405,7 +405,7 @@ const sampleProducts = [
         category: "office",
         price: 32,
         rating: 4.6,
-        image: "https://m.media-amazon.com/images/I/71K7Q4FpvzL._AC_SL1500_.jpg",
+        image: "https://www.redlemon.com.mx/cdn/shop/files/01_5182e73a-1d33-4304-8820-184d87addb07.jpg?v=1716239887&width=533",
         description: "Cuaderno con páginas borrables y app para escanear notas.",
         features: [
             "Tinta borrable con agua",
@@ -439,7 +439,7 @@ const sampleProducts = [
         category: "office",
         price: 22,
         rating: 4.8,
-        image: "https://m.media-amazon.com/images/I/61xKdJ4K4eL._AC_SL1200_.jpg",
+        image: "https://http2.mlstatic.com/D_NQ_NP_888622-MLM91438979131_092025-O.webp",
         description: "Bolígrafo de aluminio con recarga de gel y empaque regalo incluido.",
         features: [
             "Cuerpo de aluminio cepillado",
@@ -458,7 +458,7 @@ const sampleProducts = [
         category: "pets",
         price: 69,
         rating: 4.3,
-        image: "https://m.media-amazon.com/images/I/71F5J+VvRIL._AC_SL1500_.jpg",
+        image: "https://m.media-amazon.com/images/I/61-MT9QofIL.jpg",
         description: "Dispensador programable con grabación de voz y batería de respaldo.",
         features: [
             "Programable hasta 4 comidas/día",
@@ -475,7 +475,7 @@ const sampleProducts = [
         category: "garden",
         price: 55,
         rating: 4.2,
-        image: "https://m.media-amazon.com/images/I/81QZb0XySQL._AC_SL1500_.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4zLNE2CewZRmGeselSbfFueTLjV1N9OdZEw&s",
         description: "Sistema de goteo programable para macetas y huertos pequeños.",
         features: [
             "Temporizador digital 7 días",
@@ -494,7 +494,7 @@ const sampleProducts = [
         category: "accessories",
         price: 59,
         rating: 4.5,
-        image: "https://m.media-amazon.com/images/I/71uXz7+QnFL._AC_SL1500_.jpg",
+        image: "https://m.media-amazon.com/images/I/71TZqKDjxkL.jpg",
         description: "Mochila ligera con cierre oculto, puerto USB y compartimento acolchado.",
         features: [
             "Compartimento para laptop 15.6\"",
@@ -511,7 +511,7 @@ const sampleProducts = [
         category: "accessories",
         price: 45,
         rating: 4.6,
-        image: "https://m.media-amazon.com/images/I/71xHRYJ7DIL._AC_SL1500_.jpg",
+        image: "https://m.media-amazon.com/images/I/61gs1pO+5kL.jpg",
         description: "Batería externa con carga rápida y 3 puertos de salida.",
         features: [
             "20000mAh capacidad",
