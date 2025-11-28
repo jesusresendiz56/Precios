@@ -1,6 +1,6 @@
 /* === Variables CSS === */
 :root {
-    --primary: #db3434;
+    --primary: #2892ef;
     --secondary: #2e33cc;
     --dark: #2c3e50;
     --light: #ecf0f1;
@@ -299,7 +299,7 @@ html {
 
 /* === Hero Section (ajustado para evitar solapamiento con header fijo) === */
 .hero {
-    background: linear-gradient(135deg, var(--primary), #076e9d);
+    background: linear-gradient(135deg, var(--primary), #226e99);
     color: white;
     padding: 140px 0 80px; /* ↑ Aumentado el top padding para compensar header fijo */
     text-align: center;

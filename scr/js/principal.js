@@ -91,7 +91,7 @@ const sampleProducts = [
         category: "electronics",
         price: 449,
         rating: 4.9,
-        image: "https://www.playstation.com/en-us/ps5/assets/img/ps5-product-shot-01-en-1920.png",
+        image: "https://hips.hearstapps.com/hmg-prod/images/xbox-series-s-x-1600085626.jpg?crop=0.75xw:1xh;center,top&resize=1200:*",
         description: "Consola de última generación con gráficos 4K y carga ultrarrápida.",
         features: [
             "Procesador Zen 2",
@@ -108,7 +108,7 @@ const sampleProducts = [
         category: "electronics",
         price: 199,
         rating: 4.4,
-        image: "https://i0.wp.com/www.androidsis.com/wp-content/uploads/2021/12/google-pixel-watch-nuevo-diseno.jpg",
+        image: "https://selectsound.com.mx/cdn/shop/products/smartwatch-multi-sport-horus-zeit-550985_1200x1200.png?v=1720801409",
         description: "Reloj con monitoreo de salud, GPS y notificaciones inteligentes.",
         features: [
             "Monitor de ritmo cardíaco",
@@ -125,7 +125,7 @@ const sampleProducts = [
         category: "electronics",
         price: 799,
         rating: 4.5,
-        image: "https://m.media-amazon.com/images/I/71zKuNICJtL._AC_SL1500_.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBhnnyzTd3Vf5554XZVJLaVZDwp0F3rIqjAA&s",
         description: "Drone con cámara 4K, estabilización y vuelo autónomo.",
         features: [
             "Cámara 4K 30fps",

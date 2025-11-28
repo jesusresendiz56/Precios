@@ -3,320 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walmart - Comparador de Precios</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: Arial, sans-serif; 
-            background: linear-gradient(135deg, #0071ce 0%, #004c91 100%);
-            min-height: 100vh; 
-            padding: 20px;
-        }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #0071ce;
-        }
-        h1 { color: #0071ce; }
-        .btn-volver {
-            padding: 10px 20px;
-            background: #666;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .btn-volver:hover { background: #555; }
-        .buscador-interno {
-            background: #f0f8ff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 4px solid #0071ce;
-        }
-        .search-box {
-            display: flex;
-            gap: 10px;
-        }
-        .search-input {
-            flex: 1;
-            padding: 12px;
-            font-size: 1em;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-        }
-        .search-input:focus {
-            outline: none;
-            border-color: #0071ce;
-        }
-        .btn-buscar {
-            padding: 12px 30px;
-            background: #0071ce;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .btn-buscar:hover { background: #005a9e; }
-        .info-box {
-            background: #f0f8ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border-left: 4px solid #0071ce;
-        }
-        .categoria {
-            margin-bottom: 30px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            border-left: 4px solid #0071ce;
-        }
-        .categoria-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e9ecef;
-        }
-        .categoria-icono { font-size: 1.5em; margin-right: 10px; }
-        .categoria-titulo { font-size: 1.3em; font-weight: bold; color: #333; }
-        .categoria-cantidad {
-            background: #0071ce;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.8em;
-            margin-left: 10px;
-        }
-        .productos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    <title>Walmart - ItemWise</title>
+    <link rel="stylesheet" href="../../styles/principal.css">
+    <link rel="stylesheet" href="../../styles/componentes.css">
+    <link rel="stylesheet" href="../../styles/login.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<style>
+    /* Estilos para productos del mismo tamaño */
+    .recommendations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+        align-items: stretch;
+    }
+
+    .product-card {
+        background-color: white;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 450px;
+    }
+
+    .product-image {
+        height: 200px;
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+    }
+
+    .product-card:hover .product-image img {
+        transform: scale(1.05);
+    }
+
+    .product-info {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .product-title {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        color: var(--dark);
+        font-weight: 600;
+        line-height: 1.3;
+        min-height: 50px;
+        max-height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        flex-shrink: 0;
+    }
+
+    .product-price {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: var(--primary);
+        margin-bottom: 10px;
+        flex-shrink: 0;
+    }
+
+    .product-rating {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        flex-shrink: 0;
+    }
+
+    .product-features {
+        margin-bottom: 15px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .product-brand {
+        background: #e9ecef;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 0.8em;
+        color: #495057;
+        display: inline-block;
+        margin-bottom: 8px;
+        flex-shrink: 0;
+    }
+
+    .product-presentation {
+        color: #666;
+        font-size: 0.85em;
+        margin-top: 5px;
+        flex-shrink: 0;
+    }
+
+    .availability {
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 0.8em;
+        margin-bottom: 8px;
+        display: inline-block;
+        flex-shrink: 0;
+    }
+
+    .disponible {
+        background: #d4edda;
+        color: #155724;
+    }
+
+    .pocas-piezas {
+        background: #fff3cd;
+        color: #856404;
+    }
+
+    .sin-stock {
+        background: #f8d7da;
+        color: #721c24;
+    }
+
+    .product-price-old {
+        color: #999;
+        font-size: 0.9em;
+        text-decoration: line-through;
+        flex-shrink: 0;
+    }
+
+    .product-store {
+        color: #666;
+        font-size: 0.9em;
+        font-style: italic;
+        flex-shrink: 0;
+    }
+
+    .product-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: auto;
+        flex-shrink: 0;
+    }
+
+    .product-image-placeholder {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        font-size: 2em;
+    }
+
+    /* Asegurar que todos los elementos tengan altura consistente */
+    .product-card > * {
+        box-sizing: border-box;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .recommendations-grid {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
         }
-        .producto-card {
-            border: 2px solid #0071ce;
-            border-radius: 10px;
-            padding: 15px;
-            background: white;
-            transition: transform 0.3s;
-            display: flex;
-            flex-direction: column;
+        
+        .product-card {
+            min-height: 420px;
         }
-        .producto-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 113, 206, 0.2);
-        }
-        .producto-imagen {
-            width: 100%;
+        
+        .product-image {
             height: 180px;
-            object-fit: contain;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            background: #f8f9fa;
         }
-        .producto-imagen-placeholder {
-            width: 100%;
-            height: 180px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            color: #666;
-            font-size: 3em;
+    }
+
+    @media (max-width: 480px) {
+        .recommendations-grid {
+            grid-template-columns: 1fr;
         }
-        .producto-nombre {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 8px;
-            font-size: 0.95em;
-            line-height: 1.4;
-            min-height: 60px;
+        
+        .product-card {
+            min-height: 400px;
         }
-        .producto-marca {
-            background: #e9ecef;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            color: #495057;
-            display: inline-block;
-            margin-bottom: 8px;
-        }
-        .producto-precio {
-            color: #0071ce;
-            font-size: 1.4em;
-            font-weight: bold;
-            margin: 8px 0;
-        }
-        .producto-precio-antes {
-            color: #999;
-            font-size: 0.9em;
-            text-decoration: line-through;
-        }
-        .producto-tienda {
-            color: #666;
-            font-size: 0.9em;
-            font-style: italic;
-        }
-        .producto-rating {
-            color: #ffc107;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-        .producto-presentacion {
-            color: #666;
-            font-size: 0.85em;
-            margin-top: 5px;
-        }
-        .disponibilidad {
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            margin-bottom: 8px;
-            display: inline-block;
-        }
-        .disponible {
-            background: #d4edda;
-            color: #155724;
-        }
-        .pocas-piezas {
-            background: #fff3cd;
-            color: #856404;
-        }
-        .sin-stock {
-            background: #f8d7da;
-            color: #721c24;
-        }
-        .producto-link {
-            margin-top: auto;
-            padding-top: 10px;
-        }
-        .btn-ver-producto {
-            display: inline-block;
-            background: #0071ce;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 0.9em;
-            text-align: center;
-            transition: background 0.3s;
-        }
-        .btn-ver-producto:hover { background: #005a9e; }
-        .loading {
-            text-align: center;
-            padding: 50px;
-        }
-        .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #0071ce;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 15px;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .error {
-            background: #fee;
-            color: #c33;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px 0;
-            border-left: 4px solid #c33;
-        }
-        .estadisticas {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        .estadistica-card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            flex: 1;
-            min-width: 150px;
-            text-align: center;
-        }
-        .estadistica-valor {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #0071ce;
-        }
-        .estadistica-label {
-            font-size: 0.9em;
-            color: #666;
-        }
-        @media (max-width: 768px) {
-            .container { padding: 20px; }
-            .header {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-            .productos-grid { grid-template-columns: 1fr; }
-            .search-box { flex-direction: column; }
-            .estadisticas { flex-direction: column; }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
+    <!-- Header -->
+    <header class="header" id="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="../../img/logo/logo.png" alt="ItemWise Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../../../vista/index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="../../../vista/comparador.php" class="nav-link">Comparador</a></li>
+                    <li><a href="../../../vista/tiendas.html" class="nav-link active">Tiendas</a></li>
+                    <li><a href="../../../vista/recomendaciones.html" class="nav-link">Recomendaciones</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-primary" id="open-login-modal">Iniciar Sesión</button>
+                <a href="../../../vista/register.html" class="btn btn-outline">Registrarse</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section para Walmart -->
+    <section class="hero" style="background: linear-gradient(135deg, rgba(236, 161, 21, 0) 0%, rgba(0, 0, 0, 0.81) 100%), url('../../img/tiendas/walmart.jpg') center/cover no-repeat;">
     <div class="container">
-        <div class="header">
-            <h1>🛒 Walmart - Productos</h1>
-            <a href="../vista/tiendas.html" class="btn-volver">← Volver al Inicio</a>
-        </div>
-        
-        <div class="buscador-interno">
-            <div class="search-box">
-                <input type="text" class="search-input" id="busqueda-walmart" placeholder="Buscar producto específico en Walmart...">
-                <button class="btn-buscar" onclick="buscarEnWalmart()">🔍 Buscar</button>
+        <div class="hero-content" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                <h2>🛒 Walmart - Encuentra los mejores productos</h2>
+                <p>Compara precios y características de miles de productos en Walmart</p>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="¿Qué producto buscas en Walmart?">
+                        <button id="search-btn" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Buscar
+                        </button>
+                    </div>
+                    <div class="search-filters">
+                        <select id="category-filter">
+                            <option value="">Todas las categorías</option>
+                            <option value="refrescos">Refrescos y Bebidas</option>
+                            <option value="papel">Papel y Desechables</option>
+                            <option value="lacteos">Lácteos</option>
+                            <option value="galletas">Galletas</option>
+                            <option value="arroz">Arroz</option>
+                            <option value="limpieza">Limpieza</option>
+                        </select>
+                        <select id="price-filter">
+                            <option value="">Todos los precios</option>
+                            <option value="0-50">Menos de $50</option>
+                            <option value="50-100">$50 - $100</option>
+                            <option value="100-200">$100 - $200</option>
+                            <option value="200+">Más de $200</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
-                <strong>Categorías disponibles:</strong> <span id="categorias-disponibles">Cargando...</span>
+        </div>
+    </section>
+
+    <!-- Estadísticas de Walmart -->
+    <section class="categories">
+        <div class="container">
+            <h2>Estadísticas de Walmart</h2>
+            <div class="categories-grid" id="walmart-stats">
+                <!-- Las estadísticas se cargarán aquí dinámicamente -->
             </div>
         </div>
-        
-        <div class="info-box">
-            <strong id="info-titulo">Todos los productos de Walmart</strong>
-            <div id="info-detalle" style="margin-top: 5px; font-size: 0.9em; color: #666;"></div>
-            <div id="estadisticas-tienda" class="estadisticas" style="display: none;"></div>
+    </section>
+
+    <!-- Productos de Walmart -->
+    <section class="recommendations">
+        <div class="container">
+            <h2>Productos de Walmart</h2>
+            <div id="search-info" class="search-info"></div>
+            <div class="recommendations-grid" id="walmart-products">
+                <!-- Los productos se cargarán aquí dinámicamente -->
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Cargando productos de Walmart...</p>
+                </div>
+            </div>
         </div>
-        
-        <div id="resultados">
-            <div class="loading">
-                <div class="spinner"></div>
-                <p>Cargando productos de Walmart...</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ItemWise</h3>
+                    <p>Tu guía inteligente para encontrar los mejores productos al mejor precio.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="../../../vista/index.html">Inicio</a></li>
+                        <li><a href="../../../vista/tiendas.html">Tiendas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="#">Soporte</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ItemWise. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Detalle de Producto -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Contenido se cargará dinámicamente -->
             </div>
         </div>
     </div>
 
-    <script>
-        let todosLosProductosWalmart = [];
-        let busquedaActual = '';
-        let categoriasDisponibles = new Set();
+    <!-- Modal: Inicio de Sesión -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Iniciar sesión</h2>
+            <p>Accede a tu cuenta para guardar tus comparaciones favoritas</p>
+            <form id="loginForm" action="../../../controlador/engine_login.php" method="POST">
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="correo@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" name="remember"> Recordar mi sesión
+                    </label>
+                    <a href="../../../vista/recuperarpassword.html" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Iniciar sesión</button>
+                <div class="modal-footer">
+                    <p>¿No tienes cuenta? <a href="../../../vista/register.html">Registrate aquí</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
 
+    <!-- Scripts -->
+    <script>
         // ============ CONFIGURACIÓN DE ARCHIVOS ============
         const ARCHIVOS_WALMART = [
             'walmart_refrescos.json',
@@ -328,16 +380,24 @@
         ];
         // ============ FIN CONFIGURACIÓN ============
 
+        let todosLosProductosWalmart = [];
+        let busquedaActual = '';
+        let categoriasDisponibles = new Set();
+
         window.addEventListener('load', function() {
             cargarTodosLosProductosWalmart();
         });
         
-        document.getElementById('busqueda-walmart').addEventListener('keypress', function(e) {
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') buscarEnWalmart();
         });
         
+        document.getElementById('search-btn').addEventListener('click', function() {
+            buscarEnWalmart();
+        });
+        
         function buscarEnWalmart() {
-            const termino = document.getElementById('busqueda-walmart').value.trim();
+            const termino = document.getElementById('search-input').value.trim();
             busquedaActual = termino;
             if (termino === '') {
                 mostrarProductosWalmart(todosLosProductosWalmart, 'Todos los productos');
@@ -376,12 +436,13 @@
                 console.log('📦 Total productos Walmart: ' + todosLosProductosWalmart.length);
                 actualizarCategoriasDisponibles();
                 if (todosLosProductosWalmart.length === 0) {
-                    document.getElementById('resultados').innerHTML = '<div class="error"><strong>⚠️ No se cargaron productos de Walmart</strong><p style="margin-top: 10px;">Asegúrate de tener archivos JSON en la carpeta data/</p></div>';
+                    document.getElementById('walmart-products').innerHTML = '<div class="error"><strong>⚠️ No se cargaron productos de Walmart</strong><p style="margin-top: 10px;">Asegúrate de tener archivos JSON en la carpeta data/</p></div>';
                 } else {
                     mostrarProductosWalmart(todosLosProductos, 'Todos los productos');
+                    mostrarEstadisticasWalmart();
                 }
             } catch (error) {
-                document.getElementById('resultados').innerHTML = `<div class="error"><strong>❌ Error:</strong> ${error.message}</div>`;
+                document.getElementById('walmart-products').innerHTML = `<div class="error"><strong>❌ Error:</strong> ${error.message}</div>`;
             }
         }
 
@@ -395,9 +456,9 @@
                 'papel': '🧻 Papel y Desechables',
                 'lacteos': '🥛 Lácteos',
                 'carnes': '🥩 Carnes y Embutidos',
-                'arros': '🌾 arroz',
+                'arros': '🌾 Arroz',
                 'limpieza': '🧼 Limpieza',
-                'galletas': '🍪 galletas',
+                'galletas': '🍪 Galletas',
                 'despensa': '🍝 Despensa'
             };
             
@@ -460,13 +521,8 @@
         }
 
         function actualizarCategoriasDisponibles() {
-            const categoriasElement = document.getElementById('categorias-disponibles');
-            if (categoriasDisponibles.size > 0) {
-                const categoriasSinIconos = Array.from(categoriasDisponibles).map(cat => cat.replace(/^[^\w\s]*\s/, ''));
-                categoriasElement.textContent = categoriasSinIconos.join(', ');
-            } else {
-                categoriasElement.textContent = 'No hay categorías disponibles';
-            }
+            // Esta función se puede usar para mostrar categorías disponibles si es necesario
+            console.log('Categorías disponibles:', Array.from(categoriasDisponibles));
         }
 
         function filtrarProductosWalmart(termino) {
@@ -480,25 +536,20 @@
         }
         
         function mostrarProductosWalmart(productos, titulo) {
-            const resultados = document.getElementById('resultados');
-            document.getElementById('info-titulo').innerHTML = `<strong>${titulo}</strong>`;
+            const resultados = document.getElementById('walmart-products');
+            const searchInfo = document.getElementById('search-info');
+            
+            // CORRECCIÓN: Usar el elemento correcto
+            if (searchInfo) {
+                searchInfo.textContent = `${productos.length} productos encontrados`;
+            }
             
             if (!Array.isArray(productos) || productos.length === 0) {
-                resultados.innerHTML = '<div class="error">No se encontraron productos disponibles</div>';
-                document.getElementById('info-detalle').textContent = '0 productos encontrados';
-                document.getElementById('estadisticas-tienda').style.display = 'none';
+                resultados.innerHTML = '<div class="empty-recommendations"><i class="fas fa-search"></i><p>No se encontraron productos disponibles</p></div>';
                 return;
             }
             
-            const totalProductos = productos.length;
-            const categorias = [...new Set(productos.map(p => p.categoria))];
-            const precioMin = Math.min(...productos.map(p => p.precio));
-            const precioMax = Math.max(...productos.map(p => p.precio));
-            const precioPromedio = productos.reduce((sum, p) => sum + p.precio, 0) / totalProductos;
-            
-            mostrarEstadisticas(totalProductos, categorias.length, precioMin, precioMax, precioPromedio);
-            document.getElementById('info-detalle').textContent = `${totalProductos} productos encontrados en ${categorias.length} categorías`;
-            
+            // Agrupar productos por categoría
             const productosPorCategoria = {};
             productos.forEach(producto => {
                 const categoria = producto.categoria || '🛒 Otros Productos';
@@ -509,18 +560,20 @@
             });
             
             let html = '';
+            
+            // Mostrar productos agrupados por categoría
             for (const [categoria, productosCategoria] of Object.entries(productosPorCategoria)) {
                 const icono = categoria.split(' ')[0];
                 const nombreCategoria = categoria.replace(/^[^\w\s]*\s/, '');
                 
                 html += `
-                    <div class="categoria">
-                        <div class="categoria-header">
-                            <span class="categoria-icono">${icono}</span>
-                            <span class="categoria-titulo">${nombreCategoria}</span>
-                            <span class="categoria-cantidad">${productosCategoria.length} productos</span>
+                    <div class="category-section">
+                        <div class="category-header">
+                            <span class="category-icon">${icono}</span>
+                            <span class="category-title">${nombreCategoria}</span>
+                            <span class="category-count">${productosCategoria.length} productos</span>
                         </div>
-                        <div class="productos-grid">
+                        <div class="recommendations-grid">
                 `;
                 
                 productosCategoria.forEach(prod => {
@@ -539,31 +592,32 @@
                     }
                     
                     const precioAnteriorHTML = prod.precio_antes > prod.precio ? 
-                        `<div class="producto-precio-antes">Antes: $${prod.precio_antes.toFixed(2)}</div>` : '';
+                        `<div class="product-price-old">Antes: $${prod.precio_antes.toFixed(2)}</div>` : '';
                     
                     const ratingHTML = rating > 0 ? 
-                        `<div class="producto-rating">${estrellas} ${rating} ${prod.reviews > 0 ? `(${prod.reviews})` : ''}</div>` : '';
+                        `<div class="product-rating">${estrellas} ${rating} ${prod.reviews > 0 ? `(${prod.reviews})` : ''}</div>` : '';
                     
                     const imagenHTML = prod.imagen ? 
-                        `<img src="${prod.imagen}" alt="${prod.nombre}" class="producto-imagen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                         <div class="producto-imagen-placeholder" style="display:none;">📦</div>` : 
-                        `<div class="producto-imagen-placeholder">📦</div>`;
+                        `<div class="product-image"><img src="${prod.imagen}" alt="${prod.nombre}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="product-image-placeholder" style="display:none;"><i class="fas fa-box"></i></div></div>` : 
+                        `<div class="product-image"><div class="product-image-placeholder"><i class="fas fa-box"></i></div></div>`;
                     
                     const linkHTML = prod.url && prod.url !== '#' ? 
-                        `<div class="producto-link"><a href="${prod.url}" target="_blank" class="btn-ver-producto">Ver en Walmart</a></div>` : '';
+                        `<div class="product-actions"><a href="${prod.url}" target="_blank" class="btn btn-primary">Ver en Walmart</a></div>` : '';
                     
                     html += `
-                        <div class="producto-card">
+                        <div class="product-card">
                             ${imagenHTML}
-                            ${prod.marca ? `<div class="producto-marca">${prod.marca}</div>` : ''}
-                            <div class="producto-nombre">${prod.nombre}</div>
-                            ${prod.presentacion ? `<div class="producto-presentacion">${prod.presentacion}</div>` : ''}
-                            <div class="disponibilidad ${claseDisponibilidad}">${textoDisponibilidad}</div>
-                            ${precioAnteriorHTML}
-                            <div class="producto-precio">$${prod.precio.toFixed(2)}</div>
-                            <div class="producto-tienda">${prod.tienda}</div>
-                            ${ratingHTML}
-                            ${linkHTML}
+                            <div class="product-info">
+                                ${prod.marca ? `<div class="product-brand">${prod.marca}</div>` : ''}
+                                <h3 class="product-title">${prod.nombre}</h3>
+                                ${prod.presentacion ? `<div class="product-presentation">${prod.presentacion}</div>` : ''}
+                                <div class="availability ${claseDisponibilidad}">${textoDisponibilidad}</div>
+                                ${precioAnteriorHTML}
+                                <div class="product-price">$${prod.precio.toFixed(2)}</div>
+                                <div class="product-store">${prod.tienda}</div>
+                                ${ratingHTML}
+                                ${linkHTML}
+                            </div>
                         </div>
                     `;
                 });
@@ -577,32 +631,69 @@
             resultados.innerHTML = html;
         }
 
-        function mostrarEstadisticas(total, categorias, min, max, promedio) {
-            const estadisticasDiv = document.getElementById('estadisticas-tienda');
-            estadisticasDiv.innerHTML = `
-                <div class="estadistica-card">
-                    <div class="estadistica-valor">${total}</div>
-                    <div class="estadistica-label">Total Productos</div>
+        function mostrarEstadisticasWalmart() {
+            const total = todosLosProductosWalmart.length;
+            const categorias = [...new Set(todosLosProductosWalmart.map(p => p.categoria))].length;
+            const precioMin = Math.min(...todosLosProductosWalmart.map(p => p.precio));
+            const precioMax = Math.max(...todosLosProductosWalmart.map(p => p.precio));
+            const precioPromedio = todosLosProductosWalmart.reduce((sum, p) => sum + p.precio, 0) / total;
+            
+            const statsHTML = `
+                <div class="category-card">
+                    <i class="fas fa-boxes" style="color:#0071ce;"></i>
+                    <h3>${total}</h3>
+                    <p>Total Productos</p>
                 </div>
-                <div class="estadistica-card">
-                    <div class="estadistica-valor">${categorias}</div>
-                    <div class="estadistica-label">Categorías</div>
+                <div class="category-card">
+                    <i class="fas fa-tags" style="color:#0071ce;"></i>
+                    <h3>${categorias}</h3>
+                    <p>Categorías</p>
                 </div>
-                <div class="estadistica-card">
-                    <div class="estadistica-valor">$${min.toFixed(2)}</div>
-                    <div class="estadistica-label">Precio Mínimo</div>
+                <div class="category-card">
+                    <i class="fas fa-dollar-sign" style="color:#0071ce;"></i>
+                    <h3>$${precioMin.toFixed(2)}</h3>
+                    <p>Precio Mínimo</p>
                 </div>
-                <div class="estadistica-card">
-                    <div class="estadistica-valor">$${max.toFixed(2)}</div>
-                    <div class="estadistica-label">Precio Máximo</div>
+                <div class="category-card">
+                    <i class="fas fa-dollar-sign" style="color:#0071ce;"></i>
+                    <h3>$${precioMax.toFixed(2)}</h3>
+                    <p>Precio Máximo</p>
                 </div>
-                <div class="estadistica-card">
-                    <div class="estadistica-valor">$${promedio.toFixed(2)}</div>
-                    <div class="estadistica-label">Precio Promedio</div>
+                <div class="category-card">
+                    <i class="fas fa-chart-line" style="color:#0071ce;"></i>
+                    <h3>$${precioPromedio.toFixed(2)}</h3>
+                    <p>Precio Promedio</p>
                 </div>
             `;
-            estadisticasDiv.style.display = 'flex';
+            
+            document.getElementById('walmart-stats').innerHTML = statsHTML;
         }
+
+        // Funcionalidad de los modales
+        document.addEventListener('DOMContentLoaded', function() {
+            // Modal de login
+            const loginModal = document.getElementById('login-modal');
+            const openLoginModal = document.getElementById('open-login-modal');
+            const closeButtons = document.querySelectorAll('.close');
+
+            if (openLoginModal) {
+                openLoginModal.addEventListener('click', function() {
+                    loginModal.style.display = 'block';
+                });
+            }
+
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.closest('.modal').style.display = 'none';
+                });
+            });
+
+            window.addEventListener('click', function(event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = 'none';
+                }
+            });
+        });
     </script>
 </body>
 </html>

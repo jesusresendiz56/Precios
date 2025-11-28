@@ -77,7 +77,17 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seleccionar Productos</title>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --primary: #2992ef;
+            --secondary: #764ba2;
+            --dark: #333;
+            --light: #f8f9fa;
+            --border-radius: 15px;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -86,22 +96,22 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--light);
             min-height: 100vh;
             padding: 20px;
         }
         
         .container {
             max-width: 900px;
-            margin: 0 auto;
+            margin: 100px auto 50px;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
             overflow: hidden;
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 30px;
             text-align: center;
@@ -112,20 +122,26 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
             margin-bottom: 10px;
         }
         
+        .header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        
         .content {
             padding: 40px;
         }
         
         .info-box {
             background: #f0f4ff;
-            border-left: 4px solid #667eea;
-            padding: 15px;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
             margin-bottom: 30px;
-            border-radius: 5px;
+            border-radius: var(--border-radius);
+            font-size: 15px;
         }
         
         .info-box strong {
-            color: #667eea;
+            color: var(--primary);
         }
         
         .modo-seleccion {
@@ -137,9 +153,9 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
         
         .modo-btn {
             flex: 1;
-            padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
+            padding: 20px;
+            border: 3px solid #e0e0e0;
+            border-radius: var(--border-radius);
             background: white;
             cursor: pointer;
             transition: all 0.3s;
@@ -147,14 +163,17 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
         }
         
         .modo-btn:hover {
-            border-color: #667eea;
+            border-color: var(--primary);
             background: #f0f4ff;
+            transform: translateY(-2px);
         }
         
         .modo-btn.active {
-            border-color: #667eea;
-            background: #667eea;
+            border-color: var(--primary);
+            background: var(--primary);
             color: white;
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(41, 146, 239, 0.3);
         }
         
         .modo-btn input[type="radio"] {
@@ -176,7 +195,7 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
         label {
             display: block;
             font-weight: 600;
-            color: #333;
+            color: var(--dark);
             margin-bottom: 10px;
             font-size: 16px;
         }
@@ -185,15 +204,15 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
             width: 100%;
             padding: 15px;
             border: 2px solid #e0e0e0;
-            border-radius: 10px;
+            border-radius: var(--border-radius);
             font-size: 16px;
             transition: all 0.3s;
         }
         
         input[type="text"]:focus, select:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(41, 146, 239, 0.1);
         }
         
         select {
@@ -210,9 +229,10 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
             align-items: center;
             gap: 15px;
             padding: 15px;
-            background: #f9f9f9;
-            border-radius: 10px;
+            background: var(--light);
+            border-radius: var(--border-radius);
             margin-top: 10px;
+            border: 2px solid #e0e0e0;
         }
         
         .producto-preview img {
@@ -220,7 +240,7 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
             height: 60px;
             object-fit: contain;
             background: white;
-            border-radius: 5px;
+            border-radius: 8px;
             padding: 5px;
         }
         
@@ -230,21 +250,21 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
         
         .producto-preview-nombre {
             font-weight: 600;
-            color: #333;
+            color: var(--dark);
             font-size: 14px;
             margin-bottom: 5px;
         }
         
         .producto-preview-precio {
-            color: #667eea;
+            color: var(--primary);
             font-weight: 700;
             font-size: 18px;
         }
         
         .producto-preview-tienda {
             display: inline-block;
-            padding: 3px 10px;
-            background: #667eea;
+            padding: 4px 12px;
+            background: var(--primary);
             color: white;
             border-radius: 12px;
             font-size: 11px;
@@ -261,20 +281,24 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
         .btn-comparar {
             width: 100%;
             padding: 18px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             border: none;
-            border-radius: 10px;
+            border-radius: var(--border-radius);
             font-size: 18px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 15px rgba(41, 146, 239, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         
         .btn-comparar:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            box-shadow: 0 6px 20px rgba(41, 146, 239, 0.6);
         }
         
         .btn-comparar:disabled {
@@ -284,13 +308,15 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
         }
         
         .btn-volver {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             margin-top: 15px;
             padding: 12px 24px;
             background: #6c757d;
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             font-size: 14px;
             transition: all 0.3s;
         }
@@ -302,12 +328,39 @@ if ($comparacion === 'walmart_chedraui' || $comparacion === 'solo_chedraui') {
         
         .total-productos {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background: #e8f4f8;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             margin-bottom: 20px;
-            color: #0c5460;
+            color: var(--primary);
             font-weight: 600;
+            border-left: 4px solid var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 80px auto 30px;
+            }
+
+            .content {
+                padding: 25px;
+            }
+
+            .modo-seleccion {
+                flex-direction: column;
+            }
+
+            .modo-btn {
+                min-width: 100%;
+            }
+
+            .header {
+                padding: 25px 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
